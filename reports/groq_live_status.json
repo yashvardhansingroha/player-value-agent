@@ -1,0 +1,92 @@
+{
+ "label": "GROQ LIVE ATTEMPT",
+ "attempt": 5,
+ "provider": "groq",
+ "model": "openai/gpt-oss-120b",
+ "key_present": true,
+ "live_agent_runs": [
+  {
+   "as_of": "2025-11-10",
+   "case": "google_uac: the tracking outage window; the policy abstains (tracking gap)",
+   "status": "rules_only_fallback",
+   "fallback_reason": "api_failure",
+   "file": "reports\\phase5_runs\\live_groq_2025-11-10_5.json",
+   "repairs_used": 0,
+   "tokens": {
+    "prompt_tokens": 14257,
+    "output_tokens": 432
+   }
+  }
+ ],
+ "history": [
+  {
+   "attempt": 1,
+   "live_agent_runs": [
+    {
+     "as_of": "2025-11-10",
+     "case": "google_uac: the tracking outage window; the policy abstains (tracking gap)",
+     "status": "rules_only_fallback",
+     "fallback_reason": "api_failure",
+     "file": "reports\\phase5_runs\\live_groq_2025-11-10.json",
+     "repairs_used": 0,
+     "tokens": {
+      "prompt_tokens": 11830,
+      "output_tokens": 245
+     }
+    }
+   ],
+   "note": "reconstructed from the copy committed in f73fe07, because the runner of that time overwrote this file instead of keeping history; the run file itself is untouched"
+  },
+  {
+   "attempt": 2,
+   "live_agent_runs": [
+    {
+     "as_of": "2025-11-10",
+     "case": "google_uac: the tracking outage window; the policy abstains (tracking gap)",
+     "status": "rules_only_fallback",
+     "fallback_reason": "api_failure",
+     "file": "reports\\phase5_runs\\live_groq_2025-11-10_2.json",
+     "repairs_used": 0,
+     "tokens": {
+      "prompt_tokens": 11006,
+      "output_tokens": 229
+     }
+    }
+   ]
+  },
+  {
+   "attempt": 3,
+   "live_agent_runs": [
+    {
+     "as_of": "2025-11-10",
+     "case": "google_uac: the tracking outage window; the policy abstains (tracking gap)",
+     "status": "rules_only_fallback",
+     "fallback_reason": "malformed_output",
+     "file": "reports\\phase5_runs\\live_groq_2025-11-10_3.json",
+     "repairs_used": 1,
+     "tokens": {
+      "prompt_tokens": 21314,
+      "output_tokens": 543
+     }
+    }
+   ]
+  },
+  {
+   "attempt": 4,
+   "live_agent_runs": [
+    {
+     "as_of": "2025-11-10",
+     "case": "google_uac: the tracking outage window; the policy abstains (tracking gap)",
+     "status": "agent_proposal",
+     "fallback_reason": null,
+     "file": "reports\\phase5_runs\\live_groq_2025-11-10_4.json",
+     "repairs_used": 0,
+     "tokens": {
+      "prompt_tokens": 22961,
+      "output_tokens": 1447
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+# Quality-check, forecast and backtest settings. These are CHOSEN ASSUMPTIONS. ALL DATA IS SYNTHETIC.
+#
+# PROVENANCE (precise; amendment history is kept, nothing is rewritten):
+#  * FIXED BEFORE ANY BACKTEST SCORE WAS SEEN, and unchanged since: every `forecast:` setting (training window, minimum
+#    training cohorts, pooling thresholds, interval alpha, calibration windows and minimums, summary length), the `backtest:`
+#    settings, and these cohort-level `quality:` settings: min_installs_per_cohort, baseline_window_cohorts,
+#    baseline_min_cohorts, spike_ratio, low_activity_ratio. The window-level thresholds window_min_installs,
+#    concentration_top_share, cpi_baseline_days, cpi_anomaly_high/low, tracking_gap_recent_days and tracking_gap_drop were also
+#    set in advance and have not been changed.
+#  * CHANGED AFTER INSPECTING DEVELOPMENT RESULTS (dev seed 1):
+#      - tracking_gap: ALGORITHM and two settings changed after the first dev backtest showed it never fired on the dev outage
+#        (tracking_gap_baseline_days 14 -> 28; tracking_gap_min_run_days added; mean-vs-mean comparison replaced by a median
+#        baseline and a run of consecutive low days).
+#      - cpi_anomaly: the POPULATION changed after the same inspection (forecast cohorts only -> all decision-ready cohorts), and
+#        again after independent review (zero-install cohorts keep their spend in the aggregate CPI).
+#      - reporting_completeness / window accounting / payer-concentration population: added or changed after independent review.
+#      - the sensitivity run (spike exclusion off) was added after the first scores revealed how much revenue the exclusion withholds.
+#    Thresholds were not changed to improve a score, but because detectors were adjusted after seeing the dev data, dev-seed
+#    flags and scores are development results, not held-out evidence.
+#
+# SCOPE OF THE EVIDENCE HASH: it covers the `quality` and `forecast` sections (plus `version`), i.e. the forecasting and quality
+# settings. It does NOT cover the `backtest` section (first/last review, review frequency, scoring date). That is NOT because
+# scheduling cannot matter: changing the first review or the review frequency can change which cohorts are issued, when, and the
+# calibration history behind every interval. The schedule is therefore recorded separately in the forecast store (`store_meta`:
+# `schedule_json`, `schedule_hash`) and shown in policy evidence.
+version: 1
+
+quality:
+  min_installs_per_cohort: 30          # below this a cohort is too small to forecast
+  baseline_window_cohorts: 60          # prior cohorts used for rolling medians (D3 revenue/install, D1 retention)
+  baseline_min_cohorts: 10             # fewer prior cohorts than this: the spike/low-activity checks are "not evaluable"
+  spike_ratio: 3.0                     # D0-D3 net revenue per install > 3 x prior median -> revenue spike
+  low_activity_ratio: 0.4              # D1 retention < 0.4 x prior median -> possible tracking gap, cohort withheld
+  # channel / trailing-window checks
+  window_min_installs: 150             # a 7-day summary with fewer installs is "insufficient cohort size"
+  concentration_top_share: 0.50        # share of window D0-D3 IAP from the top 1% of payers (at least 1 payer)
+  cpi_baseline_days: 28
+  cpi_anomaly_high: 1.5                # window CPI > 1.5 x trailing median daily CPI
+  cpi_anomaly_low: 0.6
+  tracking_gap_activity_lookback_days: 30   # activity per player installed in the previous 30 days
+  tracking_gap_recent_days: 7
+  tracking_gap_baseline_days: 28       # median over this many complete days before the recent window (revised from 14 after the first dev backtest)
+  tracking_gap_drop: 0.5               # a day is "low" when activity per player < (1 - 0.5) x the baseline median
+  tracking_gap_min_run_days: 3         # gap suspected when this many consecutive recent days are low (added in the same revision)
+
+forecast:
+  train_window_cohorts: 60             # most recent eligible, D30-complete cohorts of the channel
+  min_train_cohorts: 20                # below this the channel multiplier is not used
+  min_pooled_cohorts: 40               # pooled paid-channel multiplier needs at least this many training cohorts
+  interval_alpha: 0.20                 # 80% prediction interval from empirical quantiles of actual / forecast
+  cohort_calibration_window: 100       # most recent matured earlier forecasts (same channel) used for calibration
+  cohort_min_calibration: 30           # fewer than this: interval unavailable
+  summary_days: 7                      # trailing summary = the 7 latest consecutive install dates that are decision-ready
+  summary_calibration_window: 40
+  summary_min_calibration: 12
+
+backtest:
+  first_as_of_day: 7                   # Mondays; day 0 is a Monday
+  last_as_of_day: 336
+  review_every_days: 7
+  scoring_as_of_day: 400               # beyond the stored data end (day 364): scores every outcome that exists in storage

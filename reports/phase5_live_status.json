@@ -1,0 +1,113 @@
+{
+ "label": "LIVE VERIFICATION",
+ "attempt": 5,
+ "key_present": true,
+ "listed_models": [
+  "models/gemini-2.5-flash",
+  "models/gemini-2.5-pro",
+  "models/gemma-4-26b-a4b-it",
+  "models/gemma-4-31b-it",
+  "models/gemini-2.5-flash-lite",
+  "models/gemini-2.5-flash-image",
+  "models/gemini-3.1-flash-lite",
+  "models/gemini-3-pro-image",
+  "models/gemini-3.1-flash-image",
+  "models/gemini-3.1-flash-lite-image",
+  "models/gemini-nano-banana-2.1",
+  "models/gemini-3.5-flash",
+  "models/gemini-3.5-flash-lite",
+  "models/gemini-omni-flash-preview",
+  "models/gemini-3.6-flash",
+  "models/gemini-3.7-flash",
+  "models/gemini-3.8-flash",
+  "models/gemini-4-argon",
+  "models/antigravity-preview-05-2026",
+  "models/antigravity-preview-09-2026",
+  "models/antigravity-preview-latest",
+  "models/deep-research-max-preview-04-2026",
+  "models/deep-research-preview-04-2026",
+  "models/deep-research-pro-preview-12-2025"
+ ],
+ "models_tried": [
+  {
+   "model": "models/gemini-3.5-flash-lite",
+   "passed": false,
+   "steps": [
+    [
+     "plain call",
+     false,
+     "API error: ClientError: 402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}"
+    ]
+   ]
+  }
+ ],
+ "selection_stopped": "BILLING (HTTP 402) while checking models/gemini-3.5-flash-lite: the project's prepaid credits are depleted ('Your prepayment credits are depleted'). This is an account/billing state, not a rate limit and not a model problem. [Corrected after the fact: the original run printed 'RATE LIMITED (HTTP 429)' because the classifier mislabelled the 402; the raw provider message in models_tried is unchanged.]",
+ "verified_model": null,
+ "connectivity_check": "FAILED",
+ "live_agent_runs": [],
+ "history": [
+  {
+   "attempt": 1,
+   "outcome": "both live cases hit the free tier rate limit (HTTP 429) and took the labelled API-failure fallback; no agent evidence",
+   "verified_model": "models/gemini-3.5-flash",
+   "live_agent_runs": [
+    {
+     "as_of": "2025-10-13",
+     "case": "applovin: the policy proposes an increase test, but the experiment design is inadequate",
+     "status": "rules_only_fallback",
+     "fallback_reason": "api_failure",
+     "file": "reports\\phase5_runs\\live_2025-10-13.json",
+     "repairs_used": 0
+    },
+    {
+     "as_of": "2025-11-10",
+     "case": "google_uac: the tracking outage window; the policy abstains (tracking gap)",
+     "status": "rules_only_fallback",
+     "fallback_reason": "api_failure",
+     "file": "reports\\phase5_runs\\live_2025-11-10.json",
+     "repairs_used": 0
+    }
+   ],
+   "connectivity_check": "PASSED (plain, tool call and round trip)"
+  },
+  {
+   "attempt": 2,
+   "verified_model": "models/gemini-3.5-flash",
+   "connectivity_check": "PASSED (plain, tool call and round trip)",
+   "live_agent_runs": [
+    {
+     "as_of": "2025-10-13",
+     "case": "applovin: the policy proposes an increase test, but the experiment design is inadequate",
+     "status": "rules_only_fallback",
+     "fallback_reason": "loop_limit",
+     "file": "reports\\phase5_runs\\live_2025-10-13_2.json",
+     "repairs_used": 0
+    },
+    {
+     "as_of": "2025-11-10",
+     "case": "google_uac: the tracking outage window; the policy abstains (tracking gap)",
+     "status": "rules_only_fallback",
+     "fallback_reason": "loop_limit",
+     "file": "reports\\phase5_runs\\live_2025-11-10_2.json",
+     "repairs_used": 0
+    }
+   ]
+  },
+  {
+   "attempt": 3,
+   "verified_model": null,
+   "connectivity_check": "FAILED",
+   "live_agent_runs": []
+  },
+  {
+   "attempt": 4,
+   "verified_model": null,
+   "connectivity_check": "FAILED",
+   "live_agent_runs": []
+  }
+ ],
+ "classification_correction": {
+  "original_label": "RATE LIMITED (HTTP 429) while checking models/gemini-3.5-fla",
+  "corrected_to": "billing (HTTP 402)"
+ }
+}

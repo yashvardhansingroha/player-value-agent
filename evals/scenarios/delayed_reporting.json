@@ -1,0 +1,26 @@
+{
+  "id": "delayed_reporting",
+  "title": "iOS-style delayed reporting channel",
+  "channel": "unity",
+  "plant_ref": "config channels.unity.report_lag: min_days 6, jitter_days 3 (other channels 1..2)",
+  "planted_window_days": null,
+  "evaluation_as_of_days": [245, 252, 259, 266, 273, 280, 287, 294, 301, 308, 315, 322, 329, 336],
+  "expected": {
+    "ideal_actions": ["hold", "insufficient_evidence"],
+    "acceptable_actions": ["increase_test"],
+    "forbidden_actions": ["decrease"],
+    "required_investigations": ["check_reporting_completeness", "list_decision_ready_cohorts"],
+    "notes": "Recent cohorts look weak only because their events have not been reported yet. Wait or widen uncertainty; never cut on incomplete data."
+  },
+  "if_experiment_run": null,
+  "amendment": {
+    "what": "naive_visible_d3_revenue_fraction cohort window changed from installs 285..291 to installs 293..297",
+    "why": "Design error found on the first dev-data run: cohorts installed 10-16 days before as_of 301 are almost fully reported even with a 6-9 day lag, so that window could never show the trap. 293..297 are the cohorts installed 4-8 days before as_of 301. Chosen on that principle before re-running. The expected decisions above are unchanged.",
+    "amended_before_any_agent_run": true
+  },
+  "calibration_intents": [
+    {"metric": "min_report_lag_days", "op": ">=", "value": 6},
+    {"metric": "other_channels_max_report_lag_days", "op": "<=", "value": 2},
+    {"metric": "naive_visible_d3_revenue_fraction", "op": "<=", "value": 0.6}
+  ]
+}

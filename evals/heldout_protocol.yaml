@@ -1,0 +1,65 @@
+# HELD-OUT DETERMINISTIC-BASELINE PROTOCOL. ALL DATA IS SYNTHETIC; the ledger is a SANDBOX; experiments are SIMULATED.
+#
+# PRE-REGISTRATION: committed BEFORE the freeze and BEFORE any held-out data is generated. It is part of the frozen set (evals/FREEZE_MANIFEST.json). It is not to be changed after
+# held-out results are seen. Permitted by the scope amendment of 2026-11-08 in evals/criteria.yaml. It evaluates ONLY the frozen deterministic rules-only baseline. No agent, no model call.
+version: 1
+freeze_id: baseline-freeze-v1          # the annotated git tag on the commit that contains evals/FREEZE_MANIFEST.json
+scope: DETERMINISTIC BASELINE ONLY. These results validate the frozen rules-only baseline on additional synthetic seeds and nothing else.
+seeds:
+  registered: [9101, 9102, 9103]       # config/generator.yaml heldout_seeds. Evaluated once each, in this order, each completely separate from the others and from the dev seed.
+  development: [1]                     # the seed the rules and configuration were developed on; never mixed with the registered seeds
+  run_once: true                       # the run is guarded by a lock; a second run is refused. See `failure_and_rerun_rules`.
+
+what_is_frozen:                        # tied together by sha256 in evals/FREEZE_MANIFEST.json and by the git tag
+  - all Python source under src/ (data, quality, forecast, policy, experiments, ledger, agent, generator, validate)
+  - all configuration under config/ (policy, forecast, generator, experiment*, agent) and sql/
+  - this protocol, evals/criteria.yaml, evals/scenarios/* (expectations; also compared with commit c3447c8 by a test), evals/dev_eval.py, evals/baseline_eval.py, evals/freeze.py
+  - scripts/generate_data.py, scripts/run_heldout_baseline.py, scripts/make_freeze_manifest.py, requirements.txt
+  - "the agent system prompt and tool declarations (inside src/agent) - frozen although NOT used by this run, so a later agent evaluation starts from a recorded state"
+not_frozen_because_they_only_present_results: [README.md, app/, scripts/build_readme.py, scripts/build_heldout_report.py, scripts/build_ui_data.py, reports/, tests/, evals/results/]
+
+artifact_ties:                         # how every artifact is tied to its seed; development data cannot be mixed with held-out forecasts
+  paths:
+    decision_data: data/decision/seed_{seed}/decision.db
+    hidden_truth: data/hidden/seed_{seed}/hidden_truth.json
+    forecast_store: data/forecasts/seed_{seed}/forecasts.db
+    results: evals/results/heldout/seed_{seed}/baseline_eval.json
+    provenance: evals/results/heldout/seed_{seed}/provenance.json
+  provenance_contains: [seed, freeze_id, sha256 of decision.db, sha256 of hidden_truth.json, sha256 of forecasts.db, generation_report seed, configuration hashes, step statuses with timestamps]
+  checks:                              # all are made BEFORE results are computed; any failure stops that seed and is recorded
+    - the seed is registered, not the development seed, and not already evaluated (run-once lock)
+    - the frozen files match the manifest hashes AND the working tree matches the git tag for every frozen path
+    - the development artifacts still match the hashes recorded in the manifest (dev data was not modified or reused)
+    - hidden_truth.json and generation_report.json both state this seed
+    - the forecast store's schedule hash and evidence hash equal those of the frozen configuration
+    - "CONTENT TIE - for a sample of at least 60 issued forecasts spread over at least 8 reviews, the features stored in the forecast store (installs, spend, D0-D3 net revenue) equal the values recomputed from THIS seed's decision.db at the same review date"
+    - the decision.db hash recorded when the store was built equals its hash at evaluation time
+    - every record written carries the seed
+
+components_evaluated:                  # definitions are those of evals/criteria.yaml, applied to each seed separately
+  forecasting: {metrics: [wape, bias, interval_coverage (nominal 0.80), interval_width_over_forecast_mean, interval_width_over_forecast_median], levels: [cohort, weekly_summary],
+                breakdowns: [overall, by_channel, by_method, by_period], accounting: [issued, scored, pending, withheld with reasons, share of matured D30 revenue withheld], reference_baseline: ignores D3}
+  policy_decisions: {reviews: all 14 weekly reviews (days 245..336), budgets: static sandbox budgets as in the dev evaluation, classes: [ideal, acceptable, forbidden, unlisted], scored_against: evals/scenarios expectations}
+  abstentions: {metrics: [abstention_recall, abstention_appropriateness, false_abstention, missed_abstention], reasons_table: all channel-reviews that ended in insufficient_evidence or hold}
+  scenario_validity:
+    what: the generator's calibration intents (scenario files) re-evaluated on EACH held-out seed's own data with evals-side access to its hidden truth
+    reported: every intent with its value, operator, threshold and PASS/FAIL, per seed
+    flagging_rule: >
+      A scenario whose intent set has any FAIL on a seed is flagged `scenario_not_materialized` for that seed. The PRIMARY policy and abstention summaries use ALL scored rows exactly as registered.
+      A SECONDARY summary that excludes flagged rows is shown alongside, never instead. No expectation is edited, relaxed or re-labelled for any seed.
+not_evaluated_on_held_out: [constraints suite, experiment safeguards, mock agent plumbing, any live agent run]   # seed-independent or out of scope; the dev evaluation covers the first two; the agent is out of scope
+aggregation: per-seed results are reported separately; a pooled table sums counts across the three seeds and states n; no pooled number replaces a per-seed number
+
+reporting_rules:
+  - "Every number is computed by the frozen evals/baseline_eval.py from an actual run and stored in evals/results/heldout/seed_N/baseline_eval.json. Tables in the report, README and screen are rendered from those files by presentation scripts (scripts/build_heldout_report.py, scripts/build_readme.py) that are not frozen because they compute no result; no number is typed by hand. The pooled table sums per-seed counts."
+  - Per-seed results, failures and the ORIGINAL outputs (data, stores, JSON) are preserved and committed or listed with hashes; nothing is overwritten.
+  - A planted scenario that fails to materialize on a seed is DISCLOSED with the failing intent values, not silently excluded or re-defined.
+  - Disagreements with the committed scenario expectations are reported with the policy's own reason. A forbidden row is a violation of a committed expectation, not independently proven economic harm.
+  - Forecast interval coverage is compared with nominal 0.80 and any shortfall is stated; nominal calibration is not claimed.
+  - "The report states that these results validate ONLY the frozen deterministic baseline on additional synthetic seeds, say nothing about any live agent, and that the seeds are consumed for the purpose of any later agent evaluation."
+
+failure_and_rerun_rules:
+  - No parameter, threshold, prompt, seed, expectation, definition or source file is changed after a held-out result has been seen. The freeze check enforces this for every frozen path.
+  - A step that crashes is recorded in RUN_LOG.json with its error, and the other seeds still run. There is no automatic retry.
+  - "The --resume flag may run steps not yet completed for a seed, with the identical frozen code; it is recorded as a resume. A crash that needs a CODE change cannot be repaired inside this protocol: the run is reported as failed and any later run is a NEW freeze that must say these seeds were already used."
+  - Seeds whose generation or backtest completed are never regenerated.

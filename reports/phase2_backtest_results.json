@@ -1,0 +1,952 @@
+{
+  "seed": 1,
+  "note": "DEV SEED backtest (generator was calibrated on this seed). Not held-out evidence. ALL DATA IS SYNTHETIC.",
+  "config": {
+    "version": 1,
+    "quality": {
+      "min_installs_per_cohort": 30,
+      "baseline_window_cohorts": 60,
+      "baseline_min_cohorts": 10,
+      "spike_ratio": 3.0,
+      "low_activity_ratio": 0.4,
+      "window_min_installs": 150,
+      "concentration_top_share": 0.5,
+      "cpi_baseline_days": 28,
+      "cpi_anomaly_high": 1.5,
+      "cpi_anomaly_low": 0.6,
+      "tracking_gap_activity_lookback_days": 30,
+      "tracking_gap_recent_days": 7,
+      "tracking_gap_baseline_days": 28,
+      "tracking_gap_drop": 0.5,
+      "tracking_gap_min_run_days": 3
+    },
+    "forecast": {
+      "train_window_cohorts": 60,
+      "min_train_cohorts": 20,
+      "min_pooled_cohorts": 40,
+      "interval_alpha": 0.2,
+      "cohort_calibration_window": 100,
+      "cohort_min_calibration": 30,
+      "summary_days": 7,
+      "summary_calibration_window": 40,
+      "summary_min_calibration": 12
+    },
+    "backtest": {
+      "first_as_of_day": 7,
+      "last_as_of_day": 336,
+      "review_every_days": 7,
+      "scoring_as_of_day": 400
+    }
+  },
+  "backtest_seconds": 199.3,
+  "reviews": [
+    {
+      "as_of": "2025-01-13",
+      "issued": 0,
+      "withheld": {
+        "insufficient_training_history": 12
+      },
+      "summaries": 4,
+      "as_of_day": 7
+    },
+    {
+      "as_of": "2025-01-20",
+      "issued": 0,
+      "withheld": {
+        "insufficient_training_history": 31
+      },
+      "summaries": 5,
+      "as_of_day": 14
+    },
+    {
+      "as_of": "2025-01-27",
+      "issued": 0,
+      "withheld": {
+        "insufficient_training_history": 34,
+        "low_activity": 1
+      },
+      "summaries": 5,
+      "as_of_day": 21
+    },
+    {
+      "as_of": "2025-02-03",
+      "issued": 0,
+      "withheld": {
+        "insufficient_training_history": 33,
+        "revenue_spike": 2
+      },
+      "summaries": 5,
+      "as_of_day": 28
+    },
+    {
+      "as_of": "2025-02-10",
+      "issued": 0,
+      "withheld": {
+        "insufficient_training_history": 32,
+        "revenue_spike": 2,
+        "below_min_installs": 1
+      },
+      "summaries": 5,
+      "as_of_day": 35
+    },
+    {
+      "as_of": "2025-02-17",
+      "issued": 35,
+      "withheld": {},
+      "summaries": 5,
+      "as_of_day": 42
+    },
+    {
+      "as_of": "2025-02-24",
+      "issued": 29,
+      "withheld": {
+        "revenue_spike": 6
+      },
+      "summaries": 5,
+      "as_of_day": 49
+    },
+    {
+      "as_of": "2025-03-03",
+      "issued": 32,
+      "withheld": {
+        "revenue_spike": 3
+      },
+      "summaries": 5,
+      "as_of_day": 56
+    },
+    {
+      "as_of": "2025-03-10",
+      "issued": 32,
+      "withheld": {
+        "revenue_spike": 3
+      },
+      "summaries": 5,
+      "as_of_day": 63
+    },
+    {
+      "as_of": "2025-03-17",
+      "issued": 28,
+      "withheld": {
+        "revenue_spike": 6,
+        "below_min_installs": 1
+      },
+      "summaries": 5,
+      "as_of_day": 70
+    },
+    {
+      "as_of": "2025-03-24",
+      "issued": 32,
+      "withheld": {
+        "revenue_spike": 2,
+        "below_min_installs": 1
+      },
+      "summaries": 5,
+      "as_of_day": 77
+    },
+    {
+      "as_of": "2025-03-31",
+      "issued": 29,
+      "withheld": {
+        "revenue_spike": 6
+      },
+      "summaries": 5,
+      "as_of_day": 84
+    },
+    {
+      "as_of": "2025-04-07",
+      "issued": 28,
+      "withheld": {
+        "revenue_spike": 7
+      },
+      "summaries": 5,
+      "as_of_day": 91
+    },
+    {
+      "as_of": "2025-04-14",
+      "issued": 26,
+      "withheld": {
+        "revenue_spike": 8,
+        "below_min_installs": 1
+      },
+      "summaries": 5,
+      "as_of_day": 98
+    },
+    {
+      "as_of": "2025-04-21",
+      "issued": 29,
+      "withheld": {
+        "revenue_spike": 6
+      },
+      "summaries": 5,
+      "as_of_day": 105
+    },
+    {
+      "as_of": "2025-04-28",
+      "issued": 33,
+      "withheld": {
+        "revenue_spike": 2
+      },
+      "summaries": 5,
+      "as_of_day": 112
+    },
+    {
+      "as_of": "2025-05-05",
+      "issued": 31,
+      "withheld": {
+        "revenue_spike": 4
+      },
+      "summaries": 5,
+      "as_of_day": 119
+    },
+    {
+      "as_of": "2025-05-12",
+      "issued": 32,
+      "withheld": {
+        "revenue_spike": 3
+      },
+      "summaries": 5,
+      "as_of_day": 126
+    },
+    {
+      "as_of": "2025-05-19",
+      "issued": 31,
+      "withheld": {
+        "revenue_spike": 4
+      },
+      "summaries": 5,
+      "as_of_day": 133
+    },
+    {
+      "as_of": "2025-05-26",
+      "issued": 31,
+      "withheld": {
+        "revenue_spike": 4
+      },
+      "summaries": 5,
+      "as_of_day": 140
+    },
+    {
+      "as_of": "2025-06-02",
+      "issued": 30,
+      "withheld": {
+        "revenue_spike": 5
+      },
+      "summaries": 5,
+      "as_of_day": 147
+    },
+    {
+      "as_of": "2025-06-09",
+      "issued": 30,
+      "withheld": {
+        "revenue_spike": 4,
+        "below_min_installs": 1
+      },
+      "summaries": 5,
+      "as_of_day": 154
+    },
+    {
+      "as_of": "2025-06-16",
+      "issued": 32,
+      "withheld": {
+        "revenue_spike": 3
+      },
+      "summaries": 5,
+      "as_of_day": 161
+    },
+    {
+      "as_of": "2025-06-23",
+      "issued": 34,
+      "withheld": {
+        "revenue_spike": 1
+      },
+      "summaries": 5,
+      "as_of_day": 168
+    },
+    {
+      "as_of": "2025-06-30",
+      "issued": 33,
+      "withheld": {
+        "revenue_spike": 2
+      },
+      "summaries": 5,
+      "as_of_day": 175
+    },
+    {
+      "as_of": "2025-07-07",
+      "issued": 32,
+      "withheld": {
+        "revenue_spike": 2,
+        "below_min_installs": 1
+      },
+      "summaries": 5,
+      "as_of_day": 182
+    },
+    {
+      "as_of": "2025-07-14",
+      "issued": 29,
+      "withheld": {
+        "revenue_spike": 6
+      },
+      "summaries": 5,
+      "as_of_day": 189
+    },
+    {
+      "as_of": "2025-07-21",
+      "issued": 32,
+      "withheld": {
+        "revenue_spike": 3
+      },
+      "summaries": 5,
+      "as_of_day": 196
+    },
+    {
+      "as_of": "2025-07-28",
+      "issued": 30,
+      "withheld": {
+        "revenue_spike": 5
+      },
+      "summaries": 5,
+      "as_of_day": 203
+    },
+    {
+      "as_of": "2025-08-04",
+      "issued": 32,
+      "withheld": {
+        "revenue_spike": 2,
+        "below_min_installs": 1
+      },
+      "summaries": 5,
+      "as_of_day": 210
+    },
+    {
+      "as_of": "2025-08-11",
+      "issued": 33,
+      "withheld": {
+        "revenue_spike": 2
+      },
+      "summaries": 5,
+      "as_of_day": 217
+    },
+    {
+      "as_of": "2025-08-18",
+      "issued": 33,
+      "withheld": {
+        "revenue_spike": 2
+      },
+      "summaries": 5,
+      "as_of_day": 224
+    },
+    {
+      "as_of": "2025-08-25",
+      "issued": 30,
+      "withheld": {
+        "revenue_spike": 5
+      },
+      "summaries": 5,
+      "as_of_day": 231
+    },
+    {
+      "as_of": "2025-09-01",
+      "issued": 32,
+      "withheld": {
+        "revenue_spike": 3
+      },
+      "summaries": 5,
+      "as_of_day": 238
+    },
+    {
+      "as_of": "2025-09-08",
+      "issued": 32,
+      "withheld": {
+        "revenue_spike": 2,
+        "below_min_installs": 1
+      },
+      "summaries": 5,
+      "as_of_day": 245
+    },
+    {
+      "as_of": "2025-09-15",
+      "issued": 30,
+      "withheld": {
+        "revenue_spike": 5
+      },
+      "summaries": 5,
+      "as_of_day": 252
+    },
+    {
+      "as_of": "2025-09-22",
+      "issued": 32,
+      "withheld": {
+        "below_min_installs": 3
+      },
+      "summaries": 5,
+      "as_of_day": 259
+    },
+    {
+      "as_of": "2025-09-29",
+      "issued": 28,
+      "withheld": {
+        "revenue_spike": 5,
+        "below_min_installs": 2
+      },
+      "summaries": 5,
+      "as_of_day": 266
+    },
+    {
+      "as_of": "2025-10-06",
+      "issued": 34,
+      "withheld": {
+        "revenue_spike": 1
+      },
+      "summaries": 5,
+      "as_of_day": 273
+    },
+    {
+      "as_of": "2025-10-13",
+      "issued": 30,
+      "withheld": {
+        "revenue_spike": 5
+      },
+      "summaries": 5,
+      "as_of_day": 280
+    },
+    {
+      "as_of": "2025-10-20",
+      "issued": 34,
+      "withheld": {
+        "revenue_spike": 1
+      },
+      "summaries": 5,
+      "as_of_day": 287
+    },
+    {
+      "as_of": "2025-10-27",
+      "issued": 33,
+      "withheld": {
+        "revenue_spike": 2
+      },
+      "summaries": 5,
+      "as_of_day": 294
+    },
+    {
+      "as_of": "2025-11-03",
+      "issued": 32,
+      "withheld": {
+        "low_activity": 2,
+        "revenue_spike": 1
+      },
+      "summaries": 5,
+      "as_of_day": 301
+    },
+    {
+      "as_of": "2025-11-10",
+      "issued": 27,
+      "withheld": {
+        "revenue_spike": 3,
+        "low_activity": 5
+      },
+      "summaries": 5,
+      "as_of_day": 308
+    },
+    {
+      "as_of": "2025-11-17",
+      "issued": 31,
+      "withheld": {
+        "revenue_spike": 3,
+        "below_min_installs": 1
+      },
+      "summaries": 5,
+      "as_of_day": 315
+    },
+    {
+      "as_of": "2025-11-24",
+      "issued": 28,
+      "withheld": {
+        "revenue_spike": 1,
+        "below_min_installs": 6
+      },
+      "summaries": 5,
+      "as_of_day": 322
+    },
+    {
+      "as_of": "2025-12-01",
+      "issued": 30,
+      "withheld": {
+        "revenue_spike": 5
+      },
+      "summaries": 5,
+      "as_of_day": 329
+    },
+    {
+      "as_of": "2025-12-08",
+      "issued": 33,
+      "withheld": {
+        "revenue_spike": 2
+      },
+      "summaries": 5,
+      "as_of_day": 336
+    }
+  ],
+  "cohort_forecasts": {
+    "scoring_as_of": "2026-02-10",
+    "issued": 1334,
+    "scored": 1334,
+    "pending_outcome_not_in_storage": 0,
+    "ranges": {
+      "install_date": [
+        "2025-01-30",
+        "2025-12-03"
+      ],
+      "issued_as_of": [
+        "2025-02-17",
+        "2025-12-08"
+      ]
+    },
+    "overall": {
+      "n": 1334,
+      "sum_actual": 62525.965786999994,
+      "sum_forecast": 62155.93665936216,
+      "wape": 0.2822408120283612,
+      "bias": -0.005918007390695505,
+      "n_with_interval": 1022,
+      "coverage": 0.7710371819960861,
+      "interval_width_over_forecast": 0.8876262817740225
+    },
+    "overall_with_interval_only": {
+      "n": 1022,
+      "sum_actual": 48257.59929299999,
+      "sum_forecast": 48244.365065989594,
+      "wape": 0.28265494958063286,
+      "bias": -0.0002742413050855218,
+      "n_with_interval": 1022,
+      "coverage": 0.7710371819960861,
+      "interval_width_over_forecast": 0.8876262817740225
+    },
+    "reference_trailing_value_per_install_ignoring_d3": {
+      "n": 1334,
+      "sum_actual": 62525.965786999994,
+      "sum_forecast": 66962.63126306314,
+      "wape": 0.48938738373943824,
+      "bias": 0.07095716827752854
+    },
+    "by_method": {
+      "channel_multiplier": {
+        "n": 1264,
+        "sum_actual": 59451.616675,
+        "sum_forecast": 59516.00984091282,
+        "wape": 0.2807582787603666,
+        "bias": 0.0010831188370340036,
+        "n_with_interval": 1022,
+        "coverage": 0.7710371819960861,
+        "interval_width_over_forecast": 0.8876262817740225
+      },
+      "pooled_multiplier": {
+        "n": 70,
+        "sum_actual": 3074.349112,
+        "sum_forecast": 2639.926818449342,
+        "wape": 0.31090996974136204,
+        "bias": -0.14130545286967972,
+        "n_with_interval": 0
+      }
+    },
+    "by_channel": {
+      "applovin": {
+        "n": 270,
+        "sum_actual": 21673.243317999997,
+        "sum_forecast": 21904.5384582715,
+        "wape": 0.3048842521297385,
+        "bias": 0.01067192098929708,
+        "n_with_interval": 211,
+        "coverage": 0.7630331753554502,
+        "interval_width_over_forecast": 0.8193598524342455
+      },
+      "google_uac": {
+        "n": 267,
+        "sum_actual": 7844.108609,
+        "sum_forecast": 7819.191247421642,
+        "wape": 0.2720030364619885,
+        "bias": -0.003176570190495515,
+        "n_with_interval": 203,
+        "coverage": 0.8177339901477833,
+        "interval_width_over_forecast": 0.8734306674367655
+      },
+      "meta": {
+        "n": 275,
+        "sum_actual": 17670.949157000003,
+        "sum_forecast": 17208.77577363066,
+        "wape": 0.30210249561277064,
+        "bias": -0.026154417584652586,
+        "n_with_interval": 211,
+        "coverage": 0.7393364928909952,
+        "interval_width_over_forecast": 0.9457948928388116
+      },
+      "tiktok": {
+        "n": 259,
+        "sum_actual": 8279.24657,
+        "sum_forecast": 8373.21986810943,
+        "wape": 0.12108300623664846,
+        "bias": 0.011350464962590371,
+        "n_with_interval": 201,
+        "coverage": 0.7611940298507462,
+        "interval_width_over_forecast": 0.4072494616677026
+      },
+      "unity": {
+        "n": 263,
+        "sum_actual": 7058.418133000001,
+        "sum_forecast": 6850.211311928922,
+        "wape": 0.36339778457190414,
+        "bias": -0.029497660403207674,
+        "n_with_interval": 196,
+        "coverage": 0.7755102040816326,
+        "interval_width_over_forecast": 1.1733163865758096
+      }
+    },
+    "by_period": {
+      "P1 (2025-02-17..2025-04-28)": {
+        "n": 333,
+        "sum_actual": 15471.844794,
+        "sum_forecast": 15166.053031244659,
+        "wape": 0.2716769965334625,
+        "bias": -0.019764402165792592,
+        "n_with_interval": 27,
+        "coverage": 0.8148148148148148,
+        "interval_width_over_forecast": 0.8626755144774837
+      },
+      "P2 (2025-05-05..2025-07-14)": {
+        "n": 345,
+        "sum_actual": 16715.525691000003,
+        "sum_forecast": 16005.525637854678,
+        "wape": 0.28989145243332914,
+        "bias": -0.04247548454474281,
+        "n_with_interval": 339,
+        "coverage": 0.7905604719764012,
+        "interval_width_over_forecast": 0.9777342009131514
+      },
+      "P3 (2025-07-21..2025-09-29)": {
+        "n": 344,
+        "sum_actual": 16887.447118,
+        "sum_forecast": 17483.4133910225,
+        "wape": 0.257656804254721,
+        "bias": 0.0352904893710828,
+        "n_with_interval": 344,
+        "coverage": 0.7587209302325582,
+        "interval_width_over_forecast": 0.8807194611021862
+      },
+      "P4 (2025-10-06..2025-12-08)": {
+        "n": 312,
+        "sum_actual": 13451.148183999998,
+        "sum_forecast": 13500.94459924032,
+        "wape": 0.3157486109603254,
+        "bias": 0.0037020196758781247,
+        "n_with_interval": 312,
+        "coverage": 0.7596153846153846,
+        "interval_width_over_forecast": 0.8328980630424283
+      }
+    },
+    "by_channel_with_interval": {
+      "applovin": {
+        "n": 211,
+        "sum_actual": 16723.168105999997,
+        "sum_forecast": 17202.899423712755,
+        "wape": 0.3140714357573184,
+        "bias": 0.02868662891337153,
+        "n_with_interval": 211,
+        "coverage": 0.7630331753554502,
+        "interval_width_over_forecast": 0.8193598524342455
+      },
+      "google_uac": {
+        "n": 203,
+        "sum_actual": 5984.742611,
+        "sum_forecast": 5892.004750238097,
+        "wape": 0.2651418553085361,
+        "bias": -0.015495714150087193,
+        "n_with_interval": 203,
+        "coverage": 0.8177339901477833,
+        "interval_width_over_forecast": 0.8734306674367655
+      },
+      "meta": {
+        "n": 211,
+        "sum_actual": 13252.423575,
+        "sum_forecast": 12984.096836624993,
+        "wape": 0.30835456764009544,
+        "bias": -0.020247371120946635,
+        "n_with_interval": 211,
+        "coverage": 0.7393364928909952,
+        "interval_width_over_forecast": 0.9457948928388116
+      },
+      "tiktok": {
+        "n": 201,
+        "sum_actual": 6662.733763999999,
+        "sum_forecast": 6666.7782433837865,
+        "wape": 0.10557811539311145,
+        "bias": 0.0006070300160632693,
+        "n_with_interval": 201,
+        "coverage": 0.7611940298507462,
+        "interval_width_over_forecast": 0.4072494616677026
+      },
+      "unity": {
+        "n": 196,
+        "sum_actual": 5634.531237000001,
+        "sum_forecast": 5498.5858120299645,
+        "wape": 0.35695780495973584,
+        "bias": -0.024127193417143297,
+        "n_with_interval": 196,
+        "coverage": 0.7755102040816326,
+        "interval_width_over_forecast": 1.1733163865758096
+      }
+    },
+    "by_period_with_interval": {
+      "P1 (2025-02-17..2025-04-28)": {
+        "n": 27,
+        "sum_actual": 1329.6364629999998,
+        "sum_forecast": 1385.5832640619585,
+        "wape": 0.19684101757024886,
+        "bias": 0.04207676505480938,
+        "n_with_interval": 27,
+        "coverage": 0.8148148148148148,
+        "interval_width_over_forecast": 0.8626755144774837
+      },
+      "P2 (2025-05-05..2025-07-14)": {
+        "n": 339,
+        "sum_actual": 16589.367528,
+        "sum_forecast": 15874.423811664812,
+        "wape": 0.28814692791860663,
+        "bias": -0.043096502330693766,
+        "n_with_interval": 339,
+        "coverage": 0.7905604719764012,
+        "interval_width_over_forecast": 0.9777342009131514
+      },
+      "P3 (2025-07-21..2025-09-29)": {
+        "n": 344,
+        "sum_actual": 16887.447118,
+        "sum_forecast": 17483.4133910225,
+        "wape": 0.257656804254721,
+        "bias": 0.0352904893710828,
+        "n_with_interval": 344,
+        "coverage": 0.7587209302325582,
+        "interval_width_over_forecast": 0.8807194611021862
+      },
+      "P4 (2025-10-06..2025-12-08)": {
+        "n": 312,
+        "sum_actual": 13451.148183999998,
+        "sum_forecast": 13500.94459924032,
+        "wape": 0.3157486109603254,
+        "bias": 0.0037020196758781247,
+        "n_with_interval": 312,
+        "coverage": 0.7596153846153846,
+        "interval_width_over_forecast": 0.8328980630424283
+      }
+    },
+    "interval_unavailable_reasons": {
+      "insufficient_calibration_history": 242,
+      "non_standard_method": 70
+    },
+    "floor_adjustments": {
+      "point_forecasts_raised": 0,
+      "intervals_adjusted": 14,
+      "actual_below_observed_d3_floor": 0,
+      "any_interval_unordered": 0
+    },
+    "withheld": {
+      "below_min_installs": {
+        "cohorts": 20,
+        "matured_actual_d30_net_revenue": 1468.5970669999995,
+        "matured_cohorts": 20,
+        "by_channel": {
+          "tiktok": 13,
+          "google_uac": 4,
+          "unity": 3
+        }
+      },
+      "insufficient_training_history": {
+        "cohorts": 142,
+        "matured_actual_d30_net_revenue": 8954.418268,
+        "matured_cohorts": 142,
+        "by_channel": {
+          "applovin": 31,
+          "google_uac": 31,
+          "tiktok": 30,
+          "meta": 29,
+          "unity": 21
+        }
+      },
+      "low_activity": {
+        "cohorts": 8,
+        "matured_actual_d30_net_revenue": 266.35663,
+        "matured_cohorts": 8,
+        "by_channel": {
+          "google_uac": 7,
+          "tiktok": 1
+        }
+      },
+      "revenue_spike": {
+        "cohorts": 149,
+        "matured_actual_d30_net_revenue": 27583.949655999997,
+        "matured_cohorts": 149,
+        "by_channel": {
+          "unity": 38,
+          "applovin": 31,
+          "tiktok": 29,
+          "meta": 28,
+          "google_uac": 23
+        }
+      }
+    },
+    "withheld_total": 319,
+    "share_of_matured_d30_revenue_withheld": 0.3796983352281359
+  },
+  "weekly_summaries": {
+    "summaries": 239,
+    "scored": 215,
+    "pending_not_mature": 0,
+    "empty_no_included_cohorts": 24,
+    "ranges": {
+      "as_of": [
+        "2025-02-17",
+        "2025-12-08"
+      ],
+      "window_start": [
+        "2025-01-30",
+        "2025-11-27"
+      ],
+      "window_end": [
+        "2025-02-05",
+        "2025-12-03"
+      ]
+    },
+    "overall": {
+      "n": 215,
+      "sum_actual": 62525.965787,
+      "sum_forecast": 62155.93665936215,
+      "wape": 0.16527334649630068,
+      "bias": -0.005918007390695502,
+      "n_with_interval": 140,
+      "coverage": 0.6714285714285714,
+      "interval_width_over_forecast": 0.39841129913283235
+    },
+    "by_channel": {
+      "applovin": {
+        "n": 43,
+        "sum_actual": 21673.243318,
+        "sum_forecast": 21904.5384582715,
+        "wape": 0.2055989843461631,
+        "bias": 0.010671920989297092,
+        "n_with_interval": 28,
+        "coverage": 0.6785714285714286,
+        "interval_width_over_forecast": 0.464612204078066
+      },
+      "google_uac": {
+        "n": 43,
+        "sum_actual": 7844.108608999998,
+        "sum_forecast": 7819.191247421641,
+        "wape": 0.10244749729913943,
+        "bias": -0.0031765701904955335,
+        "n_with_interval": 28,
+        "coverage": 0.6428571428571429,
+        "interval_width_over_forecast": 0.27254469639321666
+      },
+      "meta": {
+        "n": 43,
+        "sum_actual": 17670.949157000003,
+        "sum_forecast": 17208.77577363066,
+        "wape": 0.1671557666874789,
+        "bias": -0.026154417584652607,
+        "n_with_interval": 28,
+        "coverage": 0.5714285714285714,
+        "interval_width_over_forecast": 0.3988815817917966
+      },
+      "tiktok": {
+        "n": 43,
+        "sum_actual": 8279.24657,
+        "sum_forecast": 8373.219868109432,
+        "wape": 0.07379666903187147,
+        "bias": 0.011350464962590394,
+        "n_with_interval": 28,
+        "coverage": 0.7857142857142857,
+        "interval_width_over_forecast": 0.2123930229193831
+      },
+      "unity": {
+        "n": 43,
+        "sum_actual": 7058.418133,
+        "sum_forecast": 6850.211311928922,
+        "wape": 0.21385636235934238,
+        "bias": -0.029497660403207688,
+        "n_with_interval": 28,
+        "coverage": 0.6785714285714286,
+        "interval_width_over_forecast": 0.6584345643232616
+      }
+    },
+    "flagged_by_quality_check": {
+      "n": 26,
+      "sum_actual": 4980.233931999999,
+      "sum_forecast": 4393.608642866317,
+      "wape": 0.1667300286198471,
+      "bias": -0.11779070966212683,
+      "n_with_interval": 16,
+      "coverage": 0.625,
+      "interval_width_over_forecast": 0.32633394731621057
+    },
+    "unflagged": {
+      "n": 189,
+      "sum_actual": 57545.73185499999,
+      "sum_forecast": 57762.32801649584,
+      "wape": 0.16514727949696004,
+      "bias": 0.003763896200705359,
+      "n_with_interval": 124,
+      "coverage": 0.6774193548387096,
+      "interval_width_over_forecast": 0.3988815817917966
+    },
+    "fully_decision_ready": {
+      "n": 215,
+      "sum_actual": 62525.965787,
+      "sum_forecast": 62155.93665936215,
+      "wape": 0.16527334649630068,
+      "bias": -0.005918007390695502,
+      "n_with_interval": 140,
+      "coverage": 0.6714285714285714,
+      "interval_width_over_forecast": 0.39841129913283235
+    },
+    "not_fully_decision_ready": {
+      "n": 0
+    },
+    "summaries_not_fully_decision_ready_total": 0,
+    "floor_adjustments": {
+      "intervals_adjusted": 9,
+      "actual_below_observed_d3_floor": 0,
+      "any_interval_unordered": 0
+    }
+  },
+  "sensitivity_no_spike_exclusion": {
+    "note": "NOT the chosen configuration. Revenue-spike exclusion disabled (spike_ratio = 1e12); training also keeps those cohorts.",
+    "all_cohorts": {
+      "n": 1479,
+      "sum_actual": 89532.038668,
+      "sum_forecast": 89842.8025410944,
+      "wape": 0.27262157827396966,
+      "bias": 0.003470979525516591,
+      "n_with_interval": 1125,
+      "coverage": 0.7546666666666667,
+      "interval_width_over_forecast": 0.9727082842555604
+    },
+    "on_cohorts_the_main_run_withheld_for_spike": {
+      "n": 145,
+      "sum_actual": 27006.072881,
+      "sum_forecast": 31917.79999577097,
+      "wape": 0.2969013603278448,
+      "bias": 0.18187491148432017,
+      "n_with_interval": 97,
+      "coverage": 0.5154639175257731,
+      "interval_width_over_forecast": 0.9874419236616887
+    },
+    "on_cohorts_the_main_run_issued": {
+      "n": 1334,
+      "sum_actual": 62525.965786999994,
+      "sum_forecast": 57925.00254532341,
+      "wape": 0.26213471005164657,
+      "bias": -0.07358484085396069,
+      "n_with_interval": 1028,
+      "coverage": 0.7772373540856031,
+      "interval_width_over_forecast": 0.9669538851783076
+    }
+  }
+}

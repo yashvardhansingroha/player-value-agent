@@ -1,0 +1,802 @@
+{
+ "mode": "live",
+ "model": "openai/gpt-oss-120b",
+ "as_of": "2025-11-10",
+ "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+ "status": "agent_proposal",
+ "fallback_reason": null,
+ "fallback_detail": null,
+ "repairs_used": 0,
+ "labels": [
+  "MODE: LIVE (provider groq, model openai/gpt-oss-120b).",
+  "STAGED FINALIZATION: investigation with local tools, then a separate tool-free request constrained by a strict JSON schema (it fixes the SHAPE only). Every claim, population label, action, budget and experiment gate was checked by the unchanged validator against the evidence log.",
+  "AGENT PROPOSAL: validated against the tool evidence, the permitted substitutions, the hard constraints and the experiment-plan gate (0 repair attempt(s) used).",
+  "MISSING EVIDENCE: google_uac: insufficient_evidence (quality_check_failed:tracking_gap; forecast_covers_too_little_of_the_window).",
+  "APPROVAL REQUIRED: this is a proposal only. Nothing changes until a person approves it and it is applied in the sandbox ledger; any increase also needs its plan registered there."
+ ],
+ "validation": {
+  "ok": true,
+  "errors": [],
+  "plans_to_register": [],
+  "note": "valid = traceable, inside the policy's permitted actions and the hard constraints; it does not make the decision good"
+ },
+ "fallback_validation": null,
+ "tool_calls": [
+  {
+   "tool_call_id": "tc_001",
+   "tool": "get_review_overview",
+   "args": {},
+   "status": "ok",
+   "output_sha256": "78be07d60bab596d7e4e3ca90293ae79f05cf640f9be68ede108d760a19dda53"
+  },
+  {
+   "tool_call_id": "tc_002",
+   "tool": "get_policy_decision",
+   "args": {
+    "channel": "applovin"
+   },
+   "status": "ok",
+   "output_sha256": "917b3846d83c3bf74d8bb0e5bcb1a13af645e1427530ade81f9478715549768c"
+  },
+  {
+   "tool_call_id": "tc_003",
+   "tool": "get_policy_decision",
+   "args": {
+    "channel": "google_uac"
+   },
+   "status": "ok",
+   "output_sha256": "f9aa49a906f72b0e6d0ed9a107a641b76f72d7962bca33cb529e4b42db9104d8"
+  },
+  {
+   "tool_call_id": "tc_004",
+   "tool": "get_policy_decision",
+   "args": {
+    "channel": "meta"
+   },
+   "status": "ok",
+   "output_sha256": "cc70f975df5d0c80a711773ba8b0d9bca35a52e79f0031168b70ea77fd17ba52"
+  },
+  {
+   "tool_call_id": "tc_005",
+   "tool": "get_policy_decision",
+   "args": {
+    "channel": "tiktok"
+   },
+   "status": "ok",
+   "output_sha256": "267881854e693b5f73d017c4e9b1fc7780434b6ba6acedfac9f3fa4d3053fcb8"
+  },
+  {
+   "tool_call_id": "tc_006",
+   "tool": "get_policy_decision",
+   "args": {
+    "channel": "unity"
+   },
+   "status": "ok",
+   "output_sha256": "ee2bf6c7db939d64ad0a3fbeedeb8c64accf5dc7bb76997cd1294c8d3a5dea9c"
+  }
+ ],
+ "evidence_trail": [
+  {
+   "tool_call_id": "tc_001",
+   "tool": "get_review_overview",
+   "args": {},
+   "channel": null,
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "channel_review_status",
+    "ledger": "sandbox_ledger_state"
+   },
+   "result": {
+    "as_of": "2025-11-10",
+    "ledger": {
+     "version": 1,
+     "total_budget": 406.2,
+     "ceiling": 487.43999999999994,
+     "reserve": 81.23999999999995
+    },
+    "channels": {
+     "applovin": {
+      "current_budget": 101.7,
+      "policy_action": "hold",
+      "policy_proposed_budget": 101.7,
+      "completeness_passed": true,
+      "failed_stages": [
+       "quality:revenue_concentration",
+       "excluded_population"
+      ]
+     },
+     "google_uac": {
+      "current_budget": 72.1,
+      "policy_action": "insufficient_evidence",
+      "policy_proposed_budget": 72.1,
+      "completeness_passed": true,
+      "failed_stages": [
+       "quality:tracking_gap",
+       "quality:revenue_concentration",
+       "forecast_coverage"
+      ]
+     },
+     "meta": {
+      "current_budget": 90.7,
+      "policy_action": "hold",
+      "policy_proposed_budget": 90.7,
+      "completeness_passed": true,
+      "failed_stages": []
+     },
+     "tiktok": {
+      "current_budget": 85.0,
+      "policy_action": "decrease",
+      "policy_proposed_budget": 76.5,
+      "completeness_passed": true,
+      "failed_stages": []
+     },
+     "unity": {
+      "current_budget": 56.7,
+      "policy_action": "hold",
+      "policy_proposed_budget": 56.7,
+      "completeness_passed": true,
+      "failed_stages": [
+       "excluded_population"
+      ]
+     }
+    }
+   },
+   "output_sha256": "78be07d60bab596d7e4e3ca90293ae79f05cf640f9be68ede108d760a19dda53"
+  },
+  {
+   "tool_call_id": "tc_002",
+   "tool": "get_policy_decision",
+   "args": {
+    "channel": "applovin"
+   },
+   "channel": "applovin",
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "policy_decision"
+   },
+   "result": {
+    "action": "hold",
+    "current_budget": 101.7,
+    "proposed_budget": 101.7,
+    "reasons": [
+     "average D30 ROAS 0.461 is below the target 0.519, so (diminishing-returns heuristic) there is no basis for an increase",
+     "decrease blocked: excluded_cohorts_withheld_for_revenue_spike: included-only average ROAS is biased low"
+    ],
+    "increase_candidate": null,
+    "note": "deterministic policy output BEFORE the experiment-design gate; an increase test still needs an adequate plan (see plan_experiment)"
+   },
+   "output_sha256": "917b3846d83c3bf74d8bb0e5bcb1a13af645e1427530ade81f9478715549768c"
+  },
+  {
+   "tool_call_id": "tc_003",
+   "tool": "get_policy_decision",
+   "args": {
+    "channel": "google_uac"
+   },
+   "channel": "google_uac",
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "policy_decision"
+   },
+   "result": {
+    "action": "insufficient_evidence",
+    "current_budget": 72.1,
+    "proposed_budget": 72.1,
+    "reasons": [
+     "quality_check_failed:tracking_gap",
+     "forecast_covers_too_little_of_the_window"
+    ],
+    "increase_candidate": null,
+    "note": "deterministic policy output BEFORE the experiment-design gate; an increase test still needs an adequate plan (see plan_experiment)"
+   },
+   "output_sha256": "f9aa49a906f72b0e6d0ed9a107a641b76f72d7962bca33cb529e4b42db9104d8"
+  },
+  {
+   "tool_call_id": "tc_004",
+   "tool": "get_policy_decision",
+   "args": {
+    "channel": "meta"
+   },
+   "channel": "meta",
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "policy_decision"
+   },
+   "result": {
+    "action": "hold",
+    "current_budget": 90.7,
+    "proposed_budget": 90.7,
+    "reasons": [
+     "lower bound of model-estimated finite-step marginal D30 ROAS 0.317 is below the target 0.453 (point estimate 0.412)"
+    ],
+    "increase_candidate": {
+     "s1": 99.77000000000001,
+     "lower": 0.31703327605392123,
+     "point": 0.41242937847685146
+    },
+    "note": "deterministic policy output BEFORE the experiment-design gate; an increase test still needs an adequate plan (see plan_experiment)"
+   },
+   "output_sha256": "cc70f975df5d0c80a711773ba8b0d9bca35a52e79f0031168b70ea77fd17ba52"
+  },
+  {
+   "tool_call_id": "tc_005",
+   "tool": "get_policy_decision",
+   "args": {
+    "channel": "tiktok"
+   },
+   "channel": "tiktok",
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "policy_decision"
+   },
+   "result": {
+    "action": "decrease",
+    "current_budget": 85.0,
+    "proposed_budget": 76.5,
+    "reasons": [
+     "upper bound of average D30 ROAS 0.262 is below the target 0.893 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+    ],
+    "increase_candidate": null,
+    "note": "deterministic policy output BEFORE the experiment-design gate; an increase test still needs an adequate plan (see plan_experiment)"
+   },
+   "output_sha256": "267881854e693b5f73d017c4e9b1fc7780434b6ba6acedfac9f3fa4d3053fcb8"
+  },
+  {
+   "tool_call_id": "tc_006",
+   "tool": "get_policy_decision",
+   "args": {
+    "channel": "unity"
+   },
+   "channel": "unity",
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "policy_decision"
+   },
+   "result": {
+    "action": "hold",
+    "current_budget": 56.7,
+    "proposed_budget": 56.7,
+    "reasons": [
+     "average D30 ROAS 0.311 is below the target 0.518, so (diminishing-returns heuristic) there is no basis for an increase",
+     "decrease blocked: excluded_cohorts_withheld_for_revenue_spike: included-only average ROAS is biased low"
+    ],
+    "increase_candidate": null,
+    "note": "deterministic policy output BEFORE the experiment-design gate; an increase test still needs an adequate plan (see plan_experiment)"
+   },
+   "output_sha256": "ee2bf6c7db939d64ad0a3fbeedeb8c64accf5dc7bb76997cd1294c8d3a5dea9c"
+  }
+ ],
+ "model_turns": [
+  {
+   "text": null,
+   "tool_calls": [
+    {
+     "name": "get_review_overview",
+     "args": {}
+    }
+   ],
+   "stage": "investigation"
+  },
+  {
+   "text": null,
+   "tool_calls": [
+    {
+     "name": "get_policy_decision",
+     "args": {
+      "channel": "applovin"
+     }
+    }
+   ],
+   "stage": "investigation"
+  },
+  {
+   "text": null,
+   "tool_calls": [
+    {
+     "name": "get_policy_decision",
+     "args": {
+      "channel": "google_uac"
+     }
+    }
+   ],
+   "stage": "investigation"
+  },
+  {
+   "text": null,
+   "tool_calls": [
+    {
+     "name": "get_policy_decision",
+     "args": {
+      "channel": "meta"
+     }
+    }
+   ],
+   "stage": "investigation"
+  },
+  {
+   "text": null,
+   "tool_calls": [
+    {
+     "name": "get_policy_decision",
+     "args": {
+      "channel": "tiktok"
+     }
+    }
+   ],
+   "stage": "investigation"
+  },
+  {
+   "text": "",
+   "tool_calls": [],
+   "stage": "investigation"
+  },
+  {
+   "text": null,
+   "tool_calls": [
+    {
+     "name": "get_policy_decision",
+     "args": {
+      "channel": "unity"
+     }
+    }
+   ],
+   "stage": "investigation"
+  },
+  {
+   "text": "DONEDONE",
+   "tool_calls": [],
+   "stage": "investigation"
+  },
+  {
+   "text": "{\n  \"summary\": \"All channels are kept at their current budgets except TikTok, which is decreased to the policy\u2011proposed amount.\",\n  \"summary_claims\": [\n    {\"tool_call_id\":\"tc_001\",\"field\":\"channels.applovin.policy_action\",\"value\":\"hold\",\"population\":\"channel_review_status\",\"channel\":\"applovin\"},\n    {\"tool_call_id\":\"tc_001\",\"field\":\"channels.tiktok.policy_action\",\"value\":\"decrease\",\"population\":\"channel_review_status\",\"channel\":\"tiktok\"},\n    {\"tool_call_id\":\"tc_001\",\"field\":\"channels.google_uac.policy_action\",\"value\":\"insufficient_evidence\",\"population\":\"channel_review_status\",\"channel\":\"google_uac\"},\n    {\"tool_call_id\":\"tc_001\",\"field\":\"channels.meta.policy_action\",\"value\":\"hold\",\"population\":\"channel_review_status\",\"channel\":\"meta\"},\n    {\"tool_call_id\":\"tc_001\",\"field\":\"channels.unity.policy_action\",\"value\":\"hold\",\"population\":\"channel_review_status\",\"channel\":\"unity\"}\n  ],\n  \"items\": [\n    {\n      \"channel\": \"applovin\",\n      \"action\": \"hold\",\n      \"new_budget\": 101.7,\n      \"qualification\": \"none\",\n      \"experiment_plan_hash\": null,\n      \"reason\": \"Policy decision is hold with no increase candidate.\",\n      \"claims\": [\n        {\"tool_call_id\":\"tc_002\",\"field\":\"action\",\"value\":\"hold\",\"population\":\"policy_decision\",\"channel\":\"applovin\"},\n        {\"tool_call_id\":\"tc_002\",\"field\":\"current_budget\",\"value\":101.7,\"population\":\"policy_decision\",\"channel\":\"applovin\"}\n      ]\n    },\n    {\n      \"channel\": \"google_uac\",\n      \"action\": \"insufficient_evidence\",\n      \"new_budget\": 72.1,\n      \"qualification\": \"none\",\n      \"experiment_plan_hash\": null,\n      \"reason\": \"Policy decision reports insufficient evidence; cannot change budget.\",\n      \"claims\": [\n        {\"tool_call_id\":\"tc_003\",\"field\":\"action\",\"value\":\"insufficient_evidence\",\"population\":\"policy_decision\",\"channel\":\"google_uac\"},\n        {\"tool_call_id\":\"tc_003\",\"field\":\"current_budget\",\"value\":72.1,\"population\":\"policy_decision\",\"channel\":\"google_uac\"}\n      ]\n    },\n    {\n      \"channel\": \"meta\",\n      \"action\": \"hold\",\n      \"new_budget\": 90.7,\n      \"qualification\": \"none\",\n      \"experiment_plan_hash\": null,\n      \"reason\": \"Policy decision is hold with no increase candidate.\",\n      \"claims\": [\n        {\"tool_call_id\":\"tc_004\",\"field\":\"action\",\"value\":\"hold\",\"population\":\"policy_decision\",\"channel\":\"meta\"},\n        {\"tool_call_id\":\"tc_004\",\"field\":\"current_budget\",\"value\":90.7,\"population\":\"policy_decision\",\"channel\":\"meta\"}\n      ]\n    },\n    {\n      \"channel\": \"tiktok\",\n      \"action\": \"decrease\",\n      \"new_budget\": 76.5,\n      \"qualification\": \"none\",\n      \"experiment_plan_hash\": null,\n      \"reason\": \"Policy decision recommends decrease to the proposed budget.\",\n      \"claims\": [\n        {\"tool_call_id\":\"tc_005\",\"field\":\"action\",\"value\":\"decrease\",\"population\":\"policy_decision\",\"channel\":\"tiktok\"},\n        {\"tool_call_id\":\"tc_005\",\"field\":\"proposed_budget\",\"value\":76.5,\"population\":\"policy_decision\",\"channel\":\"tiktok\"},\n        {\"tool_call_id\":\"tc_005\",\"field\":\"current_budget\",\"value\":85.0,\"population\":\"policy_decision\",\"channel\":\"tiktok\"}\n      ]\n    },\n    {\n      \"channel\": \"unity\",\n      \"action\": \"hold\",\n      \"new_budget\": 56.7,\n      \"qualification\": \"none\",\n      \"experiment_plan_hash\": null,\n      \"reason\": \"Policy decision is hold with no increase candidate.\",\n      \"claims\": [\n        {\"tool_call_id\":\"tc_006\",\"field\":\"action\",\"value\":\"hold\",\"population\":\"policy_decision\",\"channel\":\"unity\"},\n        {\"tool_call_id\":\"tc_006\",\"field\":\"current_budget\",\"value\":56.7,\"population\":\"policy_decision\",\"channel\":\"unity\"}\n      ]\n    }\n  ]\n}",
+   "tool_calls": [],
+   "stage": "finalization"
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 22961,
+  "output_tokens": 1447
+ },
+ "plans_to_register": [],
+ "provider": "groq",
+ "rejections": [],
+ "finalization": "staged_structured",
+ "stages": {
+  "investigation": {
+   "model_requests": 8,
+   "tool_calls_by_model": 6,
+   "evidence_nudges": 1,
+   "ended_by": "model_done",
+   "required_evidence_complete": true,
+   "missing_required_at_end": [],
+   "usage": {
+    "prompt_tokens": 20215,
+    "output_tokens": 344
+   }
+  },
+  "finalization": {
+   "requests": 1,
+   "provider_accepted_schema_and_returned_text": true,
+   "text_parsed_as_json_object": true,
+   "validator_ok": true,
+   "repairs_used": 0,
+   "usage": {
+    "prompt_tokens": 2746,
+    "output_tokens": 1103
+   }
+  }
+ },
+ "proposal": {
+  "proposal_id": "P-2025-11-10-1eeddcfad7-AGENT",
+  "as_of": "2025-11-10",
+  "ledger_version": 1,
+  "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+  "source": "agent",
+  "items": [
+   {
+    "channel": "applovin",
+    "action": "hold",
+    "current_budget": 101.7,
+    "new_budget": 101.7,
+    "qualification": "none",
+    "experiment_plan_hash": null,
+    "reason": "Policy decision is hold with no increase candidate.",
+    "evidence": {
+     "claims": [
+      {
+       "tool_call_id": "tc_002",
+       "field": "action",
+       "value": "hold",
+       "population": "policy_decision",
+       "channel": "applovin"
+      },
+      {
+       "tool_call_id": "tc_002",
+       "field": "current_budget",
+       "value": 101.7,
+       "population": "policy_decision",
+       "channel": "applovin"
+      }
+     ],
+     "run_labels": [
+      "MODE: LIVE (provider groq, model openai/gpt-oss-120b).",
+      "STAGED FINALIZATION: investigation with local tools, then a separate tool-free request constrained by a strict JSON schema (it fixes the SHAPE only). Every claim, population label, action, budget and experiment gate was checked by the unchanged validator against the evidence log.",
+      "AGENT PROPOSAL: validated against the tool evidence, the permitted substitutions, the hard constraints and the experiment-plan gate (0 repair attempt(s) used).",
+      "MISSING EVIDENCE: google_uac: insufficient_evidence (quality_check_failed:tracking_gap; forecast_covers_too_little_of_the_window).",
+      "APPROVAL REQUIRED: this is a proposal only. Nothing changes until a person approves it and it is applied in the sandbox ledger; any increase also needs its plan registered there."
+     ]
+    }
+   },
+   {
+    "channel": "google_uac",
+    "action": "insufficient_evidence",
+    "current_budget": 72.1,
+    "new_budget": 72.1,
+    "qualification": "none",
+    "experiment_plan_hash": null,
+    "reason": "Policy decision reports insufficient evidence; cannot change budget.",
+    "evidence": {
+     "claims": [
+      {
+       "tool_call_id": "tc_003",
+       "field": "action",
+       "value": "insufficient_evidence",
+       "population": "policy_decision",
+       "channel": "google_uac"
+      },
+      {
+       "tool_call_id": "tc_003",
+       "field": "current_budget",
+       "value": 72.1,
+       "population": "policy_decision",
+       "channel": "google_uac"
+      }
+     ],
+     "run_labels": [
+      "MODE: LIVE (provider groq, model openai/gpt-oss-120b).",
+      "STAGED FINALIZATION: investigation with local tools, then a separate tool-free request constrained by a strict JSON schema (it fixes the SHAPE only). Every claim, population label, action, budget and experiment gate was checked by the unchanged validator against the evidence log.",
+      "AGENT PROPOSAL: validated against the tool evidence, the permitted substitutions, the hard constraints and the experiment-plan gate (0 repair attempt(s) used).",
+      "MISSING EVIDENCE: google_uac: insufficient_evidence (quality_check_failed:tracking_gap; forecast_covers_too_little_of_the_window).",
+      "APPROVAL REQUIRED: this is a proposal only. Nothing changes until a person approves it and it is applied in the sandbox ledger; any increase also needs its plan registered there."
+     ]
+    }
+   },
+   {
+    "channel": "meta",
+    "action": "hold",
+    "current_budget": 90.7,
+    "new_budget": 90.7,
+    "qualification": "none",
+    "experiment_plan_hash": null,
+    "reason": "Policy decision is hold with no increase candidate.",
+    "evidence": {
+     "claims": [
+      {
+       "tool_call_id": "tc_004",
+       "field": "action",
+       "value": "hold",
+       "population": "policy_decision",
+       "channel": "meta"
+      },
+      {
+       "tool_call_id": "tc_004",
+       "field": "current_budget",
+       "value": 90.7,
+       "population": "policy_decision",
+       "channel": "meta"
+      }
+     ],
+     "run_labels": [
+      "MODE: LIVE (provider groq, model openai/gpt-oss-120b).",
+      "STAGED FINALIZATION: investigation with local tools, then a separate tool-free request constrained by a strict JSON schema (it fixes the SHAPE only). Every claim, population label, action, budget and experiment gate was checked by the unchanged validator against the evidence log.",
+      "AGENT PROPOSAL: validated against the tool evidence, the permitted substitutions, the hard constraints and the experiment-plan gate (0 repair attempt(s) used).",
+      "MISSING EVIDENCE: google_uac: insufficient_evidence (quality_check_failed:tracking_gap; forecast_covers_too_little_of_the_window).",
+      "APPROVAL REQUIRED: this is a proposal only. Nothing changes until a person approves it and it is applied in the sandbox ledger; any increase also needs its plan registered there."
+     ]
+    }
+   },
+   {
+    "channel": "tiktok",
+    "action": "decrease",
+    "current_budget": 85.0,
+    "new_budget": 76.5,
+    "qualification": "none",
+    "experiment_plan_hash": null,
+    "reason": "Policy decision recommends decrease to the proposed budget.",
+    "evidence": {
+     "claims": [
+      {
+       "tool_call_id": "tc_005",
+       "field": "action",
+       "value": "decrease",
+       "population": "policy_decision",
+       "channel": "tiktok"
+      },
+      {
+       "tool_call_id": "tc_005",
+       "field": "proposed_budget",
+       "value": 76.5,
+       "population": "policy_decision",
+       "channel": "tiktok"
+      },
+      {
+       "tool_call_id": "tc_005",
+       "field": "current_budget",
+       "value": 85.0,
+       "population": "policy_decision",
+       "channel": "tiktok"
+      }
+     ],
+     "run_labels": [
+      "MODE: LIVE (provider groq, model openai/gpt-oss-120b).",
+      "STAGED FINALIZATION: investigation with local tools, then a separate tool-free request constrained by a strict JSON schema (it fixes the SHAPE only). Every claim, population label, action, budget and experiment gate was checked by the unchanged validator against the evidence log.",
+      "AGENT PROPOSAL: validated against the tool evidence, the permitted substitutions, the hard constraints and the experiment-plan gate (0 repair attempt(s) used).",
+      "MISSING EVIDENCE: google_uac: insufficient_evidence (quality_check_failed:tracking_gap; forecast_covers_too_little_of_the_window).",
+      "APPROVAL REQUIRED: this is a proposal only. Nothing changes until a person approves it and it is applied in the sandbox ledger; any increase also needs its plan registered there."
+     ]
+    }
+   },
+   {
+    "channel": "unity",
+    "action": "hold",
+    "current_budget": 56.7,
+    "new_budget": 56.7,
+    "qualification": "none",
+    "experiment_plan_hash": null,
+    "reason": "Policy decision is hold with no increase candidate.",
+    "evidence": {
+     "claims": [
+      {
+       "tool_call_id": "tc_006",
+       "field": "action",
+       "value": "hold",
+       "population": "policy_decision",
+       "channel": "unity"
+      },
+      {
+       "tool_call_id": "tc_006",
+       "field": "current_budget",
+       "value": 56.7,
+       "population": "policy_decision",
+       "channel": "unity"
+      }
+     ],
+     "run_labels": [
+      "MODE: LIVE (provider groq, model openai/gpt-oss-120b).",
+      "STAGED FINALIZATION: investigation with local tools, then a separate tool-free request constrained by a strict JSON schema (it fixes the SHAPE only). Every claim, population label, action, budget and experiment gate was checked by the unchanged validator against the evidence log.",
+      "AGENT PROPOSAL: validated against the tool evidence, the permitted substitutions, the hard constraints and the experiment-plan gate (0 repair attempt(s) used).",
+      "MISSING EVIDENCE: google_uac: insufficient_evidence (quality_check_failed:tracking_gap; forecast_covers_too_little_of_the_window).",
+      "APPROVAL REQUIRED: this is a proposal only. Nothing changes until a person approves it and it is applied in the sandbox ledger; any increase also needs its plan registered there."
+     ]
+    }
+   }
+  ],
+  "synthetic_notice": "SYNTHETIC DATA. SANDBOX LEDGER: nothing here moves real money."
+ },
+ "request_log": [
+  {
+   "prompt_tokens_estimated": 2224,
+   "max_completion_tokens": 2600,
+   "attempts": 1,
+   "slept_seconds": 0.0,
+   "stage": "investigation",
+   "provider_note_sha256": "044d951878c90cb1",
+   "status": 200,
+   "headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-requests": "999",
+    "x-ratelimit-remaining-tokens": "5720",
+    "x-ratelimit-reset-requests": "1m26.4s",
+    "x-ratelimit-reset-tokens": "17.099s"
+   },
+   "observed_chars_per_token": 4.994,
+   "usage": {
+    "prompt_tokens": 1781,
+    "completion_tokens": 32,
+    "total_tokens": 1813
+   },
+   "finish_reason": "tool_calls"
+  },
+  {
+   "prompt_tokens_estimated": 2218,
+   "max_completion_tokens": 2600,
+   "attempts": 1,
+   "slept_seconds": 0.0,
+   "stage": "investigation",
+   "provider_note_sha256": "044d951878c90cb1",
+   "status": 200,
+   "headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-requests": "998",
+    "x-ratelimit-remaining-tokens": "3582",
+    "x-ratelimit-reset-requests": "2m52.8s",
+    "x-ratelimit-reset-tokens": "33.134s"
+   },
+   "observed_chars_per_token": 4.863,
+   "usage": {
+    "prompt_tokens": 2163,
+    "completion_tokens": 85,
+    "total_tokens": 2248
+   },
+   "finish_reason": "tool_calls"
+  },
+  {
+   "prompt_tokens_estimated": 2478,
+   "max_completion_tokens": 2600,
+   "attempts": 1,
+   "slept_seconds": 11.27,
+   "stage": "investigation",
+   "provider_note_sha256": "044d951878c90cb1",
+   "status": 200,
+   "headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-requests": "997",
+    "x-ratelimit-remaining-tokens": "2853",
+    "x-ratelimit-reset-requests": "4m19.2s",
+    "x-ratelimit-reset-tokens": "38.602s"
+   },
+   "observed_chars_per_token": 4.884,
+   "usage": {
+    "prompt_tokens": 2343,
+    "completion_tokens": 41,
+    "total_tokens": 2384
+   },
+   "finish_reason": "tool_calls"
+  },
+  {
+   "prompt_tokens_estimated": 2638,
+   "max_completion_tokens": 2600,
+   "attempts": 1,
+   "slept_seconds": 17.94,
+   "stage": "investigation",
+   "provider_note_sha256": "044d951878c90cb1",
+   "status": 200,
+   "headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-requests": "996",
+    "x-ratelimit-remaining-tokens": "4206",
+    "x-ratelimit-reset-requests": "5m45.6s",
+    "x-ratelimit-reset-tokens": "28.455s"
+   },
+   "observed_chars_per_token": 4.927,
+   "usage": {
+    "prompt_tokens": 2484,
+    "completion_tokens": 35,
+    "total_tokens": 2519
+   },
+   "finish_reason": "tool_calls"
+  },
+  {
+   "prompt_tokens_estimated": 2805,
+   "max_completion_tokens": 2600,
+   "attempts": 1,
+   "slept_seconds": 9.04,
+   "stage": "investigation",
+   "provider_note_sha256": "044d951878c90cb1",
+   "status": 200,
+   "headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-requests": "995",
+    "x-ratelimit-remaining-tokens": "2808",
+    "x-ratelimit-reset-requests": "7m12s",
+    "x-ratelimit-reset-tokens": "38.94s"
+   },
+   "observed_chars_per_token": 4.925,
+   "usage": {
+    "prompt_tokens": 2665,
+    "completion_tokens": 33,
+    "total_tokens": 2698
+   },
+   "finish_reason": "tool_calls"
+  },
+  {
+   "prompt_tokens_estimated": 2985,
+   "max_completion_tokens": 2600,
+   "attempts": 1,
+   "slept_seconds": 20.88,
+   "stage": "investigation",
+   "provider_note_sha256": "044d951878c90cb1",
+   "status": 200,
+   "headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-requests": "994",
+    "x-ratelimit-remaining-tokens": "2454",
+    "x-ratelimit-reset-requests": "8m38.4s",
+    "x-ratelimit-reset-tokens": "41.595s"
+   },
+   "observed_chars_per_token": 4.95,
+   "usage": {
+    "prompt_tokens": 2821,
+    "completion_tokens": 25,
+    "total_tokens": 2846
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "prompt_tokens_estimated": 3037,
+   "max_completion_tokens": 2600,
+   "attempts": 1,
+   "slept_seconds": 23.92,
+   "stage": "investigation",
+   "provider_note_sha256": "044d951878c90cb1",
+   "status": 200,
+   "headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-requests": "993",
+    "x-ratelimit-remaining-tokens": "4207",
+    "x-ratelimit-reset-requests": "10m4.8s",
+    "x-ratelimit-reset-tokens": "28.447s"
+   },
+   "observed_chars_per_token": 4.94,
+   "usage": {
+    "prompt_tokens": 2891,
+    "completion_tokens": 27,
+    "total_tokens": 2918
+   },
+   "finish_reason": "tool_calls"
+  },
+  {
+   "prompt_tokens_estimated": 3239,
+   "max_completion_tokens": 2600,
+   "attempts": 1,
+   "slept_seconds": 12.29,
+   "stage": "investigation",
+   "provider_note_sha256": "044d951878c90cb1",
+   "status": 200,
+   "headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-requests": "992",
+    "x-ratelimit-remaining-tokens": "2815",
+    "x-ratelimit-reset-requests": "11m31.2s",
+    "x-ratelimit-reset-tokens": "38.887s"
+   },
+   "observed_chars_per_token": 4.955,
+   "usage": {
+    "prompt_tokens": 3067,
+    "completion_tokens": 66,
+    "total_tokens": 3133
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "prompt_tokens_estimated": 2532,
+   "max_completion_tokens": 2600,
+   "attempts": 1,
+   "slept_seconds": 17.43,
+   "stage": "finalization",
+   "provider_note_sha256": "08b34aba590688ad",
+   "schema_sha256": "7c8a74952f83d5bf",
+   "status": 200,
+   "headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-requests": "991",
+    "x-ratelimit-remaining-tokens": "2404",
+    "x-ratelimit-reset-requests": "12m57.599s",
+    "x-ratelimit-reset-tokens": "41.97s"
+   },
+   "observed_chars_per_token": 4.339,
+   "usage": {
+    "prompt_tokens": 2746,
+    "completion_tokens": 1103,
+    "total_tokens": 3849
+   },
+   "finish_reason": "stop",
+   "content_is_json": true
+  }
+ ]
+}

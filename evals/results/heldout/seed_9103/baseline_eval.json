@@ -1,0 +1,2057 @@
+{
+ "seed": 9103,
+ "label": "HELD-OUT EVALUATION OF THE FROZEN DETERMINISTIC RULES-ONLY BASELINE on one additional synthetic seed. ALL DATA IS SYNTHETIC. It says nothing about any live agent.",
+ "forecasting": {
+  "scoring_as_of": "2026-02-10",
+  "table": [
+   {
+    "level": "cohort",
+    "group": "overall",
+    "n": 1345,
+    "wape": 0.26018324235827817,
+    "bias": -0.010073829853470169,
+    "n_with_interval": 1026,
+    "coverage": 0.7680311890838206,
+    "interval_width_over_forecast_mean": 0.8028624402417665,
+    "interval_width_over_forecast_median": 0.8449271913068949
+   },
+   {
+    "level": "weekly_summary",
+    "group": "overall",
+    "n": 215,
+    "wape": 0.13702754856153995,
+    "bias": -0.010073829853470178,
+    "n_with_interval": 140,
+    "coverage": 0.7857142857142857,
+    "interval_width_over_forecast_mean": 0.37878372163324525,
+    "interval_width_over_forecast_median": 0.44048879945844976
+   },
+   {
+    "level": "cohort",
+    "group": "channel applovin",
+    "n": 279,
+    "wape": 0.2690975360284005,
+    "bias": -0.030977486691854655,
+    "n_with_interval": 217,
+    "coverage": 0.7649769585253456,
+    "interval_width_over_forecast_mean": 0.9122517300287478,
+    "interval_width_over_forecast_median": 0.8979043889911748
+   },
+   {
+    "level": "cohort",
+    "group": "channel google_uac",
+    "n": 268,
+    "wape": 0.2747118877199047,
+    "bias": -0.0064100228699372755,
+    "n_with_interval": 207,
+    "coverage": 0.7971014492753623,
+    "interval_width_over_forecast_mean": 0.8045627868193177,
+    "interval_width_over_forecast_median": 0.8059347410871764
+   },
+   {
+    "level": "cohort",
+    "group": "channel meta",
+    "n": 275,
+    "wape": 0.28697653560644726,
+    "bias": -0.0019352716114754297,
+    "n_with_interval": 210,
+    "coverage": 0.7857142857142857,
+    "interval_width_over_forecast_mean": 0.957175865559862,
+    "interval_width_over_forecast_median": 0.9223324070560133
+   },
+   {
+    "level": "cohort",
+    "group": "channel tiktok",
+    "n": 258,
+    "wape": 0.1409553259355912,
+    "bias": 0.03627950279180068,
+    "n_with_interval": 194,
+    "coverage": 0.7422680412371134,
+    "interval_width_over_forecast_mean": 0.37813336231722566,
+    "interval_width_over_forecast_median": 0.39186472430503083
+   },
+   {
+    "level": "cohort",
+    "group": "channel unity",
+    "n": 265,
+    "wape": 0.2740590625535262,
+    "bias": -0.02899731122733146,
+    "n_with_interval": 198,
+    "coverage": 0.7474747474747475,
+    "interval_width_over_forecast_mean": 0.9336815017328408,
+    "interval_width_over_forecast_median": 0.9504779214867618
+   },
+   {
+    "level": "weekly_summary",
+    "group": "channel applovin",
+    "n": 43,
+    "wape": 0.13936406049659103,
+    "bias": -0.030977486691854694,
+    "n_with_interval": 28,
+    "coverage": 0.7857142857142857,
+    "interval_width_over_forecast_mean": 0.4477141044275242,
+    "interval_width_over_forecast_median": 0.4603636060738098
+   },
+   {
+    "level": "weekly_summary",
+    "group": "channel google_uac",
+    "n": 43,
+    "wape": 0.13799208494585702,
+    "bias": -0.006410022869937257,
+    "n_with_interval": 28,
+    "coverage": 0.75,
+    "interval_width_over_forecast_mean": 0.28348451121614066,
+    "interval_width_over_forecast_median": 0.28502116975392644
+   },
+   {
+    "level": "weekly_summary",
+    "group": "channel meta",
+    "n": 43,
+    "wape": 0.15597032965116994,
+    "bias": -0.0019352716114754286,
+    "n_with_interval": 28,
+    "coverage": 0.7142857142857143,
+    "interval_width_over_forecast_mean": 0.44667986012942995,
+    "interval_width_over_forecast_median": 0.4515943554807883
+   },
+   {
+    "level": "weekly_summary",
+    "group": "channel tiktok",
+    "n": 43,
+    "wape": 0.08435093403938056,
+    "bias": 0.036279502791800665,
+    "n_with_interval": 28,
+    "coverage": 0.8571428571428571,
+    "interval_width_over_forecast_mean": 0.17217719419161906,
+    "interval_width_over_forecast_median": 0.16617474271120874
+   },
+   {
+    "level": "weekly_summary",
+    "group": "channel unity",
+    "n": 43,
+    "wape": 0.13213109095041672,
+    "bias": -0.02899731122733146,
+    "n_with_interval": 28,
+    "coverage": 0.8214285714285714,
+    "interval_width_over_forecast_mean": 0.5438629382015124,
+    "interval_width_over_forecast_median": 0.5430229663645483
+   },
+   {
+    "level": "cohort",
+    "group": "method channel_multiplier",
+    "n": 1281,
+    "wape": 0.25700605203129173,
+    "bias": -0.006647231922581247,
+    "n_with_interval": 1026,
+    "coverage": 0.7680311890838206,
+    "interval_width_over_forecast_mean": 0.8028624402417665,
+    "interval_width_over_forecast_median": 0.8449271913068949
+   },
+   {
+    "level": "cohort",
+    "group": "method pooled_multiplier",
+    "n": 64,
+    "wape": 0.3192018909923796,
+    "bias": -0.07372540828606894,
+    "n_with_interval": 0,
+    "coverage": null,
+    "interval_width_over_forecast_mean": null,
+    "interval_width_over_forecast_median": null
+   },
+   {
+    "level": "weekly_summary",
+    "group": "method channel_multiplier",
+    "n": 204,
+    "wape": 0.13394144400888308,
+    "bias": -0.0066472319225812536,
+    "n_with_interval": 140,
+    "coverage": 0.7857142857142857,
+    "interval_width_over_forecast_mean": 0.37878372163324525,
+    "interval_width_over_forecast_median": 0.44048879945844976
+   },
+   {
+    "level": "weekly_summary",
+    "group": "method pooled_multiplier",
+    "n": 11,
+    "wape": 0.19435421190125649,
+    "bias": -0.07372540828606894,
+    "n_with_interval": 0,
+    "coverage": null,
+    "interval_width_over_forecast_mean": null,
+    "interval_width_over_forecast_median": null
+   },
+   {
+    "level": "cohort",
+    "group": "period P1 (2025-02-17..2025-04-28)",
+    "n": 342,
+    "wape": 0.28012707406831455,
+    "bias": -0.05701088490476979,
+    "n_with_interval": 28,
+    "coverage": 0.6428571428571429,
+    "interval_width_over_forecast_mean": 0.8453423712232997,
+    "interval_width_over_forecast_median": 0.9337062799631839
+   },
+   {
+    "level": "cohort",
+    "group": "period P2 (2025-05-05..2025-07-14)",
+    "n": 346,
+    "wape": 0.23276000703880864,
+    "bias": 0.028599449343410247,
+    "n_with_interval": 341,
+    "coverage": 0.7448680351906158,
+    "interval_width_over_forecast_mean": 0.8877721657251807,
+    "interval_width_over_forecast_median": 0.954723919724003
+   },
+   {
+    "level": "cohort",
+    "group": "period P3 (2025-07-21..2025-09-29)",
+    "n": 342,
+    "wape": 0.2547123760003585,
+    "bias": -0.03347687906286973,
+    "n_with_interval": 342,
+    "coverage": 0.7923976608187134,
+    "interval_width_over_forecast_mean": 0.7591404695062703,
+    "interval_width_over_forecast_median": 0.8066321553135141
+   },
+   {
+    "level": "cohort",
+    "group": "period P4 (2025-10-06..2025-12-08)",
+    "n": 315,
+    "wape": 0.2765763544058358,
+    "bias": 0.029728411472736284,
+    "n_with_interval": 315,
+    "coverage": 0.7777777777777778,
+    "interval_width_over_forecast_mean": 0.7546378673345043,
+    "interval_width_over_forecast_median": 0.8335823130527938
+   },
+   {
+    "level": "weekly_summary",
+    "group": "period P1 (2025-02-17..2025-04-28)",
+    "n": 55,
+    "wape": 0.15124325718541337,
+    "bias": -0.057010884904769785,
+    "n_with_interval": 0,
+    "coverage": null,
+    "interval_width_over_forecast_mean": null,
+    "interval_width_over_forecast_median": null
+   },
+   {
+    "level": "weekly_summary",
+    "group": "period P2 (2025-05-05..2025-07-14)",
+    "n": 55,
+    "wape": 0.11480663542410158,
+    "bias": 0.028599449343410233,
+    "n_with_interval": 35,
+    "coverage": 0.8,
+    "interval_width_over_forecast_mean": 0.3780090053285626,
+    "interval_width_over_forecast_median": 0.3714808599832881
+   },
+   {
+    "level": "weekly_summary",
+    "group": "period P3 (2025-07-21..2025-09-29)",
+    "n": 55,
+    "wape": 0.1351383340847809,
+    "bias": -0.03347687906286971,
+    "n_with_interval": 55,
+    "coverage": 0.8,
+    "interval_width_over_forecast_mean": 0.38308725145844064,
+    "interval_width_over_forecast_median": 0.4412146470401064
+   },
+   {
+    "level": "weekly_summary",
+    "group": "period P4 (2025-10-06..2025-12-08)",
+    "n": 50,
+    "wape": 0.14960519456932572,
+    "bias": 0.029728411472736273,
+    "n_with_interval": 50,
+    "coverage": 0.76,
+    "interval_width_over_forecast_mean": 0.37459214023880816,
+    "interval_width_over_forecast_median": 0.453163175733152
+   }
+  ],
+  "breakdown_applicability": {
+   "cohort": {
+    "overall": "applies",
+    "by_channel": "applies",
+    "by_method": "applies",
+    "by_period": "applies"
+   },
+   "weekly_summary": {
+    "overall": "applies",
+    "by_channel": "applies",
+    "by_method": "applies, DERIVED: the weekly_summary store has no method column, so a summary's method is the method of its included cohorts (0 of 239 summaries combine cohorts forecast by more than one method; those would be grouped as 'mixed')",
+    "by_period": "applies (four groups of equal numbers of review dates, the cohort scorer's convention)"
+   }
+  },
+  "groups_without_any_interval_so_coverage_and_width_are_not_applicable": [
+   "cohort / method pooled_multiplier",
+   "weekly_summary / method pooled_multiplier",
+   "weekly_summary / period P1 (2025-02-17..2025-04-28)"
+  ],
+  "independent_width_check": {
+   "n_with_interval": 1026,
+   "mean_width_over_forecast": 0.8028624402417665,
+   "median_width_over_forecast": 0.8449271913068949,
+   "scorer_mean": 0.8028624402417665,
+   "scorer_median": 0.8449271913068949,
+   "mean_matches_scorer": true,
+   "median_matches_scorer": true,
+   "mean_differs_from_median": true
+  },
+  "summaries_with_mixed_methods": [
+   0,
+   239
+  ],
+  "cohort_accounting": {
+   "issued": 1345,
+   "scored": 1345,
+   "pending_outcome_not_in_storage": 0,
+   "withheld_total": 308,
+   "share_of_matured_d30_revenue_withheld": 0.34448399888524045
+  },
+  "summary_accounting": {
+   "summaries": 239,
+   "scored": 215,
+   "pending_not_mature": 0,
+   "empty_no_included_cohorts": 24,
+   "fully_decision_ready": {
+    "n": 215,
+    "sum_actual": 62684.79940399999,
+    "sum_forecast": 62053.32340040519,
+    "wape": 0.13702754856153995,
+    "bias": -0.010073829853470178,
+    "n_with_interval": 140,
+    "coverage": 0.7857142857142857,
+    "interval_width_over_forecast_mean": 0.37878372163324525,
+    "interval_width_over_forecast_median": 0.44048879945844976,
+    "interval_width_over_forecast": 0.44048879945844976
+   },
+   "not_fully_decision_ready": {
+    "n": 0
+   }
+  },
+  "reference_baseline_ignoring_d3": {
+   "n": 1345,
+   "sum_actual": 62684.799404,
+   "sum_forecast": 65588.70095703594,
+   "wape": 0.44251082165262035,
+   "bias": 0.04632545019918574
+  },
+  "withheld_by_reason": {
+   "below_min_installs": {
+    "cohorts": 23,
+    "matured_actual_d30_net_revenue": 1718.629471,
+    "matured_cohorts": 23,
+    "by_channel": {
+     "tiktok": 16,
+     "unity": 6,
+     "google_uac": 1
+    }
+   },
+   "insufficient_training_history": {
+    "cohorts": 143,
+    "matured_actual_d30_net_revenue": 7482.420807,
+    "matured_cohorts": 143,
+    "by_channel": {
+     "meta": 31,
+     "google_uac": 30,
+     "tiktok": 30,
+     "applovin": 29,
+     "unity": 23
+    }
+   },
+   "low_activity": {
+    "cohorts": 7,
+    "matured_actual_d30_net_revenue": 56.870577,
+    "matured_cohorts": 7,
+    "by_channel": {
+     "google_uac": 7
+    }
+   },
+   "revenue_spike": {
+    "cohorts": 135,
+    "matured_actual_d30_net_revenue": 23683.930039999996,
+    "matured_cohorts": 135,
+    "by_channel": {
+     "unity": 31,
+     "tiktok": 28,
+     "google_uac": 26,
+     "meta": 26,
+     "applovin": 24
+    }
+   }
+  },
+  "coverage_nominal": 0.8
+ },
+ "policy_primary": {
+  "rows": [
+   {
+    "scenario": "cpi_spike",
+    "channel": "google_uac",
+    "day": 259,
+    "date": "2025-09-22",
+    "action": "decrease",
+    "class": "forbidden",
+    "ideal": "hold",
+    "acceptable": "insufficient_evidence",
+    "forbidden": "increase_test/decrease",
+    "reason": "upper bound of average D30 ROAS 0.307 is below the target 0.547 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   },
+   {
+    "scenario": "cpi_spike",
+    "channel": "google_uac",
+    "day": 266,
+    "date": "2025-09-29",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold",
+    "acceptable": "insufficient_evidence",
+    "forbidden": "increase_test/decrease",
+    "reason": "average D30 ROAS 0.316 is below the target 0.547, so (diminishing-returns heuristic) there is no basis for an increase; decrease blocked: excluded_cohorts_withh"
+   },
+   {
+    "scenario": "delayed_reporting",
+    "channel": "unity",
+    "day": 245,
+    "date": "2025-09-08",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold/insufficient_evidence",
+    "acceptable": "increase_test",
+    "forbidden": "decrease",
+    "reason": "an increase would be considered but is blocked: quality_check_failed:revenue_concentration"
+   },
+   {
+    "scenario": "delayed_reporting",
+    "channel": "unity",
+    "day": 252,
+    "date": "2025-09-15",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold/insufficient_evidence",
+    "acceptable": "increase_test",
+    "forbidden": "decrease",
+    "reason": "lower bound of model-estimated finite-step marginal D30 ROAS 0.236 is below the target 0.440 (point estimate 0.324)"
+   },
+   {
+    "scenario": "delayed_reporting",
+    "channel": "unity",
+    "day": 259,
+    "date": "2025-09-22",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold/insufficient_evidence",
+    "acceptable": "increase_test",
+    "forbidden": "decrease",
+    "reason": "lower bound of model-estimated finite-step marginal D30 ROAS 0.229 is below the target 0.449 (point estimate 0.312)"
+   },
+   {
+    "scenario": "delayed_reporting",
+    "channel": "unity",
+    "day": 266,
+    "date": "2025-09-29",
+    "action": "decrease",
+    "class": "forbidden",
+    "ideal": "hold/insufficient_evidence",
+    "acceptable": "increase_test",
+    "forbidden": "decrease",
+    "reason": "upper bound of average D30 ROAS 0.353 is below the target 0.454 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   },
+   {
+    "scenario": "delayed_reporting",
+    "channel": "unity",
+    "day": 273,
+    "date": "2025-10-06",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold/insufficient_evidence",
+    "acceptable": "increase_test",
+    "forbidden": "decrease",
+    "reason": "average D30 ROAS 0.434 is below the target 0.464, so (diminishing-returns heuristic) there is no basis for an increase; but its upper bound 0.570 is not below t"
+   },
+   {
+    "scenario": "delayed_reporting",
+    "channel": "unity",
+    "day": 280,
+    "date": "2025-10-13",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold/insufficient_evidence",
+    "acceptable": "increase_test",
+    "forbidden": "decrease",
+    "reason": "average D30 ROAS 0.381 is below the target 0.468, so (diminishing-returns heuristic) there is no basis for an increase; but its upper bound 0.496 is not below t"
+   },
+   {
+    "scenario": "delayed_reporting",
+    "channel": "unity",
+    "day": 287,
+    "date": "2025-10-20",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold/insufficient_evidence",
+    "acceptable": "increase_test",
+    "forbidden": "decrease",
+    "reason": "average D30 ROAS 0.448 is below the target 0.469, so (diminishing-returns heuristic) there is no basis for an increase; decrease blocked: excluded_cohorts_withh"
+   },
+   {
+    "scenario": "delayed_reporting",
+    "channel": "unity",
+    "day": 294,
+    "date": "2025-10-27",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold/insufficient_evidence",
+    "acceptable": "increase_test",
+    "forbidden": "decrease",
+    "reason": "lower bound of model-estimated finite-step marginal D30 ROAS 0.177 is below the target 0.471 (point estimate 0.252)"
+   },
+   {
+    "scenario": "delayed_reporting",
+    "channel": "unity",
+    "day": 301,
+    "date": "2025-11-03",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold/insufficient_evidence",
+    "acceptable": "increase_test",
+    "forbidden": "decrease",
+    "reason": "average D30 ROAS 0.261 is below the target 0.479, so (diminishing-returns heuristic) there is no basis for an increase; decrease blocked: excluded_cohorts_withh"
+   },
+   {
+    "scenario": "delayed_reporting",
+    "channel": "unity",
+    "day": 308,
+    "date": "2025-11-10",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold/insufficient_evidence",
+    "acceptable": "increase_test",
+    "forbidden": "decrease",
+    "reason": "average D30 ROAS 0.419 is below the target 0.455, so (diminishing-returns heuristic) there is no basis for an increase; but its upper bound 0.572 is not below t"
+   },
+   {
+    "scenario": "delayed_reporting",
+    "channel": "unity",
+    "day": 315,
+    "date": "2025-11-17",
+    "action": "decrease",
+    "class": "forbidden",
+    "ideal": "hold/insufficient_evidence",
+    "acceptable": "increase_test",
+    "forbidden": "decrease",
+    "reason": "upper bound of average D30 ROAS 0.325 is below the target 0.517 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   },
+   {
+    "scenario": "delayed_reporting",
+    "channel": "unity",
+    "day": 322,
+    "date": "2025-11-24",
+    "action": "decrease",
+    "class": "forbidden",
+    "ideal": "hold/insufficient_evidence",
+    "acceptable": "increase_test",
+    "forbidden": "decrease",
+    "reason": "upper bound of average D30 ROAS 0.372 is below the target 0.521 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   },
+   {
+    "scenario": "delayed_reporting",
+    "channel": "unity",
+    "day": 329,
+    "date": "2025-12-01",
+    "action": "decrease",
+    "class": "forbidden",
+    "ideal": "hold/insufficient_evidence",
+    "acceptable": "increase_test",
+    "forbidden": "decrease",
+    "reason": "upper bound of average D30 ROAS 0.344 is below the target 0.525 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   },
+   {
+    "scenario": "delayed_reporting",
+    "channel": "unity",
+    "day": 336,
+    "date": "2025-12-08",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold/insufficient_evidence",
+    "acceptable": "increase_test",
+    "forbidden": "decrease",
+    "reason": "average D30 ROAS 0.239 is below the target 0.529, so (diminishing-returns heuristic) there is no basis for an increase; decrease blocked: excluded_cohorts_withh"
+   },
+   {
+    "scenario": "front_loaded",
+    "channel": "tiktok",
+    "day": 245,
+    "date": "2025-09-08",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold/decrease",
+    "acceptable": "insufficient_evidence",
+    "forbidden": "increase_test",
+    "reason": "average D30 ROAS 0.301 is below the target 0.899, so (diminishing-returns heuristic) there is no basis for an increase; decrease blocked: excluded_cohorts_withh"
+   },
+   {
+    "scenario": "front_loaded",
+    "channel": "tiktok",
+    "day": 252,
+    "date": "2025-09-15",
+    "action": "decrease",
+    "class": "ideal",
+    "ideal": "hold/decrease",
+    "acceptable": "insufficient_evidence",
+    "forbidden": "increase_test",
+    "reason": "upper bound of average D30 ROAS 0.327 is below the target 0.887 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   },
+   {
+    "scenario": "front_loaded",
+    "channel": "tiktok",
+    "day": 259,
+    "date": "2025-09-22",
+    "action": "insufficient_evidence",
+    "class": "acceptable",
+    "ideal": "hold/decrease",
+    "acceptable": "insufficient_evidence",
+    "forbidden": "increase_test",
+    "reason": "forecast_covers_too_little_of_the_window"
+   },
+   {
+    "scenario": "front_loaded",
+    "channel": "tiktok",
+    "day": 266,
+    "date": "2025-09-29",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold/decrease",
+    "acceptable": "insufficient_evidence",
+    "forbidden": "increase_test",
+    "reason": "average D30 ROAS 0.543 is below the target 0.882, so (diminishing-returns heuristic) there is no basis for an increase; decrease blocked: excluded_cohorts_withh"
+   },
+   {
+    "scenario": "front_loaded",
+    "channel": "tiktok",
+    "day": 273,
+    "date": "2025-10-06",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold/decrease",
+    "acceptable": "insufficient_evidence",
+    "forbidden": "increase_test",
+    "reason": "average D30 ROAS 0.307 is below the target 0.882, so (diminishing-returns heuristic) there is no basis for an increase; decrease blocked: excluded_cohorts_withh"
+   },
+   {
+    "scenario": "front_loaded",
+    "channel": "tiktok",
+    "day": 280,
+    "date": "2025-10-13",
+    "action": "decrease",
+    "class": "ideal",
+    "ideal": "hold/decrease",
+    "acceptable": "insufficient_evidence",
+    "forbidden": "increase_test",
+    "reason": "upper bound of average D30 ROAS 0.444 is below the target 0.884 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   },
+   {
+    "scenario": "front_loaded",
+    "channel": "tiktok",
+    "day": 287,
+    "date": "2025-10-20",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold/decrease",
+    "acceptable": "insufficient_evidence",
+    "forbidden": "increase_test",
+    "reason": "average D30 ROAS 0.561 is below the target 0.878, so (diminishing-returns heuristic) there is no basis for an increase; decrease blocked: excluded_cohorts_withh"
+   },
+   {
+    "scenario": "front_loaded",
+    "channel": "tiktok",
+    "day": 294,
+    "date": "2025-10-27",
+    "action": "decrease",
+    "class": "ideal",
+    "ideal": "hold/decrease",
+    "acceptable": "insufficient_evidence",
+    "forbidden": "increase_test",
+    "reason": "upper bound of average D30 ROAS 0.416 is below the target 0.878 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   },
+   {
+    "scenario": "front_loaded",
+    "channel": "tiktok",
+    "day": 301,
+    "date": "2025-11-03",
+    "action": "decrease",
+    "class": "ideal",
+    "ideal": "hold/decrease",
+    "acceptable": "insufficient_evidence",
+    "forbidden": "increase_test",
+    "reason": "upper bound of average D30 ROAS 0.462 is below the target 0.880 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   },
+   {
+    "scenario": "saturating_imperfect_curve",
+    "channel": "applovin",
+    "day": 245,
+    "date": "2025-09-08",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold",
+    "acceptable": "increase_test/insufficient_evidence",
+    "forbidden": "decrease",
+    "reason": "an increase would be considered but is blocked: quality_check_failed:revenue_concentration"
+   },
+   {
+    "scenario": "saturating_imperfect_curve",
+    "channel": "applovin",
+    "day": 252,
+    "date": "2025-09-15",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold",
+    "acceptable": "increase_test/insufficient_evidence",
+    "forbidden": "decrease",
+    "reason": "lower bound of model-estimated finite-step marginal D30 ROAS 0.330 is below the target 0.524 (point estimate 0.444)"
+   },
+   {
+    "scenario": "saturating_imperfect_curve",
+    "channel": "applovin",
+    "day": 259,
+    "date": "2025-09-22",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold",
+    "acceptable": "increase_test/insufficient_evidence",
+    "forbidden": "decrease",
+    "reason": "lower bound of model-estimated finite-step marginal D30 ROAS 0.362 is below the target 0.521 (point estimate 0.485)"
+   },
+   {
+    "scenario": "saturating_imperfect_curve",
+    "channel": "applovin",
+    "day": 266,
+    "date": "2025-09-29",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold",
+    "acceptable": "increase_test/insufficient_evidence",
+    "forbidden": "decrease",
+    "reason": "lower bound of model-estimated finite-step marginal D30 ROAS 0.259 is below the target 0.514 (point estimate 0.343)"
+   },
+   {
+    "scenario": "saturating_imperfect_curve",
+    "channel": "applovin",
+    "day": 273,
+    "date": "2025-10-06",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold",
+    "acceptable": "increase_test/insufficient_evidence",
+    "forbidden": "decrease",
+    "reason": "lower bound of model-estimated finite-step marginal D30 ROAS 0.241 is below the target 0.513 (point estimate 0.316)"
+   },
+   {
+    "scenario": "saturating_imperfect_curve",
+    "channel": "applovin",
+    "day": 280,
+    "date": "2025-10-13",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold",
+    "acceptable": "increase_test/insufficient_evidence",
+    "forbidden": "decrease",
+    "reason": "lower bound of model-estimated finite-step marginal D30 ROAS 0.336 is below the target 0.497 (point estimate 0.451)"
+   },
+   {
+    "scenario": "saturating_imperfect_curve",
+    "channel": "applovin",
+    "day": 287,
+    "date": "2025-10-20",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold",
+    "acceptable": "increase_test/insufficient_evidence",
+    "forbidden": "decrease",
+    "reason": "lower bound of model-estimated finite-step marginal D30 ROAS 0.342 is below the target 0.498 (point estimate 0.464)"
+   },
+   {
+    "scenario": "saturating_imperfect_curve",
+    "channel": "applovin",
+    "day": 294,
+    "date": "2025-10-27",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold",
+    "acceptable": "increase_test/insufficient_evidence",
+    "forbidden": "decrease",
+    "reason": "lower bound of model-estimated finite-step marginal D30 ROAS 0.237 is below the target 0.507 (point estimate 0.319)"
+   },
+   {
+    "scenario": "saturating_imperfect_curve",
+    "channel": "applovin",
+    "day": 301,
+    "date": "2025-11-03",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold",
+    "acceptable": "increase_test/insufficient_evidence",
+    "forbidden": "decrease",
+    "reason": "lower bound of model-estimated finite-step marginal D30 ROAS 0.215 is below the target 0.509 (point estimate 0.290)"
+   },
+   {
+    "scenario": "saturating_imperfect_curve",
+    "channel": "applovin",
+    "day": 308,
+    "date": "2025-11-10",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold",
+    "acceptable": "increase_test/insufficient_evidence",
+    "forbidden": "decrease",
+    "reason": "average D30 ROAS 0.453 is below the target 0.510, so (diminishing-returns heuristic) there is no basis for an increase; but its upper bound 0.580 is not below t"
+   },
+   {
+    "scenario": "saturating_imperfect_curve",
+    "channel": "applovin",
+    "day": 315,
+    "date": "2025-11-17",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold",
+    "acceptable": "increase_test/insufficient_evidence",
+    "forbidden": "decrease",
+    "reason": "lower bound of model-estimated finite-step marginal D30 ROAS 0.222 is below the target 0.505 (point estimate 0.299)"
+   },
+   {
+    "scenario": "saturating_imperfect_curve",
+    "channel": "applovin",
+    "day": 322,
+    "date": "2025-11-24",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold",
+    "acceptable": "increase_test/insufficient_evidence",
+    "forbidden": "decrease",
+    "reason": "lower bound of model-estimated finite-step marginal D30 ROAS 0.255 is below the target 0.507 (point estimate 0.343)"
+   },
+   {
+    "scenario": "saturating_imperfect_curve",
+    "channel": "applovin",
+    "day": 329,
+    "date": "2025-12-01",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold",
+    "acceptable": "increase_test/insufficient_evidence",
+    "forbidden": "decrease",
+    "reason": "lower bound of model-estimated finite-step marginal D30 ROAS 0.237 is below the target 0.506 (point estimate 0.319)"
+   },
+   {
+    "scenario": "saturating_imperfect_curve",
+    "channel": "applovin",
+    "day": 336,
+    "date": "2025-12-08",
+    "action": "hold",
+    "class": "ideal",
+    "ideal": "hold",
+    "acceptable": "increase_test/insufficient_evidence",
+    "forbidden": "decrease",
+    "reason": "average D30 ROAS 0.403 is below the target 0.503, so (diminishing-returns heuristic) there is no basis for an increase; decrease blocked: excluded_cohorts_withh"
+   },
+   {
+    "scenario": "steady_winner",
+    "channel": "meta",
+    "day": 252,
+    "date": "2025-09-15",
+    "action": "hold",
+    "class": "acceptable",
+    "ideal": "increase_test",
+    "acceptable": "hold",
+    "forbidden": "decrease",
+    "reason": "an increase would be considered but is blocked: quality_check_failed:revenue_concentration"
+   },
+   {
+    "scenario": "steady_winner",
+    "channel": "meta",
+    "day": 259,
+    "date": "2025-09-22",
+    "action": "hold",
+    "class": "acceptable",
+    "ideal": "increase_test",
+    "acceptable": "hold",
+    "forbidden": "decrease",
+    "reason": "lower bound of model-estimated finite-step marginal D30 ROAS 0.437 is below the target 0.481 (point estimate 0.563)"
+   },
+   {
+    "scenario": "steady_winner",
+    "channel": "meta",
+    "day": 266,
+    "date": "2025-09-29",
+    "action": "increase_test",
+    "class": "ideal",
+    "ideal": "increase_test",
+    "acceptable": "hold",
+    "forbidden": "decrease",
+    "reason": "lower bound of model-estimated finite-step marginal D30 ROAS 0.502 is at or above the target 0.482; this is a bounded TEST that needs a pre-registered experimen"
+   },
+   {
+    "scenario": "steady_winner",
+    "channel": "meta",
+    "day": 273,
+    "date": "2025-10-06",
+    "action": "hold",
+    "class": "acceptable",
+    "ideal": "increase_test",
+    "acceptable": "hold",
+    "forbidden": "decrease",
+    "reason": "lower bound of model-estimated finite-step marginal D30 ROAS 0.360 is below the target 0.481 (point estimate 0.467)"
+   },
+   {
+    "scenario": "tiny_sample_whale",
+    "channel": "tiktok",
+    "day": 322,
+    "date": "2025-11-24",
+    "action": "insufficient_evidence",
+    "class": "ideal",
+    "ideal": "insufficient_evidence",
+    "acceptable": "hold",
+    "forbidden": "increase_test/decrease",
+    "reason": "quality_check_failed:window_min_installs; forecast_covers_too_little_of_the_window"
+   },
+   {
+    "scenario": "tiny_sample_whale",
+    "channel": "tiktok",
+    "day": 329,
+    "date": "2025-12-01",
+    "action": "decrease",
+    "class": "forbidden",
+    "ideal": "insufficient_evidence",
+    "acceptable": "hold",
+    "forbidden": "increase_test/decrease",
+    "reason": "upper bound of average D30 ROAS 0.262 is below the target 0.873 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   },
+   {
+    "scenario": "tracking_outage",
+    "channel": "google_uac",
+    "day": 308,
+    "date": "2025-11-10",
+    "action": "insufficient_evidence",
+    "class": "ideal",
+    "ideal": "insufficient_evidence",
+    "acceptable": "hold",
+    "forbidden": "decrease/increase_test",
+    "reason": "quality_check_failed:tracking_gap; forecast_covers_too_little_of_the_window"
+   },
+   {
+    "scenario": "tracking_outage",
+    "channel": "google_uac",
+    "day": 315,
+    "date": "2025-11-17",
+    "action": "hold",
+    "class": "acceptable",
+    "ideal": "insufficient_evidence",
+    "acceptable": "hold",
+    "forbidden": "decrease/increase_test",
+    "reason": "average D30 ROAS 0.270 is below the target 0.528, so (diminishing-returns heuristic) there is no basis for an increase; decrease blocked: excluded_cohorts_withh"
+   },
+   {
+    "scenario": "tracking_outage",
+    "channel": "google_uac",
+    "day": 322,
+    "date": "2025-11-24",
+    "action": "decrease",
+    "class": "forbidden",
+    "ideal": "insufficient_evidence",
+    "acceptable": "hold",
+    "forbidden": "decrease/increase_test",
+    "reason": "upper bound of average D30 ROAS 0.292 is below the target 0.523 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   }
+  ],
+  "per_scenario": [
+   {
+    "scenario": "cpi_spike",
+    "n_scored": 2,
+    "ideal": 1,
+    "acceptable": 0,
+    "forbidden": 1,
+    "unlisted": 0,
+    "ideal_rate": 0.5,
+    "acceptable_or_better_rate": 0.5,
+    "forbidden_rate": 0.5,
+    "unlisted_rate": 0.0
+   },
+   {
+    "scenario": "delayed_reporting",
+    "n_scored": 14,
+    "ideal": 10,
+    "acceptable": 0,
+    "forbidden": 4,
+    "unlisted": 0,
+    "ideal_rate": 0.7142857142857143,
+    "acceptable_or_better_rate": 0.7142857142857143,
+    "forbidden_rate": 0.2857142857142857,
+    "unlisted_rate": 0.0
+   },
+   {
+    "scenario": "front_loaded",
+    "n_scored": 9,
+    "ideal": 8,
+    "acceptable": 1,
+    "forbidden": 0,
+    "unlisted": 0,
+    "ideal_rate": 0.8888888888888888,
+    "acceptable_or_better_rate": 1.0,
+    "forbidden_rate": 0.0,
+    "unlisted_rate": 0.0
+   },
+   {
+    "scenario": "saturating_imperfect_curve",
+    "n_scored": 14,
+    "ideal": 14,
+    "acceptable": 0,
+    "forbidden": 0,
+    "unlisted": 0,
+    "ideal_rate": 1.0,
+    "acceptable_or_better_rate": 1.0,
+    "forbidden_rate": 0.0,
+    "unlisted_rate": 0.0
+   },
+   {
+    "scenario": "steady_winner",
+    "n_scored": 4,
+    "ideal": 1,
+    "acceptable": 3,
+    "forbidden": 0,
+    "unlisted": 0,
+    "ideal_rate": 0.25,
+    "acceptable_or_better_rate": 1.0,
+    "forbidden_rate": 0.0,
+    "unlisted_rate": 0.0
+   },
+   {
+    "scenario": "tiny_sample_whale",
+    "n_scored": 2,
+    "ideal": 1,
+    "acceptable": 0,
+    "forbidden": 1,
+    "unlisted": 0,
+    "ideal_rate": 0.5,
+    "acceptable_or_better_rate": 0.5,
+    "forbidden_rate": 0.5,
+    "unlisted_rate": 0.0
+   },
+   {
+    "scenario": "tracking_outage",
+    "n_scored": 3,
+    "ideal": 1,
+    "acceptable": 1,
+    "forbidden": 1,
+    "unlisted": 0,
+    "ideal_rate": 0.3333333333333333,
+    "acceptable_or_better_rate": 0.6666666666666666,
+    "forbidden_rate": 0.3333333333333333,
+    "unlisted_rate": 0.0
+   }
+  ],
+  "overall": {
+   "n_scored": 48,
+   "ideal": 36,
+   "acceptable": 5,
+   "forbidden": 7,
+   "unlisted": 0,
+   "ideal_rate": 0.75,
+   "acceptable_or_better_rate": 0.8541666666666666,
+   "forbidden_rate": 0.14583333333333334,
+   "unlisted_rate": 0.0
+  },
+  "forbidden_or_unlisted": [
+   {
+    "scenario": "cpi_spike",
+    "channel": "google_uac",
+    "day": 259,
+    "date": "2025-09-22",
+    "action": "decrease",
+    "class": "forbidden",
+    "ideal": "hold",
+    "acceptable": "insufficient_evidence",
+    "forbidden": "increase_test/decrease",
+    "reason": "upper bound of average D30 ROAS 0.307 is below the target 0.547 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   },
+   {
+    "scenario": "delayed_reporting",
+    "channel": "unity",
+    "day": 266,
+    "date": "2025-09-29",
+    "action": "decrease",
+    "class": "forbidden",
+    "ideal": "hold/insufficient_evidence",
+    "acceptable": "increase_test",
+    "forbidden": "decrease",
+    "reason": "upper bound of average D30 ROAS 0.353 is below the target 0.454 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   },
+   {
+    "scenario": "delayed_reporting",
+    "channel": "unity",
+    "day": 315,
+    "date": "2025-11-17",
+    "action": "decrease",
+    "class": "forbidden",
+    "ideal": "hold/insufficient_evidence",
+    "acceptable": "increase_test",
+    "forbidden": "decrease",
+    "reason": "upper bound of average D30 ROAS 0.325 is below the target 0.517 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   },
+   {
+    "scenario": "delayed_reporting",
+    "channel": "unity",
+    "day": 322,
+    "date": "2025-11-24",
+    "action": "decrease",
+    "class": "forbidden",
+    "ideal": "hold/insufficient_evidence",
+    "acceptable": "increase_test",
+    "forbidden": "decrease",
+    "reason": "upper bound of average D30 ROAS 0.372 is below the target 0.521 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   },
+   {
+    "scenario": "delayed_reporting",
+    "channel": "unity",
+    "day": 329,
+    "date": "2025-12-01",
+    "action": "decrease",
+    "class": "forbidden",
+    "ideal": "hold/insufficient_evidence",
+    "acceptable": "increase_test",
+    "forbidden": "decrease",
+    "reason": "upper bound of average D30 ROAS 0.344 is below the target 0.525 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   },
+   {
+    "scenario": "tiny_sample_whale",
+    "channel": "tiktok",
+    "day": 329,
+    "date": "2025-12-01",
+    "action": "decrease",
+    "class": "forbidden",
+    "ideal": "insufficient_evidence",
+    "acceptable": "hold",
+    "forbidden": "increase_test/decrease",
+    "reason": "upper bound of average D30 ROAS 0.262 is below the target 0.873 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   },
+   {
+    "scenario": "tracking_outage",
+    "channel": "google_uac",
+    "day": 322,
+    "date": "2025-11-24",
+    "action": "decrease",
+    "class": "forbidden",
+    "ideal": "insufficient_evidence",
+    "acceptable": "hold",
+    "forbidden": "decrease/increase_test",
+    "reason": "upper bound of average D30 ROAS 0.292 is below the target 0.523 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   }
+  ],
+  "background_unscored_actions": [
+   {
+    "channel": "google_uac",
+    "action": "decrease",
+    "channel-reviews": 4
+   },
+   {
+    "channel": "google_uac",
+    "action": "hold",
+    "channel-reviews": 4
+   },
+   {
+    "channel": "google_uac",
+    "action": "insufficient_evidence",
+    "channel-reviews": 1
+   },
+   {
+    "channel": "meta",
+    "action": "hold",
+    "channel-reviews": 8
+   },
+   {
+    "channel": "meta",
+    "action": "increase_test",
+    "channel-reviews": 2
+   },
+   {
+    "channel": "tiktok",
+    "action": "decrease",
+    "channel-reviews": 1
+   },
+   {
+    "channel": "tiktok",
+    "action": "hold",
+    "channel-reviews": 2
+   }
+  ],
+  "n_background": 22,
+  "n_channel_reviews": 70,
+  "abstention": {
+   "n_rows_where_ie_is_the_only_ideal": 5,
+   "recall": 0.4,
+   "n_abstained": 3,
+   "appropriateness": 1.0,
+   "false_abstentions": [],
+   "missed_abstentions": [
+    {
+     "scenario": "cpi_spike",
+     "channel": "google_uac",
+     "day": 259,
+     "date": "2025-09-22",
+     "action": "decrease",
+     "class": "forbidden",
+     "ideal": "hold",
+     "acceptable": "insufficient_evidence",
+     "forbidden": "increase_test/decrease",
+     "reason": "upper bound of average D30 ROAS 0.307 is below the target 0.547 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+    },
+    {
+     "scenario": "delayed_reporting",
+     "channel": "unity",
+     "day": 266,
+     "date": "2025-09-29",
+     "action": "decrease",
+     "class": "forbidden",
+     "ideal": "hold/insufficient_evidence",
+     "acceptable": "increase_test",
+     "forbidden": "decrease",
+     "reason": "upper bound of average D30 ROAS 0.353 is below the target 0.454 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+    },
+    {
+     "scenario": "delayed_reporting",
+     "channel": "unity",
+     "day": 315,
+     "date": "2025-11-17",
+     "action": "decrease",
+     "class": "forbidden",
+     "ideal": "hold/insufficient_evidence",
+     "acceptable": "increase_test",
+     "forbidden": "decrease",
+     "reason": "upper bound of average D30 ROAS 0.325 is below the target 0.517 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+    },
+    {
+     "scenario": "delayed_reporting",
+     "channel": "unity",
+     "day": 322,
+     "date": "2025-11-24",
+     "action": "decrease",
+     "class": "forbidden",
+     "ideal": "hold/insufficient_evidence",
+     "acceptable": "increase_test",
+     "forbidden": "decrease",
+     "reason": "upper bound of average D30 ROAS 0.372 is below the target 0.521 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+    },
+    {
+     "scenario": "delayed_reporting",
+     "channel": "unity",
+     "day": 329,
+     "date": "2025-12-01",
+     "action": "decrease",
+     "class": "forbidden",
+     "ideal": "hold/insufficient_evidence",
+     "acceptable": "increase_test",
+     "forbidden": "decrease",
+     "reason": "upper bound of average D30 ROAS 0.344 is below the target 0.525 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+    },
+    {
+     "scenario": "tiny_sample_whale",
+     "channel": "tiktok",
+     "day": 329,
+     "date": "2025-12-01",
+     "action": "decrease",
+     "class": "forbidden",
+     "ideal": "insufficient_evidence",
+     "acceptable": "hold",
+     "forbidden": "increase_test/decrease",
+     "reason": "upper bound of average D30 ROAS 0.262 is below the target 0.873 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+    },
+    {
+     "scenario": "tracking_outage",
+     "channel": "google_uac",
+     "day": 322,
+     "date": "2025-11-24",
+     "action": "decrease",
+     "class": "forbidden",
+     "ideal": "insufficient_evidence",
+     "acceptable": "hold",
+     "forbidden": "decrease/increase_test",
+     "reason": "upper bound of average D30 ROAS 0.292 is below the target 0.523 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+    }
+   ]
+  },
+  "reasons_table": [
+   {
+    "action": "hold",
+    "first stated reason (numbers masked)": "lower bound of model-estimated finite-step marginal D# ROAS # is below the target # (point estimate ",
+    "channel-reviews": 24
+   },
+   {
+    "action": "hold",
+    "first stated reason (numbers masked)": "average D# ROAS # is below the target #, so (diminishing-returns heuristic) there is no basis for an",
+    "channel-reviews": 20
+   },
+   {
+    "action": "hold",
+    "first stated reason (numbers masked)": "an increase would be considered but is blocked: quality_check_failed:revenue_concentration",
+    "channel-reviews": 3
+   },
+   {
+    "action": "insufficient_evidence",
+    "first stated reason (numbers masked)": "quality_check_failed:tracking_gap",
+    "channel-reviews": 2
+   },
+   {
+    "action": "insufficient_evidence",
+    "first stated reason (numbers masked)": "forecast_covers_too_little_of_the_window",
+    "channel-reviews": 1
+   },
+   {
+    "action": "insufficient_evidence",
+    "first stated reason (numbers masked)": "quality_check_failed:window_min_installs",
+    "channel-reviews": 1
+   }
+  ]
+ },
+ "policy_secondary_excluding_unmaterialized_scenarios": null,
+ "scenario_validity": {
+  "table": [
+   {
+    "scenario": "cpi_spike",
+    "metric": "cpi_spike_ratio_to_trailing_median",
+    "value": 1.7636827961586377,
+    "op": ">=",
+    "threshold": 1.6,
+    "pass": true
+   },
+   {
+    "scenario": "delayed_reporting",
+    "metric": "min_report_lag_days",
+    "value": 6.0,
+    "op": ">=",
+    "threshold": 6,
+    "pass": true
+   },
+   {
+    "scenario": "delayed_reporting",
+    "metric": "other_channels_max_report_lag_days",
+    "value": 2.0,
+    "op": "<=",
+    "threshold": 2,
+    "pass": true
+   },
+   {
+    "scenario": "delayed_reporting",
+    "metric": "naive_visible_d3_revenue_fraction",
+    "value": 0.19971625902887954,
+    "op": "<=",
+    "threshold": 0.6,
+    "pass": true
+   },
+   {
+    "scenario": "front_loaded",
+    "metric": "d3_net_revenue_per_install_rank",
+    "value": 1.0,
+    "op": "<=",
+    "threshold": 2,
+    "pass": true
+   },
+   {
+    "scenario": "front_loaded",
+    "metric": "d30_to_d3_multiplier_over_peer_median",
+    "value": 0.6111210308561171,
+    "op": "<=",
+    "threshold": 0.65,
+    "pass": true
+   },
+   {
+    "scenario": "front_loaded",
+    "metric": "avg_d30_roas_over_target",
+    "value": 0.6715833580662884,
+    "op": "<=",
+    "threshold": 0.9,
+    "pass": true
+   },
+   {
+    "scenario": "regime_shift",
+    "metric": "iap_per_active_day_post_over_pre",
+    "value": 0.5722042417549895,
+    "op": "<=",
+    "threshold": 0.9,
+    "pass": true
+   },
+   {
+    "scenario": "regime_shift",
+    "metric": "ad_ecpm_post_over_pre",
+    "value": 1.1033327115751557,
+    "op": ">=",
+    "threshold": 1.05,
+    "pass": true
+   },
+   {
+    "scenario": "saturating_imperfect_curve",
+    "metric": "avg_d30_roas_over_target",
+    "value": 1.7506021442081767,
+    "op": ">=",
+    "threshold": 1.2,
+    "pass": true
+   },
+   {
+    "scenario": "saturating_imperfect_curve",
+    "metric": "true_step20_marginal_roas_over_target",
+    "value": 0.3142945149806943,
+    "op": "<=",
+    "threshold": 0.8,
+    "pass": true
+   },
+   {
+    "scenario": "steady_winner",
+    "metric": "avg_d30_roas_over_target",
+    "value": 2.052566345202075,
+    "op": ">=",
+    "threshold": 1.4,
+    "pass": true
+   },
+   {
+    "scenario": "steady_winner",
+    "metric": "true_step20_marginal_roas_over_target",
+    "value": 1.6054388142554878,
+    "op": ">=",
+    "threshold": 1.2,
+    "pass": true
+   },
+   {
+    "scenario": "tiny_sample_whale",
+    "metric": "window_installs_per_day_max",
+    "value": 4.0,
+    "op": "<=",
+    "threshold": 15,
+    "pass": true
+   },
+   {
+    "scenario": "tiny_sample_whale",
+    "metric": "whale_cohort_d3_net_over_normal_median",
+    "value": 46.39305755963582,
+    "op": ">=",
+    "threshold": 5,
+    "pass": true
+   },
+   {
+    "scenario": "tracking_outage",
+    "metric": "outage_event_drop_fraction",
+    "value": 0.9276822532253131,
+    "op": ">=",
+    "threshold": 0.7,
+    "pass": true
+   },
+   {
+    "scenario": "tracking_outage",
+    "metric": "outage_install_change_abs",
+    "value": 0.18260869565217386,
+    "op": "<=",
+    "threshold": 0.25,
+    "pass": true
+   }
+  ],
+  "n_intents": 17,
+  "n_pass": 17,
+  "scenarios_not_materialized": [],
+  "note": "evaluation-side diagnostic using the generator's hidden truth; not a decision input. Flagged scenarios stay in the PRIMARY policy summary; the SECONDARY summary leaves them out."
+ },
+ "budgets": {
+  "applovin": 94.0,
+  "google_uac": 55.8,
+  "meta": 87.7,
+  "tiktok": 65.0,
+  "unity": 64.7
+ },
+ "ceiling": 440.64,
+ "review_log": [
+  {
+   "date": "2025-09-08",
+   "channel": "applovin",
+   "action": "hold",
+   "reasons": [
+    "an increase would be considered but is blocked: quality_check_failed:revenue_concentration"
+   ]
+  },
+  {
+   "date": "2025-09-08",
+   "channel": "google_uac",
+   "action": "hold",
+   "reasons": [
+    "average D30 ROAS 0.537 is below the target 0.564, so (diminishing-returns heuristic) there is no basis for an increase",
+    "decrease blocked: excluded_cohorts_withheld_for_revenue_spike: included-only average ROAS is biased low"
+   ]
+  },
+  {
+   "date": "2025-09-08",
+   "channel": "meta",
+   "action": "increase_test",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.555 is at or above the target 0.474; this is a bounded TEST that needs a pre-registered experiment plan, not an optimal-allocation claim"
+   ]
+  },
+  {
+   "date": "2025-09-08",
+   "channel": "tiktok",
+   "action": "hold",
+   "reasons": [
+    "average D30 ROAS 0.301 is below the target 0.899, so (diminishing-returns heuristic) there is no basis for an increase",
+    "decrease blocked: excluded_cohorts_withheld_for_revenue_spike: included-only average ROAS is biased low"
+   ]
+  },
+  {
+   "date": "2025-09-08",
+   "channel": "unity",
+   "action": "hold",
+   "reasons": [
+    "an increase would be considered but is blocked: quality_check_failed:revenue_concentration"
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "channel": "applovin",
+   "action": "hold",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.330 is below the target 0.524 (point estimate 0.444)"
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "channel": "google_uac",
+   "action": "decrease",
+   "reasons": [
+    "upper bound of average D30 ROAS 0.486 is below the target 0.555 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "channel": "meta",
+   "action": "hold",
+   "reasons": [
+    "an increase would be considered but is blocked: quality_check_failed:revenue_concentration"
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "channel": "tiktok",
+   "action": "decrease",
+   "reasons": [
+    "upper bound of average D30 ROAS 0.327 is below the target 0.887 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "channel": "unity",
+   "action": "hold",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.236 is below the target 0.440 (point estimate 0.324)"
+   ]
+  },
+  {
+   "date": "2025-09-22",
+   "channel": "applovin",
+   "action": "hold",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.362 is below the target 0.521 (point estimate 0.485)"
+   ]
+  },
+  {
+   "date": "2025-09-22",
+   "channel": "google_uac",
+   "action": "decrease",
+   "reasons": [
+    "upper bound of average D30 ROAS 0.307 is below the target 0.547 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   ]
+  },
+  {
+   "date": "2025-09-22",
+   "channel": "meta",
+   "action": "hold",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.437 is below the target 0.481 (point estimate 0.563)"
+   ]
+  },
+  {
+   "date": "2025-09-22",
+   "channel": "tiktok",
+   "action": "insufficient_evidence",
+   "reasons": [
+    "forecast_covers_too_little_of_the_window"
+   ]
+  },
+  {
+   "date": "2025-09-22",
+   "channel": "unity",
+   "action": "hold",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.229 is below the target 0.449 (point estimate 0.312)"
+   ]
+  },
+  {
+   "date": "2025-09-29",
+   "channel": "applovin",
+   "action": "hold",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.259 is below the target 0.514 (point estimate 0.343)"
+   ]
+  },
+  {
+   "date": "2025-09-29",
+   "channel": "google_uac",
+   "action": "hold",
+   "reasons": [
+    "average D30 ROAS 0.316 is below the target 0.547, so (diminishing-returns heuristic) there is no basis for an increase",
+    "decrease blocked: excluded_cohorts_withheld_for_revenue_spike: included-only average ROAS is biased low"
+   ]
+  },
+  {
+   "date": "2025-09-29",
+   "channel": "meta",
+   "action": "increase_test",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.502 is at or above the target 0.482; this is a bounded TEST that needs a pre-registered experiment plan, not an optimal-allocation claim"
+   ]
+  },
+  {
+   "date": "2025-09-29",
+   "channel": "tiktok",
+   "action": "hold",
+   "reasons": [
+    "average D30 ROAS 0.543 is below the target 0.882, so (diminishing-returns heuristic) there is no basis for an increase",
+    "decrease blocked: excluded_cohorts_withheld_for_revenue_spike: included-only average ROAS is biased low"
+   ]
+  },
+  {
+   "date": "2025-09-29",
+   "channel": "unity",
+   "action": "decrease",
+   "reasons": [
+    "upper bound of average D30 ROAS 0.353 is below the target 0.454 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   ]
+  },
+  {
+   "date": "2025-10-06",
+   "channel": "applovin",
+   "action": "hold",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.241 is below the target 0.513 (point estimate 0.316)"
+   ]
+  },
+  {
+   "date": "2025-10-06",
+   "channel": "google_uac",
+   "action": "hold",
+   "reasons": [
+    "average D30 ROAS 0.306 is below the target 0.541, so (diminishing-returns heuristic) there is no basis for an increase",
+    "decrease blocked: excluded_cohorts_withheld_for_revenue_spike: included-only average ROAS is biased low"
+   ]
+  },
+  {
+   "date": "2025-10-06",
+   "channel": "meta",
+   "action": "hold",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.360 is below the target 0.481 (point estimate 0.467)"
+   ]
+  },
+  {
+   "date": "2025-10-06",
+   "channel": "tiktok",
+   "action": "hold",
+   "reasons": [
+    "average D30 ROAS 0.307 is below the target 0.882, so (diminishing-returns heuristic) there is no basis for an increase",
+    "decrease blocked: excluded_cohorts_withheld_for_revenue_spike: included-only average ROAS is biased low"
+   ]
+  },
+  {
+   "date": "2025-10-06",
+   "channel": "unity",
+   "action": "hold",
+   "reasons": [
+    "average D30 ROAS 0.434 is below the target 0.464, so (diminishing-returns heuristic) there is no basis for an increase",
+    "but its upper bound 0.570 is not below the target, so a decrease is not justified"
+   ]
+  },
+  {
+   "date": "2025-10-13",
+   "channel": "applovin",
+   "action": "hold",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.336 is below the target 0.497 (point estimate 0.451)"
+   ]
+  },
+  {
+   "date": "2025-10-13",
+   "channel": "google_uac",
+   "action": "decrease",
+   "reasons": [
+    "upper bound of average D30 ROAS 0.427 is below the target 0.541 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   ]
+  },
+  {
+   "date": "2025-10-13",
+   "channel": "meta",
+   "action": "increase_test",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.509 is at or above the target 0.475; this is a bounded TEST that needs a pre-registered experiment plan, not an optimal-allocation claim"
+   ]
+  },
+  {
+   "date": "2025-10-13",
+   "channel": "tiktok",
+   "action": "decrease",
+   "reasons": [
+    "upper bound of average D30 ROAS 0.444 is below the target 0.884 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   ]
+  },
+  {
+   "date": "2025-10-13",
+   "channel": "unity",
+   "action": "hold",
+   "reasons": [
+    "average D30 ROAS 0.381 is below the target 0.468, so (diminishing-returns heuristic) there is no basis for an increase",
+    "but its upper bound 0.496 is not below the target, so a decrease is not justified"
+   ]
+  },
+  {
+   "date": "2025-10-20",
+   "channel": "applovin",
+   "action": "hold",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.342 is below the target 0.498 (point estimate 0.464)"
+   ]
+  },
+  {
+   "date": "2025-10-20",
+   "channel": "google_uac",
+   "action": "decrease",
+   "reasons": [
+    "upper bound of average D30 ROAS 0.450 is below the target 0.542 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   ]
+  },
+  {
+   "date": "2025-10-20",
+   "channel": "meta",
+   "action": "hold",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.422 is below the target 0.470 (point estimate 0.557)"
+   ]
+  },
+  {
+   "date": "2025-10-20",
+   "channel": "tiktok",
+   "action": "hold",
+   "reasons": [
+    "average D30 ROAS 0.561 is below the target 0.878, so (diminishing-returns heuristic) there is no basis for an increase",
+    "decrease blocked: excluded_cohorts_withheld_for_revenue_spike: included-only average ROAS is biased low"
+   ]
+  },
+  {
+   "date": "2025-10-20",
+   "channel": "unity",
+   "action": "hold",
+   "reasons": [
+    "average D30 ROAS 0.448 is below the target 0.469, so (diminishing-returns heuristic) there is no basis for an increase",
+    "decrease blocked: excluded_cohorts_withheld_for_revenue_spike: included-only average ROAS is biased low"
+   ]
+  },
+  {
+   "date": "2025-10-27",
+   "channel": "applovin",
+   "action": "hold",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.237 is below the target 0.507 (point estimate 0.319)"
+   ]
+  },
+  {
+   "date": "2025-10-27",
+   "channel": "google_uac",
+   "action": "decrease",
+   "reasons": [
+    "upper bound of average D30 ROAS 0.313 is below the target 0.531 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   ]
+  },
+  {
+   "date": "2025-10-27",
+   "channel": "meta",
+   "action": "hold",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.270 is below the target 0.464 (point estimate 0.355)"
+   ]
+  },
+  {
+   "date": "2025-10-27",
+   "channel": "tiktok",
+   "action": "decrease",
+   "reasons": [
+    "upper bound of average D30 ROAS 0.416 is below the target 0.878 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   ]
+  },
+  {
+   "date": "2025-10-27",
+   "channel": "unity",
+   "action": "hold",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.177 is below the target 0.471 (point estimate 0.252)"
+   ]
+  },
+  {
+   "date": "2025-11-03",
+   "channel": "applovin",
+   "action": "hold",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.215 is below the target 0.509 (point estimate 0.290)"
+   ]
+  },
+  {
+   "date": "2025-11-03",
+   "channel": "google_uac",
+   "action": "insufficient_evidence",
+   "reasons": [
+    "quality_check_failed:tracking_gap"
+   ]
+  },
+  {
+   "date": "2025-11-03",
+   "channel": "meta",
+   "action": "hold",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.407 is below the target 0.468 (point estimate 0.537)"
+   ]
+  },
+  {
+   "date": "2025-11-03",
+   "channel": "tiktok",
+   "action": "decrease",
+   "reasons": [
+    "upper bound of average D30 ROAS 0.462 is below the target 0.880 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   ]
+  },
+  {
+   "date": "2025-11-03",
+   "channel": "unity",
+   "action": "hold",
+   "reasons": [
+    "average D30 ROAS 0.261 is below the target 0.479, so (diminishing-returns heuristic) there is no basis for an increase",
+    "decrease blocked: excluded_cohorts_withheld_for_revenue_spike: included-only average ROAS is biased low"
+   ]
+  },
+  {
+   "date": "2025-11-10",
+   "channel": "applovin",
+   "action": "hold",
+   "reasons": [
+    "average D30 ROAS 0.453 is below the target 0.510, so (diminishing-returns heuristic) there is no basis for an increase",
+    "but its upper bound 0.580 is not below the target, so a decrease is not justified"
+   ]
+  },
+  {
+   "date": "2025-11-10",
+   "channel": "google_uac",
+   "action": "insufficient_evidence",
+   "reasons": [
+    "quality_check_failed:tracking_gap",
+    "forecast_covers_too_little_of_the_window"
+   ]
+  },
+  {
+   "date": "2025-11-10",
+   "channel": "meta",
+   "action": "hold",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.298 is below the target 0.479 (point estimate 0.394)"
+   ]
+  },
+  {
+   "date": "2025-11-10",
+   "channel": "tiktok",
+   "action": "decrease",
+   "reasons": [
+    "upper bound of average D30 ROAS 0.349 is below the target 0.880 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   ]
+  },
+  {
+   "date": "2025-11-10",
+   "channel": "unity",
+   "action": "hold",
+   "reasons": [
+    "average D30 ROAS 0.419 is below the target 0.455, so (diminishing-returns heuristic) there is no basis for an increase",
+    "but its upper bound 0.572 is not below the target, so a decrease is not justified"
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "channel": "applovin",
+   "action": "hold",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.222 is below the target 0.505 (point estimate 0.299)"
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "channel": "google_uac",
+   "action": "hold",
+   "reasons": [
+    "average D30 ROAS 0.270 is below the target 0.528, so (diminishing-returns heuristic) there is no basis for an increase",
+    "decrease blocked: excluded_cohorts_withheld_for_revenue_spike: included-only average ROAS is biased low"
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "channel": "meta",
+   "action": "hold",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.308 is below the target 0.476 (point estimate 0.408)"
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "channel": "tiktok",
+   "action": "hold",
+   "reasons": [
+    "average D30 ROAS 0.525 is below the target 0.871, so (diminishing-returns heuristic) there is no basis for an increase",
+    "decrease blocked: excluded_cohorts_withheld_for_revenue_spike: included-only average ROAS is biased low"
+   ]
+  },
+  {
+   "date": "2025-11-17",
+   "channel": "unity",
+   "action": "decrease",
+   "reasons": [
+    "upper bound of average D30 ROAS 0.325 is below the target 0.517 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   ]
+  },
+  {
+   "date": "2025-11-24",
+   "channel": "applovin",
+   "action": "hold",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.255 is below the target 0.507 (point estimate 0.343)"
+   ]
+  },
+  {
+   "date": "2025-11-24",
+   "channel": "google_uac",
+   "action": "decrease",
+   "reasons": [
+    "upper bound of average D30 ROAS 0.292 is below the target 0.523 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   ]
+  },
+  {
+   "date": "2025-11-24",
+   "channel": "meta",
+   "action": "hold",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.448 is below the target 0.484 (point estimate 0.592)"
+   ]
+  },
+  {
+   "date": "2025-11-24",
+   "channel": "tiktok",
+   "action": "insufficient_evidence",
+   "reasons": [
+    "quality_check_failed:window_min_installs",
+    "forecast_covers_too_little_of_the_window"
+   ]
+  },
+  {
+   "date": "2025-11-24",
+   "channel": "unity",
+   "action": "decrease",
+   "reasons": [
+    "upper bound of average D30 ROAS 0.372 is below the target 0.521 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   ]
+  },
+  {
+   "date": "2025-12-01",
+   "channel": "applovin",
+   "action": "hold",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.237 is below the target 0.506 (point estimate 0.319)"
+   ]
+  },
+  {
+   "date": "2025-12-01",
+   "channel": "google_uac",
+   "action": "hold",
+   "reasons": [
+    "average D30 ROAS 0.232 is below the target 0.519, so (diminishing-returns heuristic) there is no basis for an increase",
+    "decrease blocked: excluded_cohorts_withheld_for_revenue_spike: included-only average ROAS is biased low"
+   ]
+  },
+  {
+   "date": "2025-12-01",
+   "channel": "meta",
+   "action": "hold",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.278 is below the target 0.491 (point estimate 0.375)"
+   ]
+  },
+  {
+   "date": "2025-12-01",
+   "channel": "tiktok",
+   "action": "decrease",
+   "reasons": [
+    "upper bound of average D30 ROAS 0.262 is below the target 0.873 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   ]
+  },
+  {
+   "date": "2025-12-01",
+   "channel": "unity",
+   "action": "decrease",
+   "reasons": [
+    "upper bound of average D30 ROAS 0.344 is below the target 0.525 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+   ]
+  },
+  {
+   "date": "2025-12-08",
+   "channel": "applovin",
+   "action": "hold",
+   "reasons": [
+    "average D30 ROAS 0.403 is below the target 0.503, so (diminishing-returns heuristic) there is no basis for an increase",
+    "decrease blocked: excluded_cohorts_withheld_for_revenue_spike: included-only average ROAS is biased low"
+   ]
+  },
+  {
+   "date": "2025-12-08",
+   "channel": "google_uac",
+   "action": "hold",
+   "reasons": [
+    "average D30 ROAS 0.244 is below the target 0.524, so (diminishing-returns heuristic) there is no basis for an increase",
+    "decrease blocked: excluded_cohorts_withheld_for_revenue_spike: included-only average ROAS is biased low"
+   ]
+  },
+  {
+   "date": "2025-12-08",
+   "channel": "meta",
+   "action": "hold",
+   "reasons": [
+    "lower bound of model-estimated finite-step marginal D30 ROAS 0.261 is below the target 0.489 (point estimate 0.350)"
+   ]
+  },
+  {
+   "date": "2025-12-08",
+   "channel": "tiktok",
+   "action": "hold",
+   "reasons": [
+    "average D30 ROAS 0.236 is below the target 0.877, so (diminishing-returns heuristic) there is no basis for an increase",
+    "decrease blocked: excluded_cohorts_withheld_for_revenue_spike: included-only average ROAS is biased low"
+   ]
+  },
+  {
+   "date": "2025-12-08",
+   "channel": "unity",
+   "action": "hold",
+   "reasons": [
+    "average D30 ROAS 0.239 is below the target 0.529, so (diminishing-returns heuristic) there is no basis for an increase",
+    "decrease blocked: excluded_cohorts_withheld_for_revenue_spike: included-only average ROAS is biased low"
+   ]
+  }
+ ],
+ "provenance_file": "evals\\results\\heldout\\seed_9103\\provenance.json",
+ "artifact_hashes": {
+  "decision_db": "70b3d5e0213ddae272fd8ab03581d7728e298b93d1556baa40190b817c731783",
+  "hidden_truth": "3dca821f16cca742be8a50be641c89122dca15414d351bf753503883809b53d8",
+  "decision_db_at_backtest_start": "70b3d5e0213ddae272fd8ab03581d7728e298b93d1556baa40190b817c731783",
+  "forecast_store": "f7f1aaf8c59dfc8ee1e8aa9fb9f1204e812ce8184476134740727b52cd512dae"
+ }
+}

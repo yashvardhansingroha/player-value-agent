@@ -1,0 +1,1824 @@
+{
+ "mode": "live",
+ "model": "models/gemini-3.5-flash",
+ "as_of": "2025-11-10",
+ "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+ "status": "rules_only_fallback",
+ "fallback_reason": "loop_limit",
+ "fallback_detail": "the tool-call limit of 20 was reached before a proposal was produced",
+ "repairs_used": 0,
+ "labels": [
+  "MODE: LIVE (model models/gemini-3.5-flash).",
+  "RULES-ONLY FALLBACK: AGENT UNAVAILABLE (TOOL-LOOP LIMIT). This is the reviewed deterministic proposal with the same quality gates, validation and approval requirements.",
+  "MISSING EVIDENCE: google_uac: insufficient_evidence (quality_check_failed:tracking_gap; forecast_covers_too_little_of_the_window).",
+  "APPROVAL REQUIRED: this is a proposal only. Nothing changes until a person approves it and it is applied in the sandbox ledger; any increase also needs its plan registered there."
+ ],
+ "validation": null,
+ "fallback_validation": {
+  "ok": true,
+  "errors": [],
+  "plans_to_register": [],
+  "note": "valid = traceable, inside the policy's permitted actions and the hard constraints; it does not make the decision good"
+ },
+ "tool_calls": [
+  {
+   "tool_call_id": "tc_001",
+   "tool": "get_review_overview",
+   "args": {},
+   "status": "ok",
+   "output_sha256": "78be07d60bab596d7e4e3ca90293ae79f05cf640f9be68ede108d760a19dda53"
+  },
+  {
+   "tool_call_id": "tc_002",
+   "tool": "get_policy_decision",
+   "args": {
+    "channel": "applovin"
+   },
+   "status": "ok",
+   "output_sha256": "917b3846d83c3bf74d8bb0e5bcb1a13af645e1427530ade81f9478715549768c"
+  },
+  {
+   "tool_call_id": "tc_003",
+   "tool": "get_policy_decision",
+   "args": {
+    "channel": "google_uac"
+   },
+   "status": "ok",
+   "output_sha256": "f9aa49a906f72b0e6d0ed9a107a641b76f72d7962bca33cb529e4b42db9104d8"
+  },
+  {
+   "tool_call_id": "tc_004",
+   "tool": "get_policy_decision",
+   "args": {
+    "channel": "meta"
+   },
+   "status": "ok",
+   "output_sha256": "cc70f975df5d0c80a711773ba8b0d9bca35a52e79f0031168b70ea77fd17ba52"
+  },
+  {
+   "tool_call_id": "tc_005",
+   "tool": "get_policy_decision",
+   "args": {
+    "channel": "tiktok"
+   },
+   "status": "ok",
+   "output_sha256": "267881854e693b5f73d017c4e9b1fc7780434b6ba6acedfac9f3fa4d3053fcb8"
+  },
+  {
+   "tool_call_id": "tc_006",
+   "tool": "get_policy_decision",
+   "args": {
+    "channel": "unity"
+   },
+   "status": "ok",
+   "output_sha256": "ee2bf6c7db939d64ad0a3fbeedeb8c64accf5dc7bb76997cd1294c8d3a5dea9c"
+  },
+  {
+   "tool_call_id": "tc_007",
+   "tool": "get_quality_checks",
+   "args": {
+    "channel": "applovin"
+   },
+   "status": "ok",
+   "output_sha256": "d4fa339439b3d3839cde3cfb2ce2834e188b2f28b8b0bf149fa61a2af5a116fb"
+  },
+  {
+   "tool_call_id": "tc_008",
+   "tool": "get_quality_checks",
+   "args": {
+    "channel": "google_uac"
+   },
+   "status": "ok",
+   "output_sha256": "e018ec9121119bb65cec2821c35b17040f01486545c5b02dbe83c2182d77a66c"
+  },
+  {
+   "tool_call_id": "tc_009",
+   "tool": "get_quality_checks",
+   "args": {
+    "channel": "meta"
+   },
+   "status": "ok",
+   "output_sha256": "44b112aa93a167646562e65830fa58cc58c689e2c142dfc7cb111fde24a22ad2"
+  },
+  {
+   "tool_call_id": "tc_010",
+   "tool": "get_quality_checks",
+   "args": {
+    "channel": "tiktok"
+   },
+   "status": "ok",
+   "output_sha256": "d87ba7f6451a7ac01ef8ea1dc968d1215ee3a0cf8859aa79cd3a515013a848e7"
+  },
+  {
+   "tool_call_id": "tc_011",
+   "tool": "get_quality_checks",
+   "args": {
+    "channel": "unity"
+   },
+   "status": "ok",
+   "output_sha256": "ba65e190abf3901ddb24495575178f76a34102be6c197952a596a77ae7072d2e"
+  },
+  {
+   "tool_call_id": "tc_012",
+   "tool": "get_forecast_and_populations",
+   "args": {
+    "channel": "applovin"
+   },
+   "status": "ok",
+   "output_sha256": "56fed198fe2f5fbe42b699262066fb81526b9242f530dedfc9e6bcd06a7e1474"
+  },
+  {
+   "tool_call_id": "tc_013",
+   "tool": "get_forecast_and_populations",
+   "args": {
+    "channel": "google_uac"
+   },
+   "status": "ok",
+   "output_sha256": "47047cf27dc3266d64392fac95a3083096708b77d334116f03753ff6a6539f71"
+  },
+  {
+   "tool_call_id": "tc_014",
+   "tool": "get_forecast_and_populations",
+   "args": {
+    "channel": "meta"
+   },
+   "status": "ok",
+   "output_sha256": "48c17dace575317d51cc61f4dd63df6e114b78a24905d7301f62638bad398e8e"
+  },
+  {
+   "tool_call_id": "tc_015",
+   "tool": "get_forecast_and_populations",
+   "args": {
+    "channel": "tiktok"
+   },
+   "status": "ok",
+   "output_sha256": "94bff002a152403709f93cd070823b80a2a20f1594f661dedb61f11ad354d912"
+  },
+  {
+   "tool_call_id": "tc_016",
+   "tool": "get_forecast_and_populations",
+   "args": {
+    "channel": "unity"
+   },
+   "status": "ok",
+   "output_sha256": "f89a56d9b0c34d61340c39bc4617a8ab14268dbccdfb999d919382aa9f62a254"
+  },
+  {
+   "tool_call_id": "tc_017",
+   "tool": "get_economics",
+   "args": {
+    "channel": "applovin"
+   },
+   "status": "ok",
+   "output_sha256": "8399509c9beb245e6d505687653b79cb1eadc20fe908eab3ed2e088693609fff"
+  },
+  {
+   "tool_call_id": "tc_018",
+   "tool": "get_economics",
+   "args": {
+    "channel": "google_uac"
+   },
+   "status": "ok",
+   "output_sha256": "f574a5c29aefab58d216f5e7f36773f16f61c4add702301c0df5d1ec06be1d76"
+  },
+  {
+   "tool_call_id": "tc_019",
+   "tool": "get_economics",
+   "args": {
+    "channel": "meta"
+   },
+   "status": "ok",
+   "output_sha256": "c02132b419edda5960178969297ad68dc016bd832ec471f57634480e12538b18"
+  },
+  {
+   "tool_call_id": "tc_020",
+   "tool": "get_economics",
+   "args": {
+    "channel": "tiktok"
+   },
+   "status": "ok",
+   "output_sha256": "2e0692aa0e21ecd9cd7a0d5a28e4748aaa7a8f2f7c1828c841c2c123c9d51ab7"
+  }
+ ],
+ "evidence_trail": [
+  {
+   "tool_call_id": "tc_001",
+   "tool": "get_review_overview",
+   "args": {},
+   "channel": null,
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "channel_review_status",
+    "ledger": "sandbox_ledger_state"
+   },
+   "result": {
+    "as_of": "2025-11-10",
+    "ledger": {
+     "version": 1,
+     "total_budget": 406.2,
+     "ceiling": 487.43999999999994,
+     "reserve": 81.23999999999995
+    },
+    "channels": {
+     "applovin": {
+      "current_budget": 101.7,
+      "policy_action": "hold",
+      "policy_proposed_budget": 101.7,
+      "completeness_passed": true,
+      "failed_stages": [
+       "quality:revenue_concentration",
+       "excluded_population"
+      ]
+     },
+     "google_uac": {
+      "current_budget": 72.1,
+      "policy_action": "insufficient_evidence",
+      "policy_proposed_budget": 72.1,
+      "completeness_passed": true,
+      "failed_stages": [
+       "quality:tracking_gap",
+       "quality:revenue_concentration",
+       "forecast_coverage"
+      ]
+     },
+     "meta": {
+      "current_budget": 90.7,
+      "policy_action": "hold",
+      "policy_proposed_budget": 90.7,
+      "completeness_passed": true,
+      "failed_stages": []
+     },
+     "tiktok": {
+      "current_budget": 85.0,
+      "policy_action": "decrease",
+      "policy_proposed_budget": 76.5,
+      "completeness_passed": true,
+      "failed_stages": []
+     },
+     "unity": {
+      "current_budget": 56.7,
+      "policy_action": "hold",
+      "policy_proposed_budget": 56.7,
+      "completeness_passed": true,
+      "failed_stages": [
+       "excluded_population"
+      ]
+     }
+    }
+   },
+   "output_sha256": "78be07d60bab596d7e4e3ca90293ae79f05cf640f9be68ede108d760a19dda53"
+  },
+  {
+   "tool_call_id": "tc_002",
+   "tool": "get_policy_decision",
+   "args": {
+    "channel": "applovin"
+   },
+   "channel": "applovin",
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "policy_decision"
+   },
+   "result": {
+    "action": "hold",
+    "current_budget": 101.7,
+    "proposed_budget": 101.7,
+    "reasons": [
+     "average D30 ROAS 0.461 is below the target 0.519, so (diminishing-returns heuristic) there is no basis for an increase",
+     "decrease blocked: excluded_cohorts_withheld_for_revenue_spike: included-only average ROAS is biased low"
+    ],
+    "increase_candidate": null,
+    "note": "deterministic policy output BEFORE the experiment-design gate; an increase test still needs an adequate plan (see plan_experiment)"
+   },
+   "output_sha256": "917b3846d83c3bf74d8bb0e5bcb1a13af645e1427530ade81f9478715549768c"
+  },
+  {
+   "tool_call_id": "tc_003",
+   "tool": "get_policy_decision",
+   "args": {
+    "channel": "google_uac"
+   },
+   "channel": "google_uac",
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "policy_decision"
+   },
+   "result": {
+    "action": "insufficient_evidence",
+    "current_budget": 72.1,
+    "proposed_budget": 72.1,
+    "reasons": [
+     "quality_check_failed:tracking_gap",
+     "forecast_covers_too_little_of_the_window"
+    ],
+    "increase_candidate": null,
+    "note": "deterministic policy output BEFORE the experiment-design gate; an increase test still needs an adequate plan (see plan_experiment)"
+   },
+   "output_sha256": "f9aa49a906f72b0e6d0ed9a107a641b76f72d7962bca33cb529e4b42db9104d8"
+  },
+  {
+   "tool_call_id": "tc_004",
+   "tool": "get_policy_decision",
+   "args": {
+    "channel": "meta"
+   },
+   "channel": "meta",
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "policy_decision"
+   },
+   "result": {
+    "action": "hold",
+    "current_budget": 90.7,
+    "proposed_budget": 90.7,
+    "reasons": [
+     "lower bound of model-estimated finite-step marginal D30 ROAS 0.317 is below the target 0.453 (point estimate 0.412)"
+    ],
+    "increase_candidate": {
+     "s1": 99.77000000000001,
+     "lower": 0.31703327605392123,
+     "point": 0.41242937847685146
+    },
+    "note": "deterministic policy output BEFORE the experiment-design gate; an increase test still needs an adequate plan (see plan_experiment)"
+   },
+   "output_sha256": "cc70f975df5d0c80a711773ba8b0d9bca35a52e79f0031168b70ea77fd17ba52"
+  },
+  {
+   "tool_call_id": "tc_005",
+   "tool": "get_policy_decision",
+   "args": {
+    "channel": "tiktok"
+   },
+   "channel": "tiktok",
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "policy_decision"
+   },
+   "result": {
+    "action": "decrease",
+    "current_budget": 85.0,
+    "proposed_budget": 76.5,
+    "reasons": [
+     "upper bound of average D30 ROAS 0.262 is below the target 0.893 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)"
+    ],
+    "increase_candidate": null,
+    "note": "deterministic policy output BEFORE the experiment-design gate; an increase test still needs an adequate plan (see plan_experiment)"
+   },
+   "output_sha256": "267881854e693b5f73d017c4e9b1fc7780434b6ba6acedfac9f3fa4d3053fcb8"
+  },
+  {
+   "tool_call_id": "tc_006",
+   "tool": "get_policy_decision",
+   "args": {
+    "channel": "unity"
+   },
+   "channel": "unity",
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "policy_decision"
+   },
+   "result": {
+    "action": "hold",
+    "current_budget": 56.7,
+    "proposed_budget": 56.7,
+    "reasons": [
+     "average D30 ROAS 0.311 is below the target 0.518, so (diminishing-returns heuristic) there is no basis for an increase",
+     "decrease blocked: excluded_cohorts_withheld_for_revenue_spike: included-only average ROAS is biased low"
+    ],
+    "increase_candidate": null,
+    "note": "deterministic policy output BEFORE the experiment-design gate; an increase test still needs an adequate plan (see plan_experiment)"
+   },
+   "output_sha256": "ee2bf6c7db939d64ad0a3fbeedeb8c64accf5dc7bb76997cd1294c8d3a5dea9c"
+  },
+  {
+   "tool_call_id": "tc_007",
+   "tool": "get_quality_checks",
+   "args": {
+    "channel": "applovin"
+   },
+   "channel": "applovin",
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "weekly_window_quality_checks"
+   },
+   "result": {
+    "stages": [
+     {
+      "stage": "evidence_binding",
+      "passed": true,
+      "blocks": "none",
+      "detail": "summary and its 5 contributing forecasts carry the current configuration hash and agree"
+     },
+     {
+      "stage": "completeness",
+      "passed": true,
+      "blocks": "none",
+      "detail": "every expected window date is accounted for"
+     },
+     {
+      "stage": "quality:reporting_completeness",
+      "passed": true,
+      "blocks": "none",
+      "detail": "every window date is decision-ready; 4 later install date(s) pending (up to 4 expected from the declared lag), excluded, not counted as zero"
+     },
+     {
+      "stage": "quality:missing_days",
+      "passed": true,
+      "blocks": "none",
+      "detail": "no missing days"
+     },
+     {
+      "stage": "quality:window_min_installs",
+      "passed": true,
+      "blocks": "none",
+      "detail": "567 installs in window"
+     },
+     {
+      "stage": "quality:tracking_gap",
+      "passed": true,
+      "blocks": "none",
+      "detail": "longest run of recent days below 50% of the prior 28-day median activity per player is 0 day(s)"
+     },
+     {
+      "stage": "quality:cpi_anomaly",
+      "passed": true,
+      "blocks": "none",
+      "detail": "window CPI is 0.84 x the trailing median"
+     },
+     {
+      "stage": "quality:revenue_concentration",
+      "passed": false,
+      "blocks": "increase",
+      "detail": "top 1 payer(s) of 23 provide 52% of IAP (limit 50%)"
+     },
+     {
+      "stage": "forecast_coverage",
+      "passed": true,
+      "blocks": "none",
+      "detail": "5 of 7 window cohorts forecast (need 4); included cohorts hold 77% of the window's decision-ready spend (need 70%)"
+     },
+     {
+      "stage": "excluded_population",
+      "passed": false,
+      "blocks": "decrease",
+      "detail": "2 withheld cohort(s) excluded; 2 for revenue_spike"
+     },
+     {
+      "stage": "uncertainty",
+      "passed": true,
+      "blocks": "none",
+      "detail": "interval width/forecast = 0.51 (limit 1.5)"
+     },
+     {
+      "stage": "payback_target",
+      "passed": true,
+      "blocks": "none",
+      "detail": "target D30 ROAS 0.519 (channel level, 90 mature cohorts)"
+     }
+    ],
+    "n_failed": 2
+   },
+   "output_sha256": "d4fa339439b3d3839cde3cfb2ce2834e188b2f28b8b0bf149fa61a2af5a116fb"
+  },
+  {
+   "tool_call_id": "tc_008",
+   "tool": "get_quality_checks",
+   "args": {
+    "channel": "google_uac"
+   },
+   "channel": "google_uac",
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "weekly_window_quality_checks"
+   },
+   "result": {
+    "stages": [
+     {
+      "stage": "evidence_binding",
+      "passed": true,
+      "blocks": "none",
+      "detail": "summary and its 2 contributing forecasts carry the current configuration hash and agree"
+     },
+     {
+      "stage": "completeness",
+      "passed": true,
+      "blocks": "none",
+      "detail": "every expected window date is accounted for"
+     },
+     {
+      "stage": "quality:reporting_completeness",
+      "passed": true,
+      "blocks": "none",
+      "detail": "every window date is decision-ready; 4 later install date(s) pending (up to 4 expected from the declared lag), excluded, not counted as zero"
+     },
+     {
+      "stage": "quality:missing_days",
+      "passed": true,
+      "blocks": "none",
+      "detail": "no missing days"
+     },
+     {
+      "stage": "quality:window_min_installs",
+      "passed": true,
+      "blocks": "none",
+      "detail": "196 installs in window"
+     },
+     {
+      "stage": "quality:tracking_gap",
+      "passed": false,
+      "blocks": "all->insufficient_evidence",
+      "detail": "longest run of recent days below 50% of the prior 28-day median activity per player is 4 day(s) (limit 2): suspected tracking gap, not player quality"
+     },
+     {
+      "stage": "quality:cpi_anomaly",
+      "passed": true,
+      "blocks": "none",
+      "detail": "window CPI is 1.06 x the trailing median"
+     },
+     {
+      "stage": "quality:revenue_concentration",
+      "passed": false,
+      "blocks": "increase",
+      "detail": "top 1 payer(s) of 4 provide 61% of IAP (limit 50%)"
+     },
+     {
+      "stage": "forecast_coverage",
+      "passed": false,
+      "blocks": "all->insufficient_evidence",
+      "detail": "2 of 7 window cohorts forecast (need 4); included cohorts hold 37% of the window's decision-ready spend (need 70%)"
+     },
+     {
+      "stage": "excluded_population",
+      "passed": true,
+      "blocks": "none",
+      "detail": "5 withheld cohort(s) excluded; 0 for revenue_spike"
+     },
+     {
+      "stage": "uncertainty",
+      "passed": true,
+      "blocks": "none",
+      "detail": "interval width/forecast = 0.32 (limit 1.5)"
+     },
+     {
+      "stage": "payback_target",
+      "passed": true,
+      "blocks": "none",
+      "detail": "target D30 ROAS 0.504 (channel level, 90 mature cohorts)"
+     }
+    ],
+    "n_failed": 3
+   },
+   "output_sha256": "e018ec9121119bb65cec2821c35b17040f01486545c5b02dbe83c2182d77a66c"
+  },
+  {
+   "tool_call_id": "tc_009",
+   "tool": "get_quality_checks",
+   "args": {
+    "channel": "meta"
+   },
+   "channel": "meta",
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "weekly_window_quality_checks"
+   },
+   "result": {
+    "stages": [
+     {
+      "stage": "evidence_binding",
+      "passed": true,
+      "blocks": "none",
+      "detail": "summary and its 7 contributing forecasts carry the current configuration hash and agree"
+     },
+     {
+      "stage": "completeness",
+      "passed": true,
+      "blocks": "none",
+      "detail": "every expected window date is accounted for"
+     },
+     {
+      "stage": "quality:reporting_completeness",
+      "passed": true,
+      "blocks": "none",
+      "detail": "every window date is decision-ready; 4 later install date(s) pending (up to 4 expected from the declared lag), excluded, not counted as zero"
+     },
+     {
+      "stage": "quality:missing_days",
+      "passed": true,
+      "blocks": "none",
+      "detail": "no missing days"
+     },
+     {
+      "stage": "quality:window_min_installs",
+      "passed": true,
+      "blocks": "none",
+      "detail": "589 installs in window"
+     },
+     {
+      "stage": "quality:tracking_gap",
+      "passed": true,
+      "blocks": "none",
+      "detail": "longest run of recent days below 50% of the prior 28-day median activity per player is 0 day(s)"
+     },
+     {
+      "stage": "quality:cpi_anomaly",
+      "passed": true,
+      "blocks": "none",
+      "detail": "window CPI is 1.17 x the trailing median"
+     },
+     {
+      "stage": "quality:revenue_concentration",
+      "passed": true,
+      "blocks": "none",
+      "detail": "top 1 payer(s) of 19 provide 23% of IAP"
+     },
+     {
+      "stage": "forecast_coverage",
+      "passed": true,
+      "blocks": "none",
+      "detail": "7 of 7 window cohorts forecast (need 4); included cohorts hold 100% of the window's decision-ready spend (need 70%)"
+     },
+     {
+      "stage": "excluded_population",
+      "passed": true,
+      "blocks": "none",
+      "detail": "0 withheld cohort(s) excluded; 0 for revenue_spike"
+     },
+     {
+      "stage": "uncertainty",
+      "passed": true,
+      "blocks": "none",
+      "detail": "interval width/forecast = 0.42 (limit 1.5)"
+     },
+     {
+      "stage": "payback_target",
+      "passed": true,
+      "blocks": "none",
+      "detail": "target D30 ROAS 0.453 (channel level, 90 mature cohorts)"
+     }
+    ],
+    "n_failed": 0
+   },
+   "output_sha256": "44b112aa93a167646562e65830fa58cc58c689e2c142dfc7cb111fde24a22ad2"
+  },
+  {
+   "tool_call_id": "tc_010",
+   "tool": "get_quality_checks",
+   "args": {
+    "channel": "tiktok"
+   },
+   "channel": "tiktok",
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "weekly_window_quality_checks"
+   },
+   "result": {
+    "stages": [
+     {
+      "stage": "evidence_binding",
+      "passed": true,
+      "blocks": "none",
+      "detail": "summary and its 7 contributing forecasts carry the current configuration hash and agree"
+     },
+     {
+      "stage": "completeness",
+      "passed": true,
+      "blocks": "none",
+      "detail": "every expected window date is accounted for"
+     },
+     {
+      "stage": "quality:reporting_completeness",
+      "passed": true,
+      "blocks": "none",
+      "detail": "every window date is decision-ready; 4 later install date(s) pending (up to 4 expected from the declared lag), excluded, not counted as zero"
+     },
+     {
+      "stage": "quality:missing_days",
+      "passed": true,
+      "blocks": "none",
+      "detail": "no missing days"
+     },
+     {
+      "stage": "quality:window_min_installs",
+      "passed": true,
+      "blocks": "none",
+      "detail": "376 installs in window"
+     },
+     {
+      "stage": "quality:tracking_gap",
+      "passed": true,
+      "blocks": "none",
+      "detail": "longest run of recent days below 50% of the prior 28-day median activity per player is 0 day(s)"
+     },
+     {
+      "stage": "quality:cpi_anomaly",
+      "passed": true,
+      "blocks": "none",
+      "detail": "window CPI is 0.96 x the trailing median"
+     },
+     {
+      "stage": "quality:revenue_concentration",
+      "passed": true,
+      "blocks": "none",
+      "detail": "top 1 payer(s) of 14 provide 21% of IAP"
+     },
+     {
+      "stage": "forecast_coverage",
+      "passed": true,
+      "blocks": "none",
+      "detail": "7 of 7 window cohorts forecast (need 4); included cohorts hold 100% of the window's decision-ready spend (need 70%)"
+     },
+     {
+      "stage": "excluded_population",
+      "passed": true,
+      "blocks": "none",
+      "detail": "0 withheld cohort(s) excluded; 0 for revenue_spike"
+     },
+     {
+      "stage": "uncertainty",
+      "passed": true,
+      "blocks": "none",
+      "detail": "interval width/forecast = 0.20 (limit 1.5)"
+     },
+     {
+      "stage": "payback_target",
+      "passed": true,
+      "blocks": "none",
+      "detail": "target D30 ROAS 0.893 (channel level, 90 mature cohorts)"
+     }
+    ],
+    "n_failed": 0
+   },
+   "output_sha256": "d87ba7f6451a7ac01ef8ea1dc968d1215ee3a0cf8859aa79cd3a515013a848e7"
+  },
+  {
+   "tool_call_id": "tc_011",
+   "tool": "get_quality_checks",
+   "args": {
+    "channel": "unity"
+   },
+   "channel": "unity",
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "weekly_window_quality_checks"
+   },
+   "result": {
+    "stages": [
+     {
+      "stage": "evidence_binding",
+      "passed": true,
+      "blocks": "none",
+      "detail": "summary and its 6 contributing forecasts carry the current configuration hash and agree"
+     },
+     {
+      "stage": "completeness",
+      "passed": true,
+      "blocks": "none",
+      "detail": "every expected window date is accounted for"
+     },
+     {
+      "stage": "quality:reporting_completeness",
+      "passed": true,
+      "blocks": "none",
+      "detail": "every window date is decision-ready; 11 later install date(s) pending (up to 11 expected from the declared lag), excluded, not counted as zero"
+     },
+     {
+      "stage": "quality:missing_days",
+      "passed": true,
+      "blocks": "none",
+      "detail": "no missing days"
+     },
+     {
+      "stage": "quality:window_min_installs",
+      "passed": true,
+      "blocks": "none",
+      "detail": "393 installs in window"
+     },
+     {
+      "stage": "quality:tracking_gap",
+      "passed": true,
+      "blocks": "none",
+      "detail": "longest run of recent days below 50% of the prior 28-day median activity per player is 0 day(s)"
+     },
+     {
+      "stage": "quality:cpi_anomaly",
+      "passed": true,
+      "blocks": "none",
+      "detail": "window CPI is 0.88 x the trailing median"
+     },
+     {
+      "stage": "quality:revenue_concentration",
+      "passed": true,
+      "blocks": "none",
+      "detail": "top 1 payer(s) of 10 provide 48% of IAP"
+     },
+     {
+      "stage": "forecast_coverage",
+      "passed": true,
+      "blocks": "none",
+      "detail": "6 of 7 window cohorts forecast (need 4); included cohorts hold 87% of the window's decision-ready spend (need 70%)"
+     },
+     {
+      "stage": "excluded_population",
+      "passed": false,
+      "blocks": "decrease",
+      "detail": "1 withheld cohort(s) excluded; 1 for revenue_spike"
+     },
+     {
+      "stage": "uncertainty",
+      "passed": true,
+      "blocks": "none",
+      "detail": "interval width/forecast = 0.71 (limit 1.5)"
+     },
+     {
+      "stage": "payback_target",
+      "passed": true,
+      "blocks": "none",
+      "detail": "target D30 ROAS 0.518 (channel level, 90 mature cohorts)"
+     }
+    ],
+    "n_failed": 1
+   },
+   "output_sha256": "ba65e190abf3901ddb24495575178f76a34102be6c197952a596a77ae7072d2e"
+  },
+  {
+   "tool_call_id": "tc_012",
+   "tool": "get_forecast_and_populations",
+   "args": {
+    "channel": "applovin"
+   },
+   "channel": "applovin",
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "channel_review_window",
+    "included": "included_cohorts",
+    "excluded_withheld": "excluded_withheld_cohorts",
+    "uncertainty": "included_cohorts_weekly_forecast_interval"
+   },
+   "result": {
+    "available": true,
+    "note": "The weekly forecast covers ONLY the included cohorts; it is not a whole-channel forecast.",
+    "window": [
+     "2025-10-30",
+     "2025-11-05"
+    ],
+    "n_expected_dates": 7,
+    "included": {
+     "install_dates": [
+      "2025-10-30",
+      "2025-10-31",
+      "2025-11-02",
+      "2025-11-03",
+      "2025-11-04"
+     ],
+     "n_cohorts": 5,
+     "installs": 567,
+     "spend": 580.1,
+     "forecast_d30_net_revenue": 267.7092963464106,
+     "observed_d0_3_net_revenue": 140.066398
+    },
+    "excluded_withheld": {
+     "cohorts": [
+      {
+       "install_date": "2025-11-01",
+       "reason": "revenue_spike",
+       "installs": 109,
+       "spend": 92.25,
+       "observed_d0_3_net_revenue": 258.46480499999996
+      },
+      {
+       "install_date": "2025-11-05",
+       "reason": "revenue_spike",
+       "installs": 103,
+       "spend": 84.3,
+       "observed_d0_3_net_revenue": 152.066075
+      }
+     ],
+     "n_cohorts": 2,
+     "installs": 212,
+     "spend": 176.55,
+     "observed_d0_3_net_revenue": 410.53087999999997
+    },
+    "included_spend_share": 0.7666688693583559,
+    "accounting_statuses": {
+     "forecast": 5,
+     "withheld": 2
+    },
+    "uncertainty": {
+     "interval_status": "available",
+     "calibration_n": 35,
+     "interval_reason": null,
+     "note": "80% nominal empirical interval from earlier matured forecasts; observed coverage on the dev seed is below nominal, so it is not a guaranteed bound",
+     "lo": 200.4756532094604,
+     "hi": 336.9406425358193,
+     "width_ratio": 0.5097506556133031
+    }
+   },
+   "output_sha256": "56fed198fe2f5fbe42b699262066fb81526b9242f530dedfc9e6bcd06a7e1474"
+  },
+  {
+   "tool_call_id": "tc_013",
+   "tool": "get_forecast_and_populations",
+   "args": {
+    "channel": "google_uac"
+   },
+   "channel": "google_uac",
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "channel_review_window",
+    "included": "included_cohorts",
+    "excluded_withheld": "excluded_withheld_cohorts",
+    "uncertainty": "included_cohorts_weekly_forecast_interval"
+   },
+   "result": {
+    "available": true,
+    "note": "The weekly forecast covers ONLY the included cohorts; it is not a whole-channel forecast.",
+    "window": [
+     "2025-10-30",
+     "2025-11-05"
+    ],
+    "n_expected_dates": 7,
+    "included": {
+     "install_dates": [
+      "2025-11-04",
+      "2025-11-05"
+     ],
+     "n_cohorts": 2,
+     "installs": 196,
+     "spend": 239.52999999999997,
+     "forecast_d30_net_revenue": 44.44578136311743,
+     "observed_d0_3_net_revenue": 22.748529
+    },
+    "excluded_withheld": {
+     "cohorts": [
+      {
+       "install_date": "2025-10-30",
+       "reason": "low_activity",
+       "installs": 65,
+       "spend": 74.19,
+       "observed_d0_3_net_revenue": 0.419969
+      },
+      {
+       "install_date": "2025-10-31",
+       "reason": "low_activity",
+       "installs": 67,
+       "spend": 85.91,
+       "observed_d0_3_net_revenue": 0.503789
+      },
+      {
+       "install_date": "2025-11-01",
+       "reason": "low_activity",
+       "installs": 76,
+       "spend": 72.35,
+       "observed_d0_3_net_revenue": 0.554245
+      },
+      {
+       "install_date": "2025-11-02",
+       "reason": "low_activity",
+       "installs": 55,
+       "spend": 64.69,
+       "observed_d0_3_net_revenue": 1.114426
+      },
+      {
+       "install_date": "2025-11-03",
+       "reason": "low_activity",
+       "installs": 107,
+       "spend": 113.44,
+       "observed_d0_3_net_revenue": 15.334124
+      }
+     ],
+     "n_cohorts": 5,
+     "installs": 370,
+     "spend": 410.58,
+     "observed_d0_3_net_revenue": 17.926553
+    },
+    "included_spend_share": 0.36844534001938134,
+    "accounting_statuses": {
+     "forecast": 2,
+     "withheld": 5
+    },
+    "uncertainty": {
+     "interval_status": "available",
+     "calibration_n": 35,
+     "interval_reason": null,
+     "note": "80% nominal empirical interval from earlier matured forecasts; observed coverage on the dev seed is below nominal, so it is not a guaranteed bound",
+     "lo": 39.12835250867014,
+     "hi": 53.543810066092384,
+     "width_ratio": 0.3243380387364427
+    }
+   },
+   "output_sha256": "47047cf27dc3266d64392fac95a3083096708b77d334116f03753ff6a6539f71"
+  },
+  {
+   "tool_call_id": "tc_014",
+   "tool": "get_forecast_and_populations",
+   "args": {
+    "channel": "meta"
+   },
+   "channel": "meta",
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "channel_review_window",
+    "included": "included_cohorts",
+    "excluded_withheld": "excluded_withheld_cohorts",
+    "uncertainty": "included_cohorts_weekly_forecast_interval"
+   },
+   "result": {
+    "available": true,
+    "note": "The weekly forecast covers ONLY the included cohorts; it is not a whole-channel forecast.",
+    "window": [
+     "2025-10-30",
+     "2025-11-05"
+    ],
+    "n_expected_dates": 7,
+    "included": {
+     "install_dates": [
+      "2025-10-30",
+      "2025-10-31",
+      "2025-11-01",
+      "2025-11-02",
+      "2025-11-03",
+      "2025-11-04",
+      "2025-11-05"
+     ],
+     "n_cohorts": 7,
+     "installs": 589,
+     "spend": 649.2099999999999,
+     "forecast_d30_net_revenue": 415.765347997623,
+     "observed_d0_3_net_revenue": 177.92917899999998
+    },
+    "excluded_withheld": {
+     "cohorts": [],
+     "n_cohorts": 0,
+     "installs": 0,
+     "spend": 0.0,
+     "observed_d0_3_net_revenue": 0.0
+    },
+    "included_spend_share": 1.0,
+    "accounting_statuses": {
+     "forecast": 7
+    },
+    "uncertainty": {
+     "interval_status": "available",
+     "calibration_n": 35,
+     "interval_reason": null,
+     "note": "80% nominal empirical interval from earlier matured forecasts; observed coverage on the dev seed is below nominal, so it is not a guaranteed bound",
+     "lo": 345.54205048002854,
+     "hi": 519.6836151312841,
+     "width_ratio": 0.41884578762983193
+    }
+   },
+   "output_sha256": "48c17dace575317d51cc61f4dd63df6e114b78a24905d7301f62638bad398e8e"
+  },
+  {
+   "tool_call_id": "tc_015",
+   "tool": "get_forecast_and_populations",
+   "args": {
+    "channel": "tiktok"
+   },
+   "channel": "tiktok",
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "channel_review_window",
+    "included": "included_cohorts",
+    "excluded_withheld": "excluded_withheld_cohorts",
+    "uncertainty": "included_cohorts_weekly_forecast_interval"
+   },
+   "result": {
+    "available": true,
+    "note": "The weekly forecast covers ONLY the included cohorts; it is not a whole-channel forecast.",
+    "window": [
+     "2025-10-30",
+     "2025-11-05"
+    ],
+    "n_expected_dates": 7,
+    "included": {
+     "install_dates": [
+      "2025-10-30",
+      "2025-10-31",
+      "2025-11-01",
+      "2025-11-02",
+      "2025-11-03",
+      "2025-11-04",
+      "2025-11-05"
+     ],
+     "n_cohorts": 7,
+     "installs": 376,
+     "spend": 478.34,
+     "forecast_d30_net_revenue": 115.53276657964881,
+     "observed_d0_3_net_revenue": 102.19900899999999
+    },
+    "excluded_withheld": {
+     "cohorts": [],
+     "n_cohorts": 0,
+     "installs": 0,
+     "spend": 0.0,
+     "observed_d0_3_net_revenue": 0.0
+    },
+    "included_spend_share": 1.0,
+    "accounting_statuses": {
+     "forecast": 7
+    },
+    "uncertainty": {
+     "interval_status": "available",
+     "calibration_n": 35,
+     "interval_reason": null,
+     "note": "80% nominal empirical interval from earlier matured forecasts; observed coverage on the dev seed is below nominal, so it is not a guaranteed bound",
+     "lo": 102.51790739735208,
+     "hi": 125.15835403264094,
+     "width_ratio": 0.19596558885898782
+    }
+   },
+   "output_sha256": "94bff002a152403709f93cd070823b80a2a20f1594f661dedb61f11ad354d912"
+  },
+  {
+   "tool_call_id": "tc_016",
+   "tool": "get_forecast_and_populations",
+   "args": {
+    "channel": "unity"
+   },
+   "channel": "unity",
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "channel_review_window",
+    "included": "included_cohorts",
+    "excluded_withheld": "excluded_withheld_cohorts",
+    "uncertainty": "included_cohorts_weekly_forecast_interval"
+   },
+   "result": {
+    "available": true,
+    "note": "The weekly forecast covers ONLY the included cohorts; it is not a whole-channel forecast.",
+    "window": [
+     "2025-10-23",
+     "2025-10-29"
+    ],
+    "n_expected_dates": 7,
+    "included": {
+     "install_dates": [
+      "2025-10-23",
+      "2025-10-24",
+      "2025-10-25",
+      "2025-10-26",
+      "2025-10-27",
+      "2025-10-29"
+     ],
+     "n_cohorts": 6,
+     "installs": 393,
+     "spend": 378.7,
+     "forecast_d30_net_revenue": 117.65482258889617,
+     "observed_d0_3_net_revenue": 50.02024899999999
+    },
+    "excluded_withheld": {
+     "cohorts": [
+      {
+       "install_date": "2025-10-28",
+       "reason": "revenue_spike",
+       "installs": 61,
+       "spend": 56.28,
+       "observed_d0_3_net_revenue": 69.044177
+      }
+     ],
+     "n_cohorts": 1,
+     "installs": 61,
+     "spend": 56.28,
+     "observed_d0_3_net_revenue": 69.044177
+    },
+    "included_spend_share": 0.8706147409076279,
+    "accounting_statuses": {
+     "forecast": 6,
+     "withheld": 1
+    },
+    "uncertainty": {
+     "interval_status": "available",
+     "calibration_n": 35,
+     "interval_reason": null,
+     "note": "80% nominal empirical interval from earlier matured forecasts; observed coverage on the dev seed is below nominal, so it is not a guaranteed bound",
+     "lo": 90.71977462632614,
+     "hi": 173.86490106045966,
+     "width_ratio": 0.7066869390016866
+    }
+   },
+   "output_sha256": "f89a56d9b0c34d61340c39bc4617a8ab14268dbccdfb999d919382aa9f62a254"
+  },
+  {
+   "tool_call_id": "tc_017",
+   "tool": "get_economics",
+   "args": {
+    "channel": "applovin"
+   },
+   "channel": "applovin",
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "channel_economics",
+    "average_d30_roas": "included_cohorts_forecast_average",
+    "payback_target": "mature_history_payback_target",
+    "response_curve": "historical_spend_install_response",
+    "marginal_step": "included_cohorts_model_estimated_finite_step"
+   },
+   "result": {
+    "average_d30_roas": {
+     "population": "included cohorts only",
+     "label": "forecast-based average D30 ROAS (model-estimated: uses forecast revenue)",
+     "forecast_d30_net_revenue": 267.7092963464106,
+     "spend": 580.1,
+     "point": 0.46148818539288156,
+     "lower": 0.34558809379324323,
+     "upper": 0.5808319988550582
+    },
+    "payback_target": {
+     "level": "channel",
+     "n_cohorts": 90,
+     "installs": 8957,
+     "first_install": "2025-01-30",
+     "last_install": "2025-05-12",
+     "sum_d30": 7321.874469,
+     "sum_d180": 14118.002106999998,
+     "d180_over_d30": 1.9281950498842946,
+     "target_d30_roas": 0.5186197319923662,
+     "note": "estimate derived from synthetic mature history; payback_multiple x (sum D30 / sum D180)"
+    },
+    "response_curve": null,
+    "marginal_step": null
+   },
+   "output_sha256": "8399509c9beb245e6d505687653b79cb1eadc20fe908eab3ed2e088693609fff"
+  },
+  {
+   "tool_call_id": "tc_018",
+   "tool": "get_economics",
+   "args": {
+    "channel": "google_uac"
+   },
+   "channel": "google_uac",
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "channel_economics",
+    "average_d30_roas": "included_cohorts_forecast_average",
+    "payback_target": "mature_history_payback_target",
+    "response_curve": "historical_spend_install_response",
+    "marginal_step": "included_cohorts_model_estimated_finite_step"
+   },
+   "result": {
+    "average_d30_roas": {
+     "population": "included cohorts only",
+     "label": "forecast-based average D30 ROAS (model-estimated: uses forecast revenue)",
+     "forecast_d30_net_revenue": 44.44578136311743,
+     "spend": 239.52999999999997,
+     "point": 0.18555413252251257,
+     "lower": 0.16335470508358094,
+     "upper": 0.22353696850537466
+    },
+    "payback_target": {
+     "level": "channel",
+     "n_cohorts": 90,
+     "installs": 6258,
+     "first_install": "2025-02-04",
+     "last_install": "2025-05-12",
+     "sum_d30": 2518.898522,
+     "sum_d180": 4997.671239,
+     "d180_over_d30": 1.98407009863655,
+     "target_d30_roas": 0.5040144502390306,
+     "note": "estimate derived from synthetic mature history; payback_multiple x (sum D30 / sum D180)"
+    },
+    "response_curve": null,
+    "marginal_step": null
+   },
+   "output_sha256": "f574a5c29aefab58d216f5e7f36773f16f61c4add702301c0df5d1ec06be1d76"
+  },
+  {
+   "tool_call_id": "tc_019",
+   "tool": "get_economics",
+   "args": {
+    "channel": "meta"
+   },
+   "channel": "meta",
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "channel_economics",
+    "average_d30_roas": "included_cohorts_forecast_average",
+    "payback_target": "mature_history_payback_target",
+    "response_curve": "historical_spend_install_response",
+    "marginal_step": "included_cohorts_model_estimated_finite_step"
+   },
+   "result": {
+    "average_d30_roas": {
+     "population": "included cohorts only",
+     "label": "forecast-based average D30 ROAS (model-estimated: uses forecast revenue)",
+     "forecast_d30_net_revenue": 415.765347997623,
+     "spend": 649.2099999999999,
+     "point": 0.6404173503144176,
+     "lower": 0.5322500430985792,
+     "upper": 0.8004861526028314
+    },
+    "payback_target": {
+     "level": "channel",
+     "n_cohorts": 90,
+     "installs": 8047,
+     "first_install": "2025-02-03",
+     "last_install": "2025-05-12",
+     "sum_d30": 6169.345000999999,
+     "sum_d180": 13627.008794999998,
+     "d180_over_d30": 2.2088258628413833,
+     "target_d30_roas": 0.45272921547270495,
+     "note": "estimate derived from synthetic mature history; payback_multiple x (sum D30 / sum D180)"
+    },
+    "response_curve": {
+     "usable": true,
+     "unusable_reasons": [],
+     "n_obs": 120,
+     "b": 0.7743190466081847,
+     "b_se": 0.058645929677214395,
+     "spend_range": [
+      53.875,
+      122.17449999999998
+     ],
+     "window": [
+      "2025-07-09",
+      "2025-11-05"
+     ],
+     "label": "model-estimated spend -> installs response (historical association, not causal incrementality)"
+    },
+    "marginal_step": {
+     "label": "MODEL-ESTIMATED finite-step marginal D30 ROAS (not a derivative, not causal evidence)",
+     "step_from": 90.7,
+     "step_to": 99.77000000000001,
+     "finite_step_marginal_roas": 0.41242937847685146,
+     "lower_bound": 0.31703327605392123,
+     "assumptions": [
+      "historical spend->installs association read as a response curve",
+      "step stays inside the observed spend range",
+      "incremental players are worth 80% of the included cohorts' average forecast value per install",
+      "no spillover to organic or other channels"
+     ]
+    }
+   },
+   "output_sha256": "c02132b419edda5960178969297ad68dc016bd832ec471f57634480e12538b18"
+  },
+  {
+   "tool_call_id": "tc_020",
+   "tool": "get_economics",
+   "args": {
+    "channel": "tiktok"
+   },
+   "channel": "tiktok",
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "channel_economics",
+    "average_d30_roas": "included_cohorts_forecast_average",
+    "payback_target": "mature_history_payback_target",
+    "response_curve": "historical_spend_install_response",
+    "marginal_step": "included_cohorts_model_estimated_finite_step"
+   },
+   "result": {
+    "average_d30_roas": {
+     "population": "included cohorts only",
+     "label": "forecast-based average D30 ROAS (model-estimated: uses forecast revenue)",
+     "forecast_d30_net_revenue": 115.53276657964881,
+     "spend": 478.34,
+     "point": 0.2415285499428206,
+     "lower": 0.2143201643127317,
+     "upper": 0.261651448828534
+    },
+    "payback_target": {
+     "level": "channel",
+     "n_cohorts": 90,
+     "installs": 4756,
+     "first_install": "2025-01-29",
+     "last_install": "2025-05-11",
+     "sum_d30": 2631.9714379999996,
+     "sum_d180": 2947.647339,
+     "d180_over_d30": 1.1199389539120068,
+     "target_d30_roas": 0.8929058110774221,
+     "note": "estimate derived from synthetic mature history; payback_multiple x (sum D30 / sum D180)"
+    },
+    "response_curve": null,
+    "marginal_step": null
+   },
+   "output_sha256": "2e0692aa0e21ecd9cd7a0d5a28e4748aaa7a8f2f7c1828c841c2c123c9d51ab7"
+  }
+ ],
+ "model_turns": [
+  {
+   "text": null,
+   "tool_calls": [
+    {
+     "name": "get_review_overview",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "text": null,
+   "tool_calls": [
+    {
+     "name": "get_policy_decision",
+     "args": {
+      "channel": "applovin"
+     }
+    },
+    {
+     "name": "get_policy_decision",
+     "args": {
+      "channel": "google_uac"
+     }
+    },
+    {
+     "name": "get_policy_decision",
+     "args": {
+      "channel": "meta"
+     }
+    },
+    {
+     "name": "get_policy_decision",
+     "args": {
+      "channel": "tiktok"
+     }
+    },
+    {
+     "name": "get_policy_decision",
+     "args": {
+      "channel": "unity"
+     }
+    }
+   ]
+  },
+  {
+   "text": null,
+   "tool_calls": [
+    {
+     "name": "get_quality_checks",
+     "args": {
+      "channel": "applovin"
+     }
+    },
+    {
+     "name": "get_quality_checks",
+     "args": {
+      "channel": "google_uac"
+     }
+    },
+    {
+     "name": "get_quality_checks",
+     "args": {
+      "channel": "meta"
+     }
+    },
+    {
+     "name": "get_quality_checks",
+     "args": {
+      "channel": "tiktok"
+     }
+    },
+    {
+     "name": "get_quality_checks",
+     "args": {
+      "channel": "unity"
+     }
+    }
+   ]
+  },
+  {
+   "text": null,
+   "tool_calls": [
+    {
+     "name": "get_forecast_and_populations",
+     "args": {
+      "channel": "applovin"
+     }
+    },
+    {
+     "name": "get_forecast_and_populations",
+     "args": {
+      "channel": "google_uac"
+     }
+    },
+    {
+     "name": "get_forecast_and_populations",
+     "args": {
+      "channel": "meta"
+     }
+    },
+    {
+     "name": "get_forecast_and_populations",
+     "args": {
+      "channel": "tiktok"
+     }
+    },
+    {
+     "name": "get_forecast_and_populations",
+     "args": {
+      "channel": "unity"
+     }
+    }
+   ]
+  },
+  {
+   "text": null,
+   "tool_calls": [
+    {
+     "name": "get_economics",
+     "args": {
+      "channel": "applovin"
+     }
+    },
+    {
+     "name": "get_economics",
+     "args": {
+      "channel": "google_uac"
+     }
+    },
+    {
+     "name": "get_economics",
+     "args": {
+      "channel": "meta"
+     }
+    },
+    {
+     "name": "get_economics",
+     "args": {
+      "channel": "tiktok"
+     }
+    },
+    {
+     "name": "get_economics",
+     "args": {
+      "channel": "unity"
+     }
+    }
+   ]
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 26905,
+  "output_tokens": 392
+ },
+ "plans_to_register": [],
+ "proposal": {
+  "proposal_id": "P-2025-11-10-b7da777e9d-RULES",
+  "as_of": "2025-11-10",
+  "ledger_version": 1,
+  "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+  "source": "rules_only",
+  "items": [
+   {
+    "channel": "applovin",
+    "action": "hold",
+    "current_budget": 101.7,
+    "new_budget": 101.7,
+    "qualification": "none",
+    "experiment_plan_hash": null,
+    "reason": "average D30 ROAS 0.461 is below the target 0.519, so (diminishing-returns heuristic) there is no basis for an increase; decrease blocked: excluded_cohorts_withheld_for_revenue_spike: included-only average ROAS is biased low",
+    "evidence": {
+     "run_labels": [
+      "MODE: LIVE (model models/gemini-3.5-flash).",
+      "RULES-ONLY FALLBACK: AGENT UNAVAILABLE (TOOL-LOOP LIMIT). This is the reviewed deterministic proposal with the same quality gates, validation and approval requirements.",
+      "MISSING EVIDENCE: google_uac: insufficient_evidence (quality_check_failed:tracking_gap; forecast_covers_too_little_of_the_window).",
+      "APPROVAL REQUIRED: this is a proposal only. Nothing changes until a person approves it and it is applied in the sandbox ledger; any increase also needs its plan registered there."
+     ],
+     "policy_action": "hold",
+     "uncertainty": {
+      "interval_status": "available",
+      "calibration_n": 35,
+      "interval_reason": null,
+      "note": "80% nominal empirical interval from earlier matured forecasts; observed coverage on the dev seed is below nominal, so it is not a guaranteed bound",
+      "lo": 200.4756532094604,
+      "hi": 336.9406425358193,
+      "width_ratio": 0.5097506556133031
+     },
+     "average_d30_roas": {
+      "population": "included cohorts only",
+      "label": "forecast-based average D30 ROAS (model-estimated: uses forecast revenue)",
+      "forecast_d30_net_revenue": 267.7092963464106,
+      "spend": 580.1,
+      "point": 0.46148818539288156,
+      "lower": 0.34558809379324323,
+      "upper": 0.5808319988550582
+     },
+     "payback_target": {
+      "level": "channel",
+      "n_cohorts": 90,
+      "installs": 8957,
+      "first_install": "2025-01-30",
+      "last_install": "2025-05-12",
+      "sum_d30": 7321.874469,
+      "sum_d180": 14118.002106999998,
+      "d180_over_d30": 1.9281950498842946,
+      "target_d30_roas": 0.5186197319923662,
+      "note": "estimate derived from synthetic mature history; payback_multiple x (sum D30 / sum D180)"
+     }
+    }
+   },
+   {
+    "channel": "google_uac",
+    "action": "insufficient_evidence",
+    "current_budget": 72.1,
+    "new_budget": 72.1,
+    "qualification": "none",
+    "experiment_plan_hash": null,
+    "reason": "quality_check_failed:tracking_gap; forecast_covers_too_little_of_the_window",
+    "evidence": {
+     "run_labels": [
+      "MODE: LIVE (model models/gemini-3.5-flash).",
+      "RULES-ONLY FALLBACK: AGENT UNAVAILABLE (TOOL-LOOP LIMIT). This is the reviewed deterministic proposal with the same quality gates, validation and approval requirements.",
+      "MISSING EVIDENCE: google_uac: insufficient_evidence (quality_check_failed:tracking_gap; forecast_covers_too_little_of_the_window).",
+      "APPROVAL REQUIRED: this is a proposal only. Nothing changes until a person approves it and it is applied in the sandbox ledger; any increase also needs its plan registered there."
+     ],
+     "policy_action": "insufficient_evidence",
+     "uncertainty": {
+      "interval_status": "available",
+      "calibration_n": 35,
+      "interval_reason": null,
+      "note": "80% nominal empirical interval from earlier matured forecasts; observed coverage on the dev seed is below nominal, so it is not a guaranteed bound",
+      "lo": 39.12835250867014,
+      "hi": 53.543810066092384,
+      "width_ratio": 0.3243380387364427
+     },
+     "average_d30_roas": {
+      "population": "included cohorts only",
+      "label": "forecast-based average D30 ROAS (model-estimated: uses forecast revenue)",
+      "forecast_d30_net_revenue": 44.44578136311743,
+      "spend": 239.52999999999997,
+      "point": 0.18555413252251257,
+      "lower": 0.16335470508358094,
+      "upper": 0.22353696850537466
+     },
+     "payback_target": {
+      "level": "channel",
+      "n_cohorts": 90,
+      "installs": 6258,
+      "first_install": "2025-02-04",
+      "last_install": "2025-05-12",
+      "sum_d30": 2518.898522,
+      "sum_d180": 4997.671239,
+      "d180_over_d30": 1.98407009863655,
+      "target_d30_roas": 0.5040144502390306,
+      "note": "estimate derived from synthetic mature history; payback_multiple x (sum D30 / sum D180)"
+     }
+    }
+   },
+   {
+    "channel": "meta",
+    "action": "hold",
+    "current_budget": 90.7,
+    "new_budget": 90.7,
+    "qualification": "none",
+    "experiment_plan_hash": null,
+    "reason": "lower bound of model-estimated finite-step marginal D30 ROAS 0.317 is below the target 0.453 (point estimate 0.412)",
+    "evidence": {
+     "run_labels": [
+      "MODE: LIVE (model models/gemini-3.5-flash).",
+      "RULES-ONLY FALLBACK: AGENT UNAVAILABLE (TOOL-LOOP LIMIT). This is the reviewed deterministic proposal with the same quality gates, validation and approval requirements.",
+      "MISSING EVIDENCE: google_uac: insufficient_evidence (quality_check_failed:tracking_gap; forecast_covers_too_little_of_the_window).",
+      "APPROVAL REQUIRED: this is a proposal only. Nothing changes until a person approves it and it is applied in the sandbox ledger; any increase also needs its plan registered there."
+     ],
+     "policy_action": "hold",
+     "uncertainty": {
+      "interval_status": "available",
+      "calibration_n": 35,
+      "interval_reason": null,
+      "note": "80% nominal empirical interval from earlier matured forecasts; observed coverage on the dev seed is below nominal, so it is not a guaranteed bound",
+      "lo": 345.54205048002854,
+      "hi": 519.6836151312841,
+      "width_ratio": 0.41884578762983193
+     },
+     "average_d30_roas": {
+      "population": "included cohorts only",
+      "label": "forecast-based average D30 ROAS (model-estimated: uses forecast revenue)",
+      "forecast_d30_net_revenue": 415.765347997623,
+      "spend": 649.2099999999999,
+      "point": 0.6404173503144176,
+      "lower": 0.5322500430985792,
+      "upper": 0.8004861526028314
+     },
+     "payback_target": {
+      "level": "channel",
+      "n_cohorts": 90,
+      "installs": 8047,
+      "first_install": "2025-02-03",
+      "last_install": "2025-05-12",
+      "sum_d30": 6169.345000999999,
+      "sum_d180": 13627.008794999998,
+      "d180_over_d30": 2.2088258628413833,
+      "target_d30_roas": 0.45272921547270495,
+      "note": "estimate derived from synthetic mature history; payback_multiple x (sum D30 / sum D180)"
+     }
+    }
+   },
+   {
+    "channel": "tiktok",
+    "action": "decrease",
+    "current_budget": 85.0,
+    "new_budget": 76.5,
+    "qualification": "none",
+    "experiment_plan_hash": null,
+    "reason": "upper bound of average D30 ROAS 0.262 is below the target 0.893 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)",
+    "evidence": {
+     "run_labels": [
+      "MODE: LIVE (model models/gemini-3.5-flash).",
+      "RULES-ONLY FALLBACK: AGENT UNAVAILABLE (TOOL-LOOP LIMIT). This is the reviewed deterministic proposal with the same quality gates, validation and approval requirements.",
+      "MISSING EVIDENCE: google_uac: insufficient_evidence (quality_check_failed:tracking_gap; forecast_covers_too_little_of_the_window).",
+      "APPROVAL REQUIRED: this is a proposal only. Nothing changes until a person approves it and it is applied in the sandbox ledger; any increase also needs its plan registered there."
+     ],
+     "policy_action": "decrease",
+     "uncertainty": {
+      "interval_status": "available",
+      "calibration_n": 35,
+      "interval_reason": null,
+      "note": "80% nominal empirical interval from earlier matured forecasts; observed coverage on the dev seed is below nominal, so it is not a guaranteed bound",
+      "lo": 102.51790739735208,
+      "hi": 125.15835403264094,
+      "width_ratio": 0.19596558885898782
+     },
+     "average_d30_roas": {
+      "population": "included cohorts only",
+      "label": "forecast-based average D30 ROAS (model-estimated: uses forecast revenue)",
+      "forecast_d30_net_revenue": 115.53276657964881,
+      "spend": 478.34,
+      "point": 0.2415285499428206,
+      "lower": 0.2143201643127317,
+      "upper": 0.261651448828534
+     },
+     "payback_target": {
+      "level": "channel",
+      "n_cohorts": 90,
+      "installs": 4756,
+      "first_install": "2025-01-29",
+      "last_install": "2025-05-11",
+      "sum_d30": 2631.9714379999996,
+      "sum_d180": 2947.647339,
+      "d180_over_d30": 1.1199389539120068,
+      "target_d30_roas": 0.8929058110774221,
+      "note": "estimate derived from synthetic mature history; payback_multiple x (sum D30 / sum D180)"
+     }
+    }
+   },
+   {
+    "channel": "unity",
+    "action": "hold",
+    "current_budget": 56.7,
+    "new_budget": 56.7,
+    "qualification": "none",
+    "experiment_plan_hash": null,
+    "reason": "average D30 ROAS 0.311 is below the target 0.518, so (diminishing-returns heuristic) there is no basis for an increase; decrease blocked: excluded_cohorts_withheld_for_revenue_spike: included-only average ROAS is biased low",
+    "evidence": {
+     "run_labels": [
+      "MODE: LIVE (model models/gemini-3.5-flash).",
+      "RULES-ONLY FALLBACK: AGENT UNAVAILABLE (TOOL-LOOP LIMIT). This is the reviewed deterministic proposal with the same quality gates, validation and approval requirements.",
+      "MISSING EVIDENCE: google_uac: insufficient_evidence (quality_check_failed:tracking_gap; forecast_covers_too_little_of_the_window).",
+      "APPROVAL REQUIRED: this is a proposal only. Nothing changes until a person approves it and it is applied in the sandbox ledger; any increase also needs its plan registered there."
+     ],
+     "policy_action": "hold",
+     "uncertainty": {
+      "interval_status": "available",
+      "calibration_n": 35,
+      "interval_reason": null,
+      "note": "80% nominal empirical interval from earlier matured forecasts; observed coverage on the dev seed is below nominal, so it is not a guaranteed bound",
+      "lo": 90.71977462632614,
+      "hi": 173.86490106045966,
+      "width_ratio": 0.7066869390016866
+     },
+     "average_d30_roas": {
+      "population": "included cohorts only",
+      "label": "forecast-based average D30 ROAS (model-estimated: uses forecast revenue)",
+      "forecast_d30_net_revenue": 117.65482258889617,
+      "spend": 378.7,
+      "point": 0.31068080958250904,
+      "lower": 0.23955578195491456,
+      "upper": 0.45910985228534373
+     },
+     "payback_target": {
+      "level": "channel",
+      "n_cohorts": 90,
+      "installs": 4986,
+      "first_install": "2025-01-15",
+      "last_install": "2025-05-05",
+      "sum_d30": 1872.2194889999998,
+      "sum_d180": 3611.487642,
+      "d180_over_d30": 1.9289873133032003,
+      "target_d30_roas": 0.5184067272519272,
+      "note": "estimate derived from synthetic mature history; payback_multiple x (sum D30 / sum D180)"
+     }
+    }
+   }
+  ],
+  "synthetic_notice": "SYNTHETIC DATA. SANDBOX LEDGER: nothing here moves real money."
+ }
+}

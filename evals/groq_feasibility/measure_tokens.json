@@ -1,0 +1,450 @@
+{
+ "system_prompt_chars": 4090,
+ "tool_declarations_chars_compact_json": 2584,
+ "tool_declarations_chars_openai_wrapped": 2801,
+ "task_prompt_chars": 502,
+ "wrap_up_chars": 245,
+ "cases": {
+  "2025-10-13": {
+   "channels": [
+    "applovin",
+    "google_uac",
+    "meta",
+    "tiktok",
+    "unity"
+   ],
+   "actions": {
+    "applovin": "increase_test",
+    "google_uac": "decrease",
+    "meta": "hold",
+    "tiktok": "hold",
+    "unity": "hold"
+   },
+   "rows": [
+    {
+     "tool": "get_review_overview",
+     "channel": "-",
+     "full": 1342,
+     "compact": 1061,
+     "compact_6sf": 1037,
+     "compact_4sf": 1035,
+     "error": false
+    },
+    {
+     "tool": "get_policy_decision",
+     "channel": "applovin",
+     "full": 908,
+     "compact": 658,
+     "compact_6sf": 626,
+     "compact_4sf": 619,
+     "error": false
+    },
+    {
+     "tool": "get_quality_checks",
+     "channel": "applovin",
+     "full": 2140,
+     "compact": 1808,
+     "compact_6sf": 1808,
+     "compact_4sf": 1808,
+     "error": false
+    },
+    {
+     "tool": "get_forecast_and_populations",
+     "channel": "applovin",
+     "full": 1675,
+     "compact": 1367,
+     "compact_6sf": 1284,
+     "compact_4sf": 1268,
+     "error": false
+    },
+    {
+     "tool": "get_economics",
+     "channel": "applovin",
+     "full": 2094,
+     "compact": 1782,
+     "compact_6sf": 1639,
+     "compact_4sf": 1615,
+     "error": false
+    },
+    {
+     "tool": "plan_experiment",
+     "channel": "applovin",
+     "full": 1854,
+     "compact": 1533,
+     "compact_6sf": 1502,
+     "compact_4sf": 1494,
+     "error": false
+    },
+    {
+     "tool": "get_policy_decision",
+     "channel": "google_uac",
+     "full": 769,
+     "compact": 522,
+     "compact_6sf": 522,
+     "compact_4sf": 522,
+     "error": false
+    },
+    {
+     "tool": "get_quality_checks",
+     "channel": "google_uac",
+     "full": 2139,
+     "compact": 1805,
+     "compact_6sf": 1805,
+     "compact_4sf": 1805,
+     "error": false
+    },
+    {
+     "tool": "get_forecast_and_populations",
+     "channel": "google_uac",
+     "full": 1514,
+     "compact": 1214,
+     "compact_6sf": 1156,
+     "compact_4sf": 1146,
+     "error": false
+    },
+    {
+     "tool": "get_economics",
+     "channel": "google_uac",
+     "full": 1314,
+     "compact": 1031,
+     "compact_6sf": 938,
+     "compact_4sf": 928,
+     "error": false
+    },
+    {
+     "tool": "get_policy_decision",
+     "channel": "meta",
+     "full": 803,
+     "compact": 557,
+     "compact_6sf": 524,
+     "compact_4sf": 520,
+     "error": false
+    },
+    {
+     "tool": "get_quality_checks",
+     "channel": "meta",
+     "full": 2132,
+     "compact": 1804,
+     "compact_6sf": 1804,
+     "compact_4sf": 1804,
+     "error": false
+    },
+    {
+     "tool": "get_forecast_and_populations",
+     "channel": "meta",
+     "full": 1661,
+     "compact": 1357,
+     "compact_6sf": 1281,
+     "compact_4sf": 1263,
+     "error": false
+    },
+    {
+     "tool": "get_economics",
+     "channel": "meta",
+     "full": 2088,
+     "compact": 1780,
+     "compact_6sf": 1635,
+     "compact_4sf": 1609,
+     "error": false
+    },
+    {
+     "tool": "get_policy_decision",
+     "channel": "tiktok",
+     "full": 838,
+     "compact": 594,
+     "compact_6sf": 594,
+     "compact_4sf": 594,
+     "error": false
+    },
+    {
+     "tool": "get_quality_checks",
+     "channel": "tiktok",
+     "full": 2136,
+     "compact": 1806,
+     "compact_6sf": 1806,
+     "compact_4sf": 1806,
+     "error": false
+    },
+    {
+     "tool": "get_forecast_and_populations",
+     "channel": "tiktok",
+     "full": 1813,
+     "compact": 1498,
+     "compact_6sf": 1387,
+     "compact_4sf": 1370,
+     "error": false
+    },
+    {
+     "tool": "get_economics",
+     "channel": "tiktok",
+     "full": 1314,
+     "compact": 1035,
+     "compact_6sf": 936,
+     "compact_4sf": 923,
+     "error": false
+    },
+    {
+     "tool": "get_policy_decision",
+     "channel": "unity",
+     "full": 836,
+     "compact": 593,
+     "compact_6sf": 593,
+     "compact_4sf": 593,
+     "error": false
+    },
+    {
+     "tool": "get_quality_checks",
+     "channel": "unity",
+     "full": 2136,
+     "compact": 1807,
+     "compact_6sf": 1807,
+     "compact_4sf": 1807,
+     "error": false
+    },
+    {
+     "tool": "get_forecast_and_populations",
+     "channel": "unity",
+     "full": 1679,
+     "compact": 1374,
+     "compact_6sf": 1278,
+     "compact_4sf": 1264,
+     "error": false
+    },
+    {
+     "tool": "get_economics",
+     "channel": "unity",
+     "full": 1309,
+     "compact": 1031,
+     "compact_6sf": 938,
+     "compact_4sf": 923,
+     "error": false
+    },
+    {
+     "tool": "check_budget_constraints",
+     "channel": "-",
+     "full": 798,
+     "compact": 335,
+     "compact_6sf": 323,
+     "compact_4sf": 323,
+     "error": false
+    }
+   ]
+  },
+  "2025-11-10": {
+   "channels": [
+    "applovin",
+    "google_uac",
+    "meta",
+    "tiktok",
+    "unity"
+   ],
+   "actions": {
+    "applovin": "hold",
+    "google_uac": "insufficient_evidence",
+    "meta": "hold",
+    "tiktok": "decrease",
+    "unity": "hold"
+   },
+   "rows": [
+    {
+     "tool": "get_review_overview",
+     "channel": "-",
+     "full": 1415,
+     "compact": 1131,
+     "compact_6sf": 1107,
+     "compact_4sf": 1106,
+     "error": false
+    },
+    {
+     "tool": "get_policy_decision",
+     "channel": "applovin",
+     "full": 844,
+     "compact": 598,
+     "compact_6sf": 598,
+     "compact_4sf": 598,
+     "error": false
+    },
+    {
+     "tool": "get_quality_checks",
+     "channel": "applovin",
+     "full": 2157,
+     "compact": 1825,
+     "compact_6sf": 1825,
+     "compact_4sf": 1825,
+     "error": false
+    },
+    {
+     "tool": "get_forecast_and_populations",
+     "channel": "applovin",
+     "full": 1788,
+     "compact": 1471,
+     "compact_6sf": 1393,
+     "compact_4sf": 1374,
+     "error": false
+    },
+    {
+     "tool": "get_economics",
+     "channel": "applovin",
+     "full": 1299,
+     "compact": 1018,
+     "compact_6sf": 938,
+     "compact_4sf": 927,
+     "error": false
+    },
+    {
+     "tool": "get_policy_decision",
+     "channel": "google_uac",
+     "full": 715,
+     "compact": 467,
+     "compact_6sf": 467,
+     "compact_4sf": 467,
+     "error": false
+    },
+    {
+     "tool": "get_quality_checks",
+     "channel": "google_uac",
+     "full": 2255,
+     "compact": 1921,
+     "compact_6sf": 1921,
+     "compact_4sf": 1921,
+     "error": false
+    },
+    {
+     "tool": "get_forecast_and_populations",
+     "channel": "google_uac",
+     "full": 2130,
+     "compact": 1784,
+     "compact_6sf": 1713,
+     "compact_4sf": 1684,
+     "error": false
+    },
+    {
+     "tool": "get_economics",
+     "channel": "google_uac",
+     "full": 1308,
+     "compact": 1025,
+     "compact_6sf": 942,
+     "compact_4sf": 927,
+     "error": false
+    },
+    {
+     "tool": "get_policy_decision",
+     "channel": "meta",
+     "full": 805,
+     "compact": 559,
+     "compact_6sf": 525,
+     "compact_4sf": 520,
+     "error": false
+    },
+    {
+     "tool": "get_quality_checks",
+     "channel": "meta",
+     "full": 2128,
+     "compact": 1800,
+     "compact_6sf": 1800,
+     "compact_4sf": 1800,
+     "error": false
+    },
+    {
+     "tool": "get_forecast_and_populations",
+     "channel": "meta",
+     "full": 1508,
+     "compact": 1214,
+     "compact_6sf": 1151,
+     "compact_4sf": 1140,
+     "error": false
+    },
+    {
+     "tool": "get_economics",
+     "channel": "meta",
+     "full": 2105,
+     "compact": 1797,
+     "compact_6sf": 1637,
+     "compact_4sf": 1612,
+     "error": false
+    },
+    {
+     "tool": "get_policy_decision",
+     "channel": "tiktok",
+     "full": 760,
+     "compact": 517,
+     "compact_6sf": 517,
+     "compact_4sf": 517,
+     "error": false
+    },
+    {
+     "tool": "get_quality_checks",
+     "channel": "tiktok",
+     "full": 2132,
+     "compact": 1802,
+     "compact_6sf": 1802,
+     "compact_4sf": 1802,
+     "error": false
+    },
+    {
+     "tool": "get_forecast_and_populations",
+     "channel": "tiktok",
+     "full": 1504,
+     "compact": 1208,
+     "compact_6sf": 1153,
+     "compact_4sf": 1141,
+     "error": false
+    },
+    {
+     "tool": "get_economics",
+     "channel": "tiktok",
+     "full": 1294,
+     "compact": 1015,
+     "compact_6sf": 938,
+     "compact_4sf": 923,
+     "error": false
+    },
+    {
+     "tool": "get_policy_decision",
+     "channel": "unity",
+     "full": 836,
+     "compact": 593,
+     "compact_6sf": 593,
+     "compact_4sf": 593,
+     "error": false
+    },
+    {
+     "tool": "get_quality_checks",
+     "channel": "unity",
+     "full": 2136,
+     "compact": 1807,
+     "compact_6sf": 1807,
+     "compact_4sf": 1807,
+     "error": false
+    },
+    {
+     "tool": "get_forecast_and_populations",
+     "channel": "unity",
+     "full": 1652,
+     "compact": 1347,
+     "compact_6sf": 1281,
+     "compact_4sf": 1265,
+     "error": false
+    },
+    {
+     "tool": "get_economics",
+     "channel": "unity",
+     "full": 1295,
+     "compact": 1017,
+     "compact_6sf": 936,
+     "compact_4sf": 923,
+     "error": false
+    },
+    {
+     "tool": "check_budget_constraints",
+     "channel": "-",
+     "full": 798,
+     "compact": 335,
+     "compact_6sf": 323,
+     "compact_4sf": 323,
+     "error": false
+    }
+   ]
+  }
+ }
+}

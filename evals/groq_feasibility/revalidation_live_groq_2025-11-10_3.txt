@@ -1,0 +1,20 @@
+=== model turn 4: answer text, 2950 chars, evidence available when it was written: tc_001..tc_003
+   parsed OK; validator ok = False | errors: 14
+     - wrong_population applovin | claim tc_001:channels.applovin.policy_action: that field describes 'channel_review_status', the claim says 'default'
+     - wrong_population applovin | claim tc_001:channels.applovin.current_budget: that field describes 'channel_review_status', the claim says 'default'
+     - missing_required_evidence applovin | every item must cite get_policy_decision.action == 'hold' for its channel (call the tool and cite it)
+     - wrong_population meta | claim tc_001:channels.meta.policy_action: that field describes 'channel_review_status', the claim says 'default'
+     - wrong_population meta | claim tc_001:channels.meta.current_budget: that field describes 'channel_review_status', the claim says 'default'
+     - missing_required_evidence meta | every item must cite get_policy_decision.action == 'hold' for its channel (call the tool and cite it)
+     - wrong_population unity | claim tc_001:channels.unity.policy_action: that field describes 'channel_review_status', the claim says 'default'
+     - wrong_population unity | claim tc_001:channels.unity.current_budget: that field describes 'channel_review_status', the claim says 'default'
+     - missing_required_evidence unity | every item must cite get_policy_decision.action == 'hold' for its channel (call the tool and cite it)
+     - wrong_population  | claim tc_001:channels.applovin.policy_action: that field describes 'channel_review_status', the claim says 'default'
+     - wrong_population  | claim tc_001:channels.meta.policy_action: that field describes 'channel_review_status', the claim says 'default'
+     - wrong_population  | claim tc_001:channels.unity.policy_action: that field describes 'channel_review_status', the claim says 'default'
+     - wrong_population  | claim tc_001:channels.tiktok.policy_action: that field describes 'channel_review_status', the claim says 'default'
+     - wrong_population  | claim tc_001:channels.google_uac.policy_action: that field describes 'channel_review_status', the claim says 'default'
+=== model turn 8: answer text, 724 chars, evidence available when it was written: tc_001..tc_006
+   PARSE FAILED: [{'code': 'malformed_output', 'detail': 'invalid JSON: Invalid control character at: line 1 column 718 (char 717)'}]
+   text around the failing character: 'field":"action","value":"decrease","population":"policy_decision","channel":"tiktok","etc":""}],"items":[{"channel":"applovin","action":"hold","new_budget":"\xa0\xa0\xa0\n\n\n\n"}]'
+   control characters in text: [(717, '0xa'), (718, '0xa'), (719, '0xa'), (720, '0xa')]

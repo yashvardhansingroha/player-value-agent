@@ -1,0 +1,20 @@
+# SIMULATOR parameters (hidden side). Read ONLY by src/experiments/simulator.py and scoring; decision code never reads this file.
+# ALL DATA IS SYNTHETIC. Fixed before any experiment was simulated (Phase 4a); not tuned.
+version: 1
+units:
+  share_sigma: 0.5                  # lognormal spread of unit budget shares
+  installs_multiplier_sigma: 0.15   # unit-specific installs-per-spend multiplier (mean 1)
+  value_multiplier_sigma: 0.15      # unit-specific value-per-install multiplier (mean 1)
+noise:
+  installs_dispersion: 0.25         # negative binomial: variance = mean + dispersion x mean^2
+  common_day_sd: 0.08               # day-wide multiplicative shock shared by every unit
+  spend_noise_sd: 0.04              # unit-day delivery noise on realized spend
+  treated_delivery_mean: 0.97       # realized / planned INCREMENTAL spend for treated units
+  treated_delivery_sd: 0.03
+revenue:                            # per-install D30 net revenue: ad part + heavy-tailed in-app purchases
+  payer_rate: 0.04
+  payer_sigma: 1.2                  # lognormal sigma of a payer's D30 revenue
+  iap_share_of_value: 0.70
+  ad_noise_sd: 0.30
+value_reference:
+  matured_cohorts: 90               # value per install = mean D30 net of the channel's last 90 cohorts matured at the decision date

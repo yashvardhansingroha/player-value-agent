@@ -1,0 +1,37 @@
+# Groq provider settings (added after the baseline freeze; not part of it). The key is read ONLY from the GROQ_API_KEY environment variable;
+# it is never stored in any file. ALL DATA IS SYNTHETIC. Used by the live smoke test and by the recorded live runs in reports/phase5_runs/live_groq_*.json (see README); no live reliability is demonstrated.
+provider: groq
+api_key_env_var: GROQ_API_KEY
+model: openai/gpt-oss-120b     # the candidate named by the account owner; accepted by the live API in the smoke test (2 requests); no agent run yet
+
+# Limits shown in the owner's Groq account for this model (copied, not measured).
+rpm: 30
+rpd: 1000
+tpm: 8000
+tpd: 200000
+margin_tokens: 500             # a request must fit in (tpm - margin) tokens: prompt + the completion it may use. The provider's bucket accounting matched usage on most responses and ran
+                               # 30-500 tokens above it on others (unexplained), so a margin of a few hundred is kept.
+
+# Request settings. Output headroom: max_completion_tokens is SHRUNK per request so prompt + completion fits inside the minute; below min_completion_tokens
+# the request is refused before it is sent (waiting cannot fix an oversized request).
+timeout_seconds: 60            # urllib takes SECONDS (the Gemini SDK takes milliseconds)
+temperature: 0.0
+reasoning_effort: low          # gpt-oss reasoning tokens count as output tokens; low keeps them small. UNVERIFIED parameter name/values until the smoke test.
+max_completion_tokens: 2600
+min_completion_tokens: 1200     # the final JSON answer (5 items with cited claims) is estimated at 1,100-1,500 tokens plus reasoning: a window smaller than this would truncate it
+assumed_chars_per_token: 4.0   # was 2.8 (a pessimistic offline guess). The live smoke test measured 4.99 and 4.86 on the serialised request (about 4.3 on the tool-result JSON), so 4.0 is still
+                               # conservative; after the first response of a run the observed figure replaces it (5% safer).
+
+# Bounded retry (per-minute 429 and 5xx only; daily limits, 413, auth and billing errors are never retried; timeouts are not retried).
+max_rate_limit_retries: 2
+max_rate_limit_wait_seconds: 90
+max_tool_use_failed_retries: 0   # was 2. HTTP 400 tool_use_failed: in the second full case the identical request failed identically on all 3 attempts (temperature 0), costing about 9,000 tokens for nothing.
+staged_finalization: true     # NEW: stage 1 investigates with tools (the model ends it with the word DONE); stage 2 is ONE tool-free request constrained by a strict JSON schema. reasoning_effort stays low.
+max_evidence_nudges: 2         # times the model is asked to collect required evidence (get_policy_decision for every channel, plan_experiment for a retrieved increase) before the labelled fallback
+unwrap_wrapped_final_answer: true  # a final answer the provider rejected as a call to a non-existent tool (seen live: 'JSON') is taken from failed_generation UNCHANGED, labelled, and validated like any answer
+
+# Investigation bounds for the token budget (the Gemini file's 40 calls / 30 turns are far larger than 8000 tokens/minute allows).
+max_tool_calls: 14             # overview 1 + policy 5 + up to 8 targeted calls
+max_model_turns: 20            # AMENDMENT (kept on record): this was 10. The first full case showed the model makes ONE tool call per turn, so nine calls and the answer fill ten turns
+                               # exactly and a single repair would hit the bound. 20 covers 14 single-call turns, the answer and a repair; it is a hard bound, not raised to obtain an outcome.
+repair_retries: 1

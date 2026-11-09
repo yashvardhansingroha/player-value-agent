@@ -1,0 +1,52 @@
+{
+ "rehearsal_seed": 1,
+ "all_reproduced": true,
+ "checks": {
+  "policy_overall_equal": true,
+  "abstention_recall_equal": true,
+  "cohort_forecast_overall_equal": true,
+  "all_forecasting_rows_equal": true,
+  "scored_policy_rows_equal": true,
+  "per_scenario_equal": true,
+  "background_actions_equal": true,
+  "regenerated_decision_db_byte_identical_to_dev": true,
+  "regenerated_hidden_truth_byte_identical_to_dev": true,
+  "regenerated_forecast_store_byte_identical_to_dev": true
+ },
+ "dev_numbers": {
+  "policy_overall": {
+   "n_scored": 48,
+   "ideal": 37,
+   "acceptable": 8,
+   "forbidden": 3,
+   "unlisted": 0,
+   "ideal_rate": 0.7708333333333334,
+   "acceptable_or_better_rate": 0.9375,
+   "forbidden_rate": 0.0625,
+   "unlisted_rate": 0.0
+  },
+  "abstention_recall": 0.4,
+  "cohort_forecast_overall": {
+   "level": "cohort",
+   "group": "overall",
+   "n": 1334,
+   "wape": 0.2822408120283612,
+   "bias": -0.005918007390695505,
+   "n_with_interval": 1022,
+   "coverage": 0.7710371819960861,
+   "interval_width_over_forecast_mean": 0.8569837907383542,
+   "interval_width_over_forecast_median": 0.8876262817740225
+  }
+ },
+ "scenario_validity_dev_seed": {
+  "n_pass": 17,
+  "n_intents": 17,
+  "scenarios_not_materialized": []
+ },
+ "steps": {
+  "generate": "completed",
+  "backtest": "completed",
+  "tie_checks": "completed",
+  "evaluate": "completed"
+ }
+}

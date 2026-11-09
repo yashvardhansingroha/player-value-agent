@@ -1,0 +1,42 @@
+# SIMULATED budget-experiment design standards. ALL DATA IS SYNTHETIC; every experiment here is a SIMULATION.
+# PROVENANCE: fixed BEFORE any experiment simulation, power study or readout was run, and committed first (Phase 4a).
+# Do not tune any value, seed or threshold toward a preferred outcome. Changing a value changes the experiment-config hash that every
+# plan binds, so earlier plans stop being valid for readout.
+version: 1
+
+design:
+  units_per_channel: 24             # synthetic market/campaign units that PARTITION the channel's daily budget
+  pre_days: 14                      # acquisition days in the pre-period (whole weeks, so weekday mix matches the treatment window)
+  treatment_day_options: [14, 28, 56]   # allowed treatment windows (whole weeks); the shortest ADEQUATE one is chosen
+  min_units_per_arm: 8
+  assignment_seed_base: 20251013    # per-experiment seed = hash(base, channel, decision date); fixed, not tuned
+  # Planning assumptions (used ONLY by the planning simulation, which never sees hidden truth):
+  planning_delivery_fraction: 0.97  # realized / planned incremental spend assumed in planning
+  planning_common_shock_sd: 0.05    # period-wide shock shared by both arms
+
+estimator:                          # one estimator, used by planning simulations AND the actual readout
+  name: unit_level_did_ratio        # sum over arms of unit-level difference-in-differences, as a ratio of revenue change to spend change
+  alpha: 0.10                       # one-sided; lower bound = estimate - t(1-alpha, nT+nC-2) x delta-method SE
+  min_delivery_fraction: 0.5        # realized incremental spend must be 50%..150% of planned, else the readout is invalid (rollback)
+  max_delivery_fraction: 1.5
+
+guardrails:                         # evaluated on point estimates, inside the same decision rule
+  max_cpi_ratio: 1.50               # treated post/pre CPI relative to control post/pre CPI
+  min_d1_retention_change: -0.03    # treated minus control change in D1 retention (post minus pre)
+
+# KEEP iff delivery valid AND guardrails pass AND lower bound of iROAS >= target D30 ROAS. Otherwise ROLL BACK.
+
+power:                              # planning simulation = same estimator + rule on bootstrapped pre-period noise
+  replicates: 1000
+  seed: 4242
+  target_power: 0.80
+  alternative_multiple_of_target: 1.5     # the design must detect a true iROAS of 1.5 x target with this power
+  boundary_multiple: 1.0                  # false-keep is checked at the target boundary ...
+  below_boundary_multiples: [0.5, 0.8]    # ... and below it
+  max_false_keep: 0.10                    # P(keep) at or below the boundary must not exceed this (plus the tolerance below)
+  false_keep_tolerance_mc_se: 2.0         # allowed excess in units of Monte Carlo standard errors
+  reported_multiples: [0.5, 0.8, 1.0, 1.25, 1.5, 2.0]   # all reported; only the ones above are used for adequacy
+  informational_planning_haircut: 0.80    # extra alternative = model-estimated marginal ROAS x this (reported, not used for adequacy)
+
+scale_search:                       # "what volume would this test need?" (SIMULATED scale-up of budgets and installs)
+  options: [1, 5, 10, 25, 50, 100]

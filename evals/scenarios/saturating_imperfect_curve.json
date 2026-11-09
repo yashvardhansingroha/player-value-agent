@@ -1,0 +1,20 @@
+{
+  "id": "saturating_imperfect_curve",
+  "title": "Good average ROAS, poor marginal ROAS; a power-law fit is the wrong curve",
+  "channel": "applovin",
+  "plant_ref": "config channels.applovin: Hill response (h=1.6, k_over_base=0.8) plus quality_gamma=0.6 (incremental players worth less)",
+  "planted_window_days": null,
+  "evaluation_as_of_days": [245, 252, 259, 266, 273, 280, 287, 294, 301, 308, 315, 322, 329, 336],
+  "expected": {
+    "ideal_actions": ["hold"],
+    "acceptable_actions": ["increase_test", "insufficient_evidence"],
+    "forbidden_actions": ["decrease"],
+    "required_investigations": ["get_roas_average_vs_marginal", "design_budget_experiment"],
+    "notes": "Average ROAS is good so decreasing is wrong. A fitted power law may overstate marginal ROAS, so an increase_test is tolerable only as a pre-registered bounded test; a permanent increase is wrong."
+  },
+  "if_experiment_run": {"expected_readout": "rollback", "forbidden_final_state": "permanent budget increase retained"},
+  "calibration_intents": [
+    {"metric": "avg_d30_roas_over_target", "op": ">=", "value": 1.2},
+    {"metric": "true_step20_marginal_roas_over_target", "op": "<=", "value": 0.8}
+  ]
+}

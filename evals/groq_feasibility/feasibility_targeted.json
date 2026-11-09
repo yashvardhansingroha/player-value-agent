@@ -1,0 +1,2090 @@
+[
+ {
+  "as_of": "2025-10-13",
+  "ratio": 2.6,
+  "sequential": false,
+  "max_model_turns": 10,
+  "calls_per_turn": [
+   1,
+   5,
+   3
+  ],
+  "status": "rules_only_fallback (api_failure)",
+  "detail": "REQUEST TOO LARGE (preflight): the prompt is estimated at 7784 tokens, leaving 0 for the answer inside the 7500-token minute (at least 1200 are needed",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 3210,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 15.2,
+    "prompt_tokens": 3782,
+    "completion_tokens": 350,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 53.1,
+    "prompt_tokens": 5337,
+    "completion_tokens": 290,
+    "max_completion_tokens": 1881
+   }
+  ],
+  "refused": [
+   {
+    "prompt_tokens_estimated": 7784,
+    "max_completion_tokens": null,
+    "attempts": 0,
+    "refused_before_sending": true,
+    "n_messages": 14,
+    "n_tool_messages": 9
+   }
+  ],
+  "total": 13199,
+  "waited_s": 53.1
+ },
+ {
+  "as_of": "2025-10-13",
+  "ratio": 2.6,
+  "sequential": true,
+  "max_model_turns": 10,
+  "calls_per_turn": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "status": "rules_only_fallback (api_failure)",
+  "detail": "REQUEST TOO LARGE (preflight): the prompt is estimated at 6465 tokens, leaving 1035 for the answer inside the 7500-token minute (at least 1200 are nee",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 3210,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 15.2,
+    "prompt_tokens": 3782,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 48.1,
+    "prompt_tokens": 4138,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 83.3,
+    "prompt_tokens": 4441,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 120.0,
+    "prompt_tokens": 4757,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2492
+   },
+   {
+    "t": 157.4,
+    "prompt_tokens": 5087,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2145
+   },
+   {
+    "t": 197.3,
+    "prompt_tokens": 5416,
+    "completion_tokens": 230,
+    "max_completion_tokens": 1799
+   }
+  ],
+  "refused": [
+   {
+    "prompt_tokens_estimated": 6465,
+    "max_completion_tokens": null,
+    "attempts": 0,
+    "refused_before_sending": true,
+    "n_messages": 16,
+    "n_tool_messages": 7
+   }
+  ],
+  "total": 32441,
+  "waited_s": 197.3
+ },
+ {
+  "as_of": "2025-10-13",
+  "ratio": 2.6,
+  "sequential": true,
+  "max_model_turns": 20,
+  "calls_per_turn": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "status": "rules_only_fallback (api_failure)",
+  "detail": "REQUEST TOO LARGE (preflight): the prompt is estimated at 6465 tokens, leaving 1035 for the answer inside the 7500-token minute (at least 1200 are nee",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 3210,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 15.2,
+    "prompt_tokens": 3782,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 48.1,
+    "prompt_tokens": 4138,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 83.3,
+    "prompt_tokens": 4441,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 120.0,
+    "prompt_tokens": 4757,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2492
+   },
+   {
+    "t": 157.4,
+    "prompt_tokens": 5087,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2145
+   },
+   {
+    "t": 197.3,
+    "prompt_tokens": 5416,
+    "completion_tokens": 230,
+    "max_completion_tokens": 1799
+   }
+  ],
+  "refused": [
+   {
+    "prompt_tokens_estimated": 6465,
+    "max_completion_tokens": null,
+    "attempts": 0,
+    "refused_before_sending": true,
+    "n_messages": 16,
+    "n_tool_messages": 7
+   }
+  ],
+  "total": 32441,
+  "waited_s": 197.3
+ },
+ {
+  "as_of": "2025-10-13",
+  "ratio": 3.2,
+  "sequential": false,
+  "max_model_turns": 10,
+  "calls_per_turn": [
+   1,
+   5,
+   3
+  ],
+  "status": "rules_only_fallback (api_failure)",
+  "detail": "REQUEST TOO LARGE (preflight): the prompt is estimated at 6324 tokens, leaving 1176 for the answer inside the 7500-token minute (at least 1200 are nee",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 2608,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 5.1,
+    "prompt_tokens": 3073,
+    "completion_tokens": 350,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 40.7,
+    "prompt_tokens": 4336,
+    "completion_tokens": 290,
+    "max_completion_tokens": 2600
+   }
+  ],
+  "refused": [
+   {
+    "prompt_tokens_estimated": 6324,
+    "max_completion_tokens": null,
+    "attempts": 0,
+    "refused_before_sending": true,
+    "n_messages": 14,
+    "n_tool_messages": 9
+   }
+  ],
+  "total": 10887,
+  "waited_s": 40.7
+ },
+ {
+  "as_of": "2025-10-13",
+  "ratio": 3.2,
+  "sequential": true,
+  "max_model_turns": 10,
+  "calls_per_turn": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "status": "rules_only_fallback (api_failure)",
+  "detail": "REQUEST TOO LARGE (preflight): the prompt is estimated at 6425 tokens, leaving 1075 for the answer inside the 7500-token minute (at least 1200 are nee",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 2608,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 5.1,
+    "prompt_tokens": 3073,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 32.2,
+    "prompt_tokens": 3362,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 61.0,
+    "prompt_tokens": 3608,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 91.8,
+    "prompt_tokens": 3865,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 124.7,
+    "prompt_tokens": 4133,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 159.5,
+    "prompt_tokens": 4400,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 196.2,
+    "prompt_tokens": 4990,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2248
+   },
+   {
+    "t": 235.4,
+    "prompt_tokens": 5684,
+    "completion_tokens": 230,
+    "max_completion_tokens": 1516
+   }
+  ],
+  "refused": [
+   {
+    "prompt_tokens_estimated": 6425,
+    "max_completion_tokens": null,
+    "attempts": 0,
+    "refused_before_sending": true,
+    "n_messages": 20,
+    "n_tool_messages": 9
+   }
+  ],
+  "total": 37793,
+  "waited_s": 235.4
+ },
+ {
+  "as_of": "2025-10-13",
+  "ratio": 3.2,
+  "sequential": true,
+  "max_model_turns": 20,
+  "calls_per_turn": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "status": "rules_only_fallback (api_failure)",
+  "detail": "REQUEST TOO LARGE (preflight): the prompt is estimated at 6425 tokens, leaving 1075 for the answer inside the 7500-token minute (at least 1200 are nee",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 2608,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 5.1,
+    "prompt_tokens": 3073,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 32.2,
+    "prompt_tokens": 3362,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 61.0,
+    "prompt_tokens": 3608,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 91.8,
+    "prompt_tokens": 3865,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 124.7,
+    "prompt_tokens": 4133,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 159.5,
+    "prompt_tokens": 4400,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 196.2,
+    "prompt_tokens": 4990,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2248
+   },
+   {
+    "t": 235.4,
+    "prompt_tokens": 5684,
+    "completion_tokens": 230,
+    "max_completion_tokens": 1516
+   }
+  ],
+  "refused": [
+   {
+    "prompt_tokens_estimated": 6425,
+    "max_completion_tokens": null,
+    "attempts": 0,
+    "refused_before_sending": true,
+    "n_messages": 20,
+    "n_tool_messages": 9
+   }
+  ],
+  "total": 37793,
+  "waited_s": 235.4
+ },
+ {
+  "as_of": "2025-10-13",
+  "ratio": 3.8,
+  "sequential": false,
+  "max_model_turns": 10,
+  "calls_per_turn": [
+   1,
+   5,
+   3
+  ],
+  "status": "rules_only_fallback (malformed_output)",
+  "detail": "",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 2196,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 0.0,
+    "prompt_tokens": 2587,
+    "completion_tokens": 350,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 28.6,
+    "prompt_tokens": 3652,
+    "completion_tokens": 290,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 66.1,
+    "prompt_tokens": 5059,
+    "completion_tokens": 1400,
+    "max_completion_tokens": 2174
+   }
+  ],
+  "refused": [],
+  "total": 15764,
+  "waited_s": 66.1
+ },
+ {
+  "as_of": "2025-10-13",
+  "ratio": 3.8,
+  "sequential": true,
+  "max_model_turns": 10,
+  "calls_per_turn": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "status": "rules_only_fallback (malformed_output)",
+  "detail": "",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 2196,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 0.0,
+    "prompt_tokens": 2587,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 21.2,
+    "prompt_tokens": 2831,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 45.8,
+    "prompt_tokens": 3038,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 72.0,
+    "prompt_tokens": 3255,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 100.0,
+    "prompt_tokens": 3480,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 129.6,
+    "prompt_tokens": 3705,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 163.0,
+    "prompt_tokens": 4202,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 199.8,
+    "prompt_tokens": 4787,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2461
+   },
+   {
+    "t": 237.4,
+    "prompt_tokens": 5140,
+    "completion_tokens": 1400,
+    "max_completion_tokens": 2089
+   }
+  ],
+  "refused": [],
+  "total": 38691,
+  "waited_s": 237.4
+ },
+ {
+  "as_of": "2025-10-13",
+  "ratio": 3.8,
+  "sequential": true,
+  "max_model_turns": 20,
+  "calls_per_turn": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "status": "rules_only_fallback (malformed_output)",
+  "detail": "",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 2196,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 0.0,
+    "prompt_tokens": 2587,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 21.2,
+    "prompt_tokens": 2831,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 45.8,
+    "prompt_tokens": 3038,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 72.0,
+    "prompt_tokens": 3255,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 100.0,
+    "prompt_tokens": 3480,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 129.6,
+    "prompt_tokens": 3705,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 163.0,
+    "prompt_tokens": 4202,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 199.8,
+    "prompt_tokens": 4787,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2461
+   },
+   {
+    "t": 237.4,
+    "prompt_tokens": 5140,
+    "completion_tokens": 1400,
+    "max_completion_tokens": 2089
+   }
+  ],
+  "refused": [],
+  "total": 38691,
+  "waited_s": 237.4
+ },
+ {
+  "as_of": "2025-10-13",
+  "ratio": 4.3,
+  "sequential": false,
+  "max_model_turns": 10,
+  "calls_per_turn": [
+   1,
+   5,
+   3
+  ],
+  "status": "rules_only_fallback (malformed_output)",
+  "detail": "",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 1940,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 0.0,
+    "prompt_tokens": 2286,
+    "completion_tokens": 350,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 21.1,
+    "prompt_tokens": 3227,
+    "completion_tokens": 290,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 57.3,
+    "prompt_tokens": 4471,
+    "completion_tokens": 1400,
+    "max_completion_tokens": 2600
+   }
+  ],
+  "refused": [],
+  "total": 14194,
+  "waited_s": 57.3
+ },
+ {
+  "as_of": "2025-10-13",
+  "ratio": 4.3,
+  "sequential": true,
+  "max_model_turns": 10,
+  "calls_per_turn": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "status": "rules_only_fallback (malformed_output)",
+  "detail": "",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 1940,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 0.0,
+    "prompt_tokens": 2286,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 14.4,
+    "prompt_tokens": 2502,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 36.4,
+    "prompt_tokens": 2685,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 59.8,
+    "prompt_tokens": 2876,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 84.6,
+    "prompt_tokens": 3076,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 111.0,
+    "prompt_tokens": 3274,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 140.7,
+    "prompt_tokens": 3713,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 174.4,
+    "prompt_tokens": 4230,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 210.3,
+    "prompt_tokens": 4542,
+    "completion_tokens": 1400,
+    "max_completion_tokens": 2600
+   }
+  ],
+  "refused": [],
+  "total": 34594,
+  "waited_s": 210.3
+ },
+ {
+  "as_of": "2025-10-13",
+  "ratio": 4.3,
+  "sequential": true,
+  "max_model_turns": 20,
+  "calls_per_turn": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "status": "rules_only_fallback (malformed_output)",
+  "detail": "",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 1940,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 0.0,
+    "prompt_tokens": 2286,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 14.4,
+    "prompt_tokens": 2502,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 36.4,
+    "prompt_tokens": 2685,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 59.8,
+    "prompt_tokens": 2876,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 84.6,
+    "prompt_tokens": 3076,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 111.0,
+    "prompt_tokens": 3274,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 140.7,
+    "prompt_tokens": 3713,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 174.4,
+    "prompt_tokens": 4230,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 210.3,
+    "prompt_tokens": 4542,
+    "completion_tokens": 1400,
+    "max_completion_tokens": 2600
+   }
+  ],
+  "refused": [],
+  "total": 34594,
+  "waited_s": 210.3
+ },
+ {
+  "as_of": "2025-10-13",
+  "ratio": 4.9,
+  "sequential": false,
+  "max_model_turns": 10,
+  "calls_per_turn": [
+   1,
+   5,
+   3
+  ],
+  "status": "rules_only_fallback (malformed_output)",
+  "detail": "",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 1703,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 0.0,
+    "prompt_tokens": 2006,
+    "completion_tokens": 350,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 14.1,
+    "prompt_tokens": 2832,
+    "completion_tokens": 290,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 46.1,
+    "prompt_tokens": 3923,
+    "completion_tokens": 1400,
+    "max_completion_tokens": 2600
+   }
+  ],
+  "refused": [],
+  "total": 12734,
+  "waited_s": 46.1
+ },
+ {
+  "as_of": "2025-10-13",
+  "ratio": 4.9,
+  "sequential": true,
+  "max_model_turns": 10,
+  "calls_per_turn": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "status": "rules_only_fallback (malformed_output)",
+  "detail": "",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 1703,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 0.0,
+    "prompt_tokens": 2006,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 8.2,
+    "prompt_tokens": 2196,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 27.6,
+    "prompt_tokens": 2356,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 48.3,
+    "prompt_tokens": 2524,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 70.4,
+    "prompt_tokens": 2699,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 93.7,
+    "prompt_tokens": 2873,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 120.0,
+    "prompt_tokens": 3258,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 149.8,
+    "prompt_tokens": 3712,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 181.5,
+    "prompt_tokens": 3986,
+    "completion_tokens": 1400,
+    "max_completion_tokens": 2600
+   }
+  ],
+  "refused": [],
+  "total": 30783,
+  "waited_s": 181.5
+ },
+ {
+  "as_of": "2025-10-13",
+  "ratio": 4.9,
+  "sequential": true,
+  "max_model_turns": 20,
+  "calls_per_turn": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "status": "rules_only_fallback (malformed_output)",
+  "detail": "",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 1703,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 0.0,
+    "prompt_tokens": 2006,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 8.2,
+    "prompt_tokens": 2196,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 27.6,
+    "prompt_tokens": 2356,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 48.3,
+    "prompt_tokens": 2524,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 70.4,
+    "prompt_tokens": 2699,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 93.7,
+    "prompt_tokens": 2873,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 120.0,
+    "prompt_tokens": 3258,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 149.8,
+    "prompt_tokens": 3712,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 181.5,
+    "prompt_tokens": 3986,
+    "completion_tokens": 1400,
+    "max_completion_tokens": 2600
+   }
+  ],
+  "refused": [],
+  "total": 30783,
+  "waited_s": 181.5
+ },
+ {
+  "as_of": "2025-11-10",
+  "ratio": 2.6,
+  "sequential": false,
+  "max_model_turns": 10,
+  "calls_per_turn": [
+   1,
+   5,
+   3
+  ],
+  "status": "rules_only_fallback (api_failure)",
+  "detail": "REQUEST TOO LARGE (preflight): the prompt is estimated at 7908 tokens, leaving 0 for the answer inside the 7500-token minute (at least 1200 are needed",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 3210,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 15.4,
+    "prompt_tokens": 3810,
+    "completion_tokens": 350,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 53.3,
+    "prompt_tokens": 5291,
+    "completion_tokens": 290,
+    "max_completion_tokens": 1931
+   }
+  ],
+  "refused": [
+   {
+    "prompt_tokens_estimated": 7908,
+    "max_completion_tokens": null,
+    "attempts": 0,
+    "refused_before_sending": true,
+    "n_messages": 14,
+    "n_tool_messages": 9
+   }
+  ],
+  "total": 13181,
+  "waited_s": 53.3
+ },
+ {
+  "as_of": "2025-11-10",
+  "ratio": 2.6,
+  "sequential": true,
+  "max_model_turns": 10,
+  "calls_per_turn": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "status": "rules_only_fallback (api_failure)",
+  "detail": "REQUEST TOO LARGE (preflight): the prompt is estimated at 6600 tokens, leaving 900 for the answer inside the 7500-token minute (at least 1200 are need",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 3210,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 15.4,
+    "prompt_tokens": 3810,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 48.3,
+    "prompt_tokens": 4142,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 83.4,
+    "prompt_tokens": 4425,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 120.1,
+    "prompt_tokens": 4741,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2508
+   },
+   {
+    "t": 157.4,
+    "prompt_tokens": 5041,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2194
+   },
+   {
+    "t": 196.9,
+    "prompt_tokens": 5370,
+    "completion_tokens": 230,
+    "max_completion_tokens": 1847
+   }
+  ],
+  "refused": [
+   {
+    "prompt_tokens_estimated": 6600,
+    "max_completion_tokens": null,
+    "attempts": 0,
+    "refused_before_sending": true,
+    "n_messages": 16,
+    "n_tool_messages": 7
+   }
+  ],
+  "total": 32349,
+  "waited_s": 196.9
+ },
+ {
+  "as_of": "2025-11-10",
+  "ratio": 2.6,
+  "sequential": true,
+  "max_model_turns": 20,
+  "calls_per_turn": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "status": "rules_only_fallback (api_failure)",
+  "detail": "REQUEST TOO LARGE (preflight): the prompt is estimated at 6600 tokens, leaving 900 for the answer inside the 7500-token minute (at least 1200 are need",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 3210,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 15.4,
+    "prompt_tokens": 3810,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 48.3,
+    "prompt_tokens": 4142,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 83.4,
+    "prompt_tokens": 4425,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 120.1,
+    "prompt_tokens": 4741,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2508
+   },
+   {
+    "t": 157.4,
+    "prompt_tokens": 5041,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2194
+   },
+   {
+    "t": 196.9,
+    "prompt_tokens": 5370,
+    "completion_tokens": 230,
+    "max_completion_tokens": 1847
+   }
+  ],
+  "refused": [
+   {
+    "prompt_tokens_estimated": 6600,
+    "max_completion_tokens": null,
+    "attempts": 0,
+    "refused_before_sending": true,
+    "n_messages": 16,
+    "n_tool_messages": 7
+   }
+  ],
+  "total": 32349,
+  "waited_s": 196.9
+ },
+ {
+  "as_of": "2025-11-10",
+  "ratio": 3.2,
+  "sequential": false,
+  "max_model_turns": 10,
+  "calls_per_turn": [
+   1,
+   5,
+   3
+  ],
+  "status": "rules_only_fallback (api_failure)",
+  "detail": "REQUEST TOO LARGE (preflight): the prompt is estimated at 6425 tokens, leaving 1075 for the answer inside the 7500-token minute (at least 1200 are nee",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 2608,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 5.3,
+    "prompt_tokens": 3096,
+    "completion_tokens": 350,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 40.6,
+    "prompt_tokens": 4299,
+    "completion_tokens": 290,
+    "max_completion_tokens": 2600
+   }
+  ],
+  "refused": [
+   {
+    "prompt_tokens_estimated": 6425,
+    "max_completion_tokens": null,
+    "attempts": 0,
+    "refused_before_sending": true,
+    "n_messages": 14,
+    "n_tool_messages": 9
+   }
+  ],
+  "total": 10873,
+  "waited_s": 40.6
+ },
+ {
+  "as_of": "2025-11-10",
+  "ratio": 3.2,
+  "sequential": true,
+  "max_model_turns": 10,
+  "calls_per_turn": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "status": "rules_only_fallback (api_failure)",
+  "detail": "REQUEST TOO LARGE (preflight): the prompt is estimated at 6526 tokens, leaving 974 for the answer inside the 7500-token minute (at least 1200 are need",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 2608,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 5.3,
+    "prompt_tokens": 3096,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 32.4,
+    "prompt_tokens": 3365,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 61.1,
+    "prompt_tokens": 3595,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 91.8,
+    "prompt_tokens": 3852,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 124.4,
+    "prompt_tokens": 4095,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 158.9,
+    "prompt_tokens": 4363,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 195.7,
+    "prompt_tokens": 5094,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2137
+   },
+   {
+    "t": 235.6,
+    "prompt_tokens": 5786,
+    "completion_tokens": 230,
+    "max_completion_tokens": 1408
+   }
+  ],
+  "refused": [
+   {
+    "prompt_tokens_estimated": 6526,
+    "max_completion_tokens": null,
+    "attempts": 0,
+    "refused_before_sending": true,
+    "n_messages": 20,
+    "n_tool_messages": 9
+   }
+  ],
+  "total": 37924,
+  "waited_s": 235.6
+ },
+ {
+  "as_of": "2025-11-10",
+  "ratio": 3.2,
+  "sequential": true,
+  "max_model_turns": 20,
+  "calls_per_turn": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "status": "rules_only_fallback (api_failure)",
+  "detail": "REQUEST TOO LARGE (preflight): the prompt is estimated at 6526 tokens, leaving 974 for the answer inside the 7500-token minute (at least 1200 are need",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 2608,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 5.3,
+    "prompt_tokens": 3096,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 32.4,
+    "prompt_tokens": 3365,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 61.1,
+    "prompt_tokens": 3595,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 91.8,
+    "prompt_tokens": 3852,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 124.4,
+    "prompt_tokens": 4095,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 158.9,
+    "prompt_tokens": 4363,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 195.7,
+    "prompt_tokens": 5094,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2137
+   },
+   {
+    "t": 235.6,
+    "prompt_tokens": 5786,
+    "completion_tokens": 230,
+    "max_completion_tokens": 1408
+   }
+  ],
+  "refused": [
+   {
+    "prompt_tokens_estimated": 6526,
+    "max_completion_tokens": null,
+    "attempts": 0,
+    "refused_before_sending": true,
+    "n_messages": 20,
+    "n_tool_messages": 9
+   }
+  ],
+  "total": 37924,
+  "waited_s": 235.6
+ },
+ {
+  "as_of": "2025-11-10",
+  "ratio": 3.8,
+  "sequential": false,
+  "max_model_turns": 10,
+  "calls_per_turn": [
+   1,
+   5,
+   3
+  ],
+  "status": "rules_only_fallback (malformed_output)",
+  "detail": "",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 2196,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 0.0,
+    "prompt_tokens": 2607,
+    "completion_tokens": 350,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 28.5,
+    "prompt_tokens": 3620,
+    "completion_tokens": 290,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 66.0,
+    "prompt_tokens": 5140,
+    "completion_tokens": 1400,
+    "max_completion_tokens": 2089
+   }
+  ],
+  "refused": [],
+  "total": 15833,
+  "waited_s": 66.0
+ },
+ {
+  "as_of": "2025-11-10",
+  "ratio": 3.8,
+  "sequential": true,
+  "max_model_turns": 10,
+  "calls_per_turn": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "status": "rules_only_fallback (malformed_output)",
+  "detail": "",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 2196,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 0.0,
+    "prompt_tokens": 2607,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 21.4,
+    "prompt_tokens": 2834,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 45.9,
+    "prompt_tokens": 3027,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 72.0,
+    "prompt_tokens": 3244,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 99.7,
+    "prompt_tokens": 3449,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 129.1,
+    "prompt_tokens": 3674,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 163.2,
+    "prompt_tokens": 4289,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 200.0,
+    "prompt_tokens": 4872,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2371
+   },
+   {
+    "t": 238.3,
+    "prompt_tokens": 5220,
+    "completion_tokens": 1400,
+    "max_completion_tokens": 2005
+   }
+  ],
+  "refused": [],
+  "total": 38882,
+  "waited_s": 238.3
+ },
+ {
+  "as_of": "2025-11-10",
+  "ratio": 3.8,
+  "sequential": true,
+  "max_model_turns": 20,
+  "calls_per_turn": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "status": "rules_only_fallback (malformed_output)",
+  "detail": "",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 2196,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 0.0,
+    "prompt_tokens": 2607,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 21.4,
+    "prompt_tokens": 2834,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 45.9,
+    "prompt_tokens": 3027,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 72.0,
+    "prompt_tokens": 3244,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 99.7,
+    "prompt_tokens": 3449,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 129.1,
+    "prompt_tokens": 3674,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 163.2,
+    "prompt_tokens": 4289,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 200.0,
+    "prompt_tokens": 4872,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2371
+   },
+   {
+    "t": 238.3,
+    "prompt_tokens": 5220,
+    "completion_tokens": 1400,
+    "max_completion_tokens": 2005
+   }
+  ],
+  "refused": [],
+  "total": 38882,
+  "waited_s": 238.3
+ },
+ {
+  "as_of": "2025-11-10",
+  "ratio": 4.3,
+  "sequential": false,
+  "max_model_turns": 10,
+  "calls_per_turn": [
+   1,
+   5,
+   3
+  ],
+  "status": "rules_only_fallback (malformed_output)",
+  "detail": "",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 1940,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 0.0,
+    "prompt_tokens": 2304,
+    "completion_tokens": 350,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 21.0,
+    "prompt_tokens": 3199,
+    "completion_tokens": 290,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 57.8,
+    "prompt_tokens": 4542,
+    "completion_tokens": 1400,
+    "max_completion_tokens": 2600
+   }
+  ],
+  "refused": [],
+  "total": 14255,
+  "waited_s": 57.8
+ },
+ {
+  "as_of": "2025-11-10",
+  "ratio": 4.3,
+  "sequential": true,
+  "max_model_turns": 10,
+  "calls_per_turn": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "status": "rules_only_fallback (malformed_output)",
+  "detail": "",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 1940,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 0.0,
+    "prompt_tokens": 2304,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 14.6,
+    "prompt_tokens": 2504,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 36.5,
+    "prompt_tokens": 2675,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 59.8,
+    "prompt_tokens": 2867,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 84.4,
+    "prompt_tokens": 3048,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 110.6,
+    "prompt_tokens": 3246,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 140.9,
+    "prompt_tokens": 3790,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 175.1,
+    "prompt_tokens": 4306,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 211.6,
+    "prompt_tokens": 4613,
+    "completion_tokens": 1400,
+    "max_completion_tokens": 2600
+   }
+  ],
+  "refused": [],
+  "total": 34763,
+  "waited_s": 211.6
+ },
+ {
+  "as_of": "2025-11-10",
+  "ratio": 4.3,
+  "sequential": true,
+  "max_model_turns": 20,
+  "calls_per_turn": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "status": "rules_only_fallback (malformed_output)",
+  "detail": "",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 1940,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 0.0,
+    "prompt_tokens": 2304,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 14.6,
+    "prompt_tokens": 2504,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 36.5,
+    "prompt_tokens": 2675,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 59.8,
+    "prompt_tokens": 2867,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 84.4,
+    "prompt_tokens": 3048,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 110.6,
+    "prompt_tokens": 3246,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 140.9,
+    "prompt_tokens": 3790,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 175.1,
+    "prompt_tokens": 4306,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 211.6,
+    "prompt_tokens": 4613,
+    "completion_tokens": 1400,
+    "max_completion_tokens": 2600
+   }
+  ],
+  "refused": [],
+  "total": 34763,
+  "waited_s": 211.6
+ },
+ {
+  "as_of": "2025-11-10",
+  "ratio": 4.9,
+  "sequential": false,
+  "max_model_turns": 10,
+  "calls_per_turn": [
+   1,
+   5,
+   3
+  ],
+  "status": "rules_only_fallback (malformed_output)",
+  "detail": "",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 1703,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 0.0,
+    "prompt_tokens": 2022,
+    "completion_tokens": 350,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 14.0,
+    "prompt_tokens": 2807,
+    "completion_tokens": 290,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 46.5,
+    "prompt_tokens": 3986,
+    "completion_tokens": 1400,
+    "max_completion_tokens": 2600
+   }
+  ],
+  "refused": [],
+  "total": 12788,
+  "waited_s": 46.5
+ },
+ {
+  "as_of": "2025-11-10",
+  "ratio": 4.9,
+  "sequential": true,
+  "max_model_turns": 10,
+  "calls_per_turn": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "status": "rules_only_fallback (malformed_output)",
+  "detail": "",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 1703,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 0.0,
+    "prompt_tokens": 2022,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 8.3,
+    "prompt_tokens": 2198,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 27.7,
+    "prompt_tokens": 2347,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 48.3,
+    "prompt_tokens": 2516,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 70.2,
+    "prompt_tokens": 2674,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 93.3,
+    "prompt_tokens": 2849,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 120.2,
+    "prompt_tokens": 3326,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 150.4,
+    "prompt_tokens": 3778,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 182.6,
+    "prompt_tokens": 4048,
+    "completion_tokens": 1400,
+    "max_completion_tokens": 2600
+   }
+  ],
+  "refused": [],
+  "total": 30931,
+  "waited_s": 182.6
+ },
+ {
+  "as_of": "2025-11-10",
+  "ratio": 4.9,
+  "sequential": true,
+  "max_model_turns": 20,
+  "calls_per_turn": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "status": "rules_only_fallback (malformed_output)",
+  "detail": "",
+  "requests": [
+   {
+    "t": 0.0,
+    "prompt_tokens": 1703,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 0.0,
+    "prompt_tokens": 2022,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 8.3,
+    "prompt_tokens": 2198,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 27.7,
+    "prompt_tokens": 2347,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 48.3,
+    "prompt_tokens": 2516,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 70.2,
+    "prompt_tokens": 2674,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 93.3,
+    "prompt_tokens": 2849,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 120.2,
+    "prompt_tokens": 3326,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 150.4,
+    "prompt_tokens": 3778,
+    "completion_tokens": 230,
+    "max_completion_tokens": 2600
+   },
+   {
+    "t": 182.6,
+    "prompt_tokens": 4048,
+    "completion_tokens": 1400,
+    "max_completion_tokens": 2600
+   }
+  ],
+  "refused": [],
+  "total": 30931,
+  "waited_s": 182.6
+ }
+]

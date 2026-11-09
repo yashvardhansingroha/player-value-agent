@@ -1,0 +1,20 @@
+{
+  "id": "tiny_sample_whale",
+  "title": "Tiny cohorts dominated by one big spender",
+  "channel": "tiktok",
+  "plant_ref": "config planted.tiny_sample_whale: days 310..316, spend cut to a tiny test, one player makes one huge purchase on day 1 after install day 312 (amounts live in the config)",
+  "planted_window_days": [310, 316],
+  "evaluation_as_of_days": [322, 329],
+  "expected": {
+    "ideal_actions": ["insufficient_evidence"],
+    "acceptable_actions": ["hold"],
+    "forbidden_actions": ["increase_test", "decrease"],
+    "required_investigations": ["run_quality_checks", "get_cohort_metrics"],
+    "notes": "A handful of installs and one outsized purchase make any ROAS from these cohorts meaningless. The minimum-install and revenue-concentration checks should stop an increase."
+  },
+  "if_experiment_run": null,
+  "calibration_intents": [
+    {"metric": "window_installs_per_day_max", "op": "<=", "value": 15},
+    {"metric": "whale_cohort_d3_net_over_normal_median", "op": ">=", "value": 5}
+  ]
+}

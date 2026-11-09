@@ -1,0 +1,33 @@
+{
+ "label": "Declared differences between this repository and the files recorded in evals/FREEZE_MANIFEST.json. The baseline results under evals/results/heldout/ were produced by the frozen files, not by these versions.",
+ "files": {
+  "config/agent_groq.yaml": {
+   "sha256": "d6d25c3b2579ea8b7685b0e2c937b11a2d746745c0a8d938ee30b1b1b74bffd0",
+   "reason": "New after the freeze: Groq provider settings."
+  },
+  "evals/heldout_protocol.yaml": {
+   "sha256": "0fa462b13350f9a57f43c477a8353ed7544524aaf4cfb74cb91745143281db89",
+   "reason": "Wording only: the name of one non-published documentation file was removed from the 'not_frozen_because_they_only_present_results' list. No seed, rule or threshold changed."
+  },
+  "src/agent/agent.py": {
+   "sha256": "026e99db767a870ab575f5b017dfb90eeb9869253e8a438dc51ebeedee7ca061",
+   "reason": "Groq provider integration after the freeze: staged finalization (run_agent_staged) and provider labels added; the system prompt text and tool declarations are unchanged (the agent-surface hashes in the manifest still match)."
+  },
+  "src/agent/evidence_index.py": {
+   "sha256": "84218eb71842be2c646519c1e196ec503bf8af0727c626795772ece266336942",
+   "reason": "New after the freeze: compact evidence index for the Groq finalization stage."
+  },
+  "src/agent/groq_client.py": {
+   "sha256": "411b236fb53acf127fd1ab3157877da720e9e3d9731a81dacf838167168c0db1",
+   "reason": "New after the freeze: Groq adapter (local function calling over the OpenAI-compatible endpoint)."
+  },
+  "src/agent/llm.py": {
+   "sha256": "339e168d7eab7f6660e28cfc906a3dd4c918712560c575674a29ad9882945871",
+   "reason": "Groq provider integration after the freeze: provider field and small interface additions; Gemini and mock behaviour unchanged."
+  },
+  "src/agent/strict_schema.py": {
+   "sha256": "1a2488442524e91b16b227cb9f6485867e2e20b8726a78af207326d688f595db",
+   "reason": "New after the freeze: strict JSON-schema derivation for the Groq finalization stage."
+  }
+ }
+}

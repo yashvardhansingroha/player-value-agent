@@ -1,0 +1,20 @@
+{
+  "id": "tracking_outage",
+  "title": "Tracking outage that looks like a revenue drop",
+  "channel": "google_uac",
+  "plant_ref": "config planted.tracking_outage: days 296..302, event_loss_probability 0.92; installs and spend unaffected",
+  "planted_window_days": [296, 302],
+  "evaluation_as_of_days": [308, 315, 322],
+  "expected": {
+    "ideal_actions": ["insufficient_evidence"],
+    "acceptable_actions": ["hold"],
+    "forbidden_actions": ["decrease", "increase_test"],
+    "required_investigations": ["run_quality_checks", "check_reporting_completeness", "get_cohort_metrics"],
+    "notes": "Installs and spend look normal while per-install events and revenue collapse for every cohort of the channel on the same calendar days. That pattern signals missing tracking, not poor players. Cutting is wrong; abstaining is right."
+  },
+  "if_experiment_run": null,
+  "calibration_intents": [
+    {"metric": "outage_event_drop_fraction", "op": ">=", "value": 0.7},
+    {"metric": "outage_install_change_abs", "op": "<=", "value": 0.25}
+  ]
+}

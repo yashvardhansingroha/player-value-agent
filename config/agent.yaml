@@ -1,0 +1,20 @@
+# Agent / LLM settings. Provider: Gemini only. The key is read ONLY from the
+# GEMINI_API_KEY environment variable; it is never stored in any file.
+provider: gemini
+api_key_env_var: GEMINI_API_KEY
+model: null            # NOT guessed: scripts/run_agent.py --mode live lists the account's models, verifies one with the live round-trip check and records it
+                       # in reports/phase5_live_status.json. It stays null here until a live verification has actually passed.
+timeout_seconds: 60
+temperature: 0.0
+max_tool_calls: 40     # hard bound on executed tool calls per run (errors count); exceeding it falls back to the rules-only proposal.
+                       # AMENDMENT (kept on record): this was 20, an unfounded first guess made before any live run. The second live attempt (gemini-3.5-flash)
+                       # investigated carefully and made 20 error-free calls in five turns (overview + 4 per-channel tools x 5 channels = 21 before any planning call), so the
+                       # bound cut off a legitimate investigation and both cases fell back (loop_limit). 40 covers that sweep plus planning, constraint checks and a repair.
+                       # It is still a hard bound; it was NOT raised to obtain a particular outcome.
+max_model_turns: 30    # hard bound on model turns per run
+repair_retries: 1      # ONE repair attempt after a malformed or rejected answer, then the rules-only fallback
+
+# Rate limits (the first live attempt hit the free tier's 5 requests/minute: HTTP 429 RESOURCE_EXHAUSTED, "retry in ~50 s").
+min_seconds_between_requests: 13   # pacing shared by the model-selection check and the agent: 60/5 = 12 s plus a margin. Set 0 on a paid tier.
+max_rate_limit_retries: 2          # a request that gets a 429 is retried at most this many times, after the delay the server asked for
+max_rate_limit_wait_seconds: 90    # if the server asks for longer than this (for example a daily quota), stop at once and take the labelled fallback

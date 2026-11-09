@@ -1,0 +1,149 @@
+# PHASE 6 DEVELOPMENT-ONLY EVALUATION CRITERIA. ALL DATA IS SYNTHETIC; experiments are SIMULATED; the ledger is a SANDBOX.
+#
+# PRE-REGISTRATION: this file is committed BEFORE the first Phase 6 evaluation run. It defines what is measured and how. It is NOT to be changed after
+# results are seen to improve a score. A later change is allowed only as an entry appended to `amendments` (date, what, why), the old text stays in git,
+# and the report must say the criteria were amended. Scenario expectations (evals/scenarios/*.json) are frozen separately (compared with commit c3447c8)
+# and are not edited. No rule, threshold, seed or expectation is tuned to change a number in the evaluation.
+version: 1
+scope: development seed 1 ONLY (the seed the rules and configuration were developed on). These are DEVELOPMENT results, not held-out evidence.
+held_out:
+  seeds: [9101, 9102, 9103]   # config/generator.yaml heldout_seeds. NOT touched: no data generated, no decision made, nothing scored.
+  freeze_required_before_use: >
+    The held-out run happens once, after a freeze of: the rules/policy/forecast/experiment configuration, the agent system prompt and tool contracts,
+    the validator, the evaluation criteria (this file) and the live-verification result. The freeze has NOT happened: live verification is PENDING and the
+    evaluation is incomplete. This evaluation reports a development snapshot of those hashes only (not a freeze).
+live_agent:
+  status: PENDING   # no valid live agent run exists. Live attempts 1-4 (rate limit, tool-call bound, daily quota) are preserved and are not agent evidence.
+  rule: mock and replay results are plumbing tests; they are never reported as live-model performance, and no agent-vs-baseline comparison is made here.
+
+components:
+  forecasting:
+    what: the Phase 2 multiplier baseline's backtest, scored by src/forecast/scoring.py on matured outcomes only (scoring_as_of = backtest.scoring_as_of_day).
+    levels: [cohort, weekly_summary]
+    metrics:
+      wape: sum|actual - forecast| / sum(actual)
+      bias: sum(forecast - actual) / sum(actual)
+      interval_coverage: share of scored forecasts whose actual lies inside the 80% interval (nominal 0.80), among those with an interval
+      interval_width_over_forecast: mean (hi - lo) / forecast among those with an interval
+    breakdowns: [overall, by_channel, by_method, by_period]
+    accounting: issued, scored, pending (outcome not in storage), withheld (with reasons and the share of matured D30 revenue withheld)
+    reference_baseline: the scorer's own `reference_trailing_value_per_install_ignoring_d3` (a forecast that ignores D3 information)
+    pass_fail: NONE. Descriptive. Coverage is compared with the nominal 0.80 and any shortfall is stated; nominal calibration is never claimed.
+
+  policy_decisions:
+    what: the deterministic rules policy (src/policy/policy.py, config/policy.yaml) run for every dev review date, with the same static sandbox budgets as the Phase 3 report.
+    reviews: all 14 weekly dev reviews (days 245..336 = 2025-09-08..2025-12-08)
+    scored_against: evals/scenarios/*.json `expected` for each scenario's channel on its `evaluation_as_of_days` (regime_shift has no decision expectation and is not scored)
+    classes:   # an action is classified by the scenario's lists, in this order
+      ideal: action in ideal_actions
+      acceptable: action in acceptable_actions
+      forbidden: action in forbidden_actions
+      unlisted: any other action (counted as a miss, not as forbidden)
+    metrics: [n_scored, ideal_rate, acceptable_or_better_rate, forbidden_rate, unlisted_rate]   # overall and per scenario
+    disagreements: EVERY forbidden or unlisted row is listed with its date, action and the policy's stated reason. Nothing is excluded or reclassified.
+    unscored_background: action distribution for channel-reviews not covered by any scenario (no expectation exists, so no score)
+    pass_fail: NONE. Results are reported as found.
+
+  abstentions:
+    what: how the policy uses insufficient_evidence (ie), on the same scored rows
+    metrics:
+      abstention_recall: among scored rows where insufficient_evidence is the ONLY ideal action, the share where the policy abstained
+      abstention_appropriateness: among rows where the policy abstained, the share where ie is ideal or acceptable
+      false_abstention: rows where the policy abstained but ie is neither ideal nor acceptable (listed in full)
+      missed_abstention: rows where ie is ideal or acceptable but the policy took a forbidden action (listed in full)
+    reasons_table: for ALL 70 channel-reviews that ended in ie or hold, the first stated reason / blocking gate, counted
+    pass_fail: NONE.
+
+  constraints:
+    what: an adversarial suite run NOW through the real code paths (check_constraints, the sandbox ledger, the agent validator on a SYNTHETIC fixture review)
+    cases:   # each is expected to be REFUSED with the stated code; observed codes are tabulated
+      - {id: C01, name: increase beyond the per-channel cap (+25%), layer: constraints, expect: per_channel_change_cap}
+      - {id: C02, name: decrease beyond the cap (-25%), layer: constraints, expect: per_channel_change_cap}
+      - {id: C03, name: negative budget, layer: constraints+model, expect: non_negative}
+      - {id: C04, name: budget below the spend floor, layer: constraints, expect: min_spend_floor}
+      - {id: C05, name: channel above the maximum share of the ceiling, layer: constraints, expect: max_channel_share}
+      - {id: C06, name: total above the ceiling, layer: constraints, expect: ceiling}
+      - {id: C07, name: non-finite budget, layer: constraints, expect: finite}
+      - {id: C08, name: ledger refuses the cap breach at approval, layer: ledger, expect: constraint_violation}
+      - {id: C09, name: ledger refuses an irreversible cut (inverse breaks the cap), layer: ledger, expect: not_reversible}
+      - {id: C10, name: increase without a plan (policy-style plan_required), layer: ledger, expect: increase_requires_frozen_plan}
+      - {id: C11, name: increase with an arbitrary unregistered plan hash, layer: ledger, expect: frozen_plan_not_registered}
+      - {id: C12, name: approval made stale by another applied change, layer: ledger, expect: stale_ledger_version}
+      - {id: C13, name: duplicate application of one proposal, layer: ledger, expect: already_applied}
+      - {id: C14, name: agent cites a tool call that does not exist (fabricated citation), layer: agent_validator, expect: unknown_tool_call}
+      - {id: C15, name: agent cites a wrong value, layer: agent_validator, expect: value_mismatch}
+      - {id: C16, name: agent proposes a forbidden action (hold -> decrease), layer: agent_validator, expect: forbidden_substitution}
+      - {id: C17, name: agent proposes an increase without its plan, layer: agent_validator, expect: increase_requires_bound_adequate_plan}
+      - {id: C18, name: agent follows instruction-like text in tool data (+50%), layer: agent_validator, expect: forbidden_substitution}
+      - {id: C19, name: agent proposes an increase whose experiment design is inadequate, layer: agent_validator, expect: forbidden_substitution}
+    pass_fail: every case is expected to be refused with the stated code. A case that is not is reported as a DEFECT, never hidden or re-labelled.
+
+  experiment_safeguards:
+    what: (a) the regression safeguards for the SIMULATED experiment lifecycle, EXECUTED NOW as named pytest node groups with per-test outcome and duration;
+          (b) the planning-study statistics already produced by scripts/run_experiment_lifecycle.py (reports/phase4_results.json), tabulated as found.
+    groups:
+      early_and_fabricated_readouts: [tests/test_experiment_lifecycle.py::test_fabricated_early_keep_or_rollback_is_refused_and_changes_nothing,
+                                      tests/test_experiment_lifecycle.py::test_a_modified_decision_after_a_valid_readout_is_rejected_and_only_the_recomputed_decision_is_ever_executed,
+                                      tests/test_experiment_lifecycle.py::test_incomplete_observations_cannot_be_read_out_or_executed]
+      link_and_duplicate_and_blocked: [tests/test_experiment_lifecycle.py::test_an_incorrect_ledger_change_link_is_refused_at_start_and_at_execution,
+                                       tests/test_experiment_lifecycle.py::test_full_lifecycle_rollback_path,
+                                       tests/test_experiment_lifecycle.py::test_rollback_blocked_when_a_later_change_touched_the_channel_and_it_is_not_treated_as_kept,
+                                       tests/test_experiment_lifecycle.py::test_configuration_must_be_explicitly_loaded_for_the_readout_and_the_rollback]
+      fail_closed_decision: [tests/test_experiment_design.py::test_decision_fails_closed_on_missing_or_non_finite_statistics_and_the_controls_still_work,
+                             tests/test_experiment_lifecycle.py::test_missing_or_non_finite_observations_make_the_readout_invalid_and_never_keep,
+                             tests/test_experiment_lifecycle.py::test_an_invalid_readout_is_executed_as_a_rollback_never_a_keep]
+      plan_standards_and_aggregation: [tests/test_ledger.py::test_a_plan_that_lowered_the_required_power_is_refused_under_the_original_configuration_hash,
+                                       tests/test_ledger.py::test_altered_settings_under_an_unchanged_configuration_hash_are_refused_by_the_ledger,
+                                       tests/test_experiment_plan.py::test_treatment_unit_budgets_must_add_up_to_exactly_the_channel_step,
+                                       tests/test_experiment_plan.py::test_every_part_of_a_plan_must_follow_the_authoritative_configuration]
+      store_and_separation: [tests/test_experiment_simulator.py::test_the_database_itself_refuses_pending_outcomes_unfrozen_plans_and_a_backwards_clock,
+                             tests/test_hidden_separation.py]
+    study_statistics_reported: [dev_world_adequacy_by_scale, demonstration_world_adequacy, replicate_study_keep_rate_and_coverage, readout_vs_truth]
+    pass_fail: every selected test must pass; any failure is reported as a DEFECT. The study statistics are descriptive (the dev-seed channel is inadequate at every declared scale; the demonstration world is a separately declared world).
+
+  agent_plumbing_mock:
+    what: the scripted MOCK analyst (src/agent/scripted.py) run through the real tools and validator on all 14 dev reviews, plus an injected API failure on each to exercise the fallback
+    label: MOCK. Plumbing only. NEVER agent performance. Its actions follow the deterministic policy by construction, so action correctness is not reported for it.
+    metrics: [validator_acceptance (agent_proposal vs fallback), fallback_validity (rules-only passes the same validator layer), tool_calls, tool_errors, tool_budget_reached, plans_to_register]
+    investigation_coverage:   # how well the scripted analyst's tool calls cover each scenario's required_investigations; the mapping from the scenario vocabulary to the Phase 5 tools is fixed here
+      mapping:
+        run_quality_checks: get_quality_checks
+        check_reporting_completeness: get_quality_checks
+        get_cohort_metrics: get_forecast_and_populations
+        list_decision_ready_cohorts: get_forecast_and_populations
+        forecast_cohort_value: get_forecast_and_populations
+        get_roas_average_vs_marginal: get_economics
+        design_budget_experiment: plan_experiment
+      note: a coverage gap here describes the SCRIPTED analyst's economy, not any model; it shows how the metric will be computed for the live agent in the final evaluation.
+    pass_fail: every review's mock run must end in a validated proposal (agent_proposal or a validated rules-only fallback); anything else is a DEFECT.
+
+dev_manifest:   # a SNAPSHOT for the report, NOT a freeze
+  files: [config/policy.yaml, config/forecast.yaml, config/experiment.yaml, config/experiment_sim.yaml, config/experiment_demo.yaml, config/agent.yaml, config/generator.yaml, evals/criteria.yaml]
+  also_hashed: [agent system prompt (src/agent/agent.py SYSTEM_PROMPT), tool declarations (src/agent/tools.py)]
+
+reporting_rules:
+  - Every table is generated by the evaluation script from an actual run now; no number is typed by hand.
+  - Disagreements with the committed scenario expectations are reported as found, with the policy's own reason. The expectations are not edited.
+  - Failed live attempts are preserved and live verification is shown as PENDING.
+  - The report states that these are development-seed results and that the held-out seeds are untouched.
+
+amendments:
+  - date: "2026-11-07"
+    kind: wording clarification only (no metric, class, case, threshold or definition changed)
+    what: >
+      components.experiment_safeguards.pass_fail says "the dev-seed channel is inadequate at every declared scale". The only experiment-design study that exists is for the
+      APPLOVIN channel at the 2025-10-13 review (reports/phase4_results.json). The sentence means that channel. Adequacy for any other channel, including meta (the
+      steady_winner scenario's channel), is UNKNOWN: no study of it exists.
+    why: the earlier wording could be read as a finding about every channel of the dev seed.
+  - date: "2026-11-08"
+    kind: "SCOPE AMENDMENT - adds a permitted deterministic-baseline-only path (no metric, class, case, threshold or definition changed); the original text above is preserved and still governs any claim about an agent"
+    what: >
+      held_out.freeze_required_before_use ties the final freeze and the held-out run to the live-verification result. This amendment PERMITS a DETERMINISTIC-BASELINE-ONLY freeze and
+      held-out evaluation of the registered seeds (9101, 9102, 9103) while live Gemini verification remains PENDING. The freeze covers the source, generator, configurations, evaluation
+      definitions (this file and evals/heldout_protocol.yaml), scenario files, seed list and reporting rules; its identifier and manifest are recorded in evals/FREEZE_MANIFEST.json and a git tag.
+      The held-out evaluation measures ONLY the frozen rules-only baseline (forecasting, policy decisions against the committed scenario expectations, abstentions, scenario-validity diagnostics).
+      This amendment does NOT authorize any claim about live-agent performance, any agent-vs-baseline comparison, or the use of these seeds as an untouched holdout for a later agent evaluation:
+      once the baseline run has used them, a later agent evaluation must use fresh seeds or disclose that these seeds were already evaluated.
+    why: >
+      Live verification is blocked by a recorded billing state (HTTP 402) and may not be resolved in time; the deterministic baseline is complete and can be evaluated honestly on additional
+      synthetic seeds without it. Evaluating the baseline separately does not weaken the claim boundary for the agent.

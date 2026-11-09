@@ -1,0 +1,82 @@
+{
+  "seed": 1,
+  "freeze_id": "REHEARSAL (not a freeze)",
+  "rehearsal": true,
+  "git_commit": "69b9ca02d784f1ee3d3fc3d1310d6801d5939b90",
+  "paths": {
+    "decision_db": "data/decision/seed_1/decision.db",
+    "generation_report": "data/decision/seed_1/generation_report.json",
+    "hidden_truth": "data/hidden/seed_1/hidden_truth.json",
+    "forecast_store": "data/forecasts/seed_1/forecasts.db",
+    "results_dir": "evals/results/rehearsal/seed_1",
+    "results": "evals/results/rehearsal/seed_1/baseline_eval.json",
+    "provenance": "evals/results/rehearsal/seed_1/provenance.json"
+  },
+  "hashes": {
+    "decision_db": "b82355b1c8b3c759483a290e817c7519b0a06858e6efe089e6cc157d2a186e14",
+    "hidden_truth": "cc71cf0d62262b7d99a081fc242e89a6c0ffd3f9cac0a2a943f14efbda3e1275",
+    "decision_db_at_backtest_start": "b82355b1c8b3c759483a290e817c7519b0a06858e6efe089e6cc157d2a186e14",
+    "forecast_store": "d4ba84f4731ac0d853741ba545583c27e9caa7b08c6d4740b281be506cf26133"
+  },
+  "steps": {
+    "generate": {
+      "status": "completed",
+      "started": "2026-11-08T06:49:39+00:00",
+      "resumed": false,
+      "detail": {
+        "generation_report_seed": 1,
+        "row_counts": {
+          "players": 159860,
+          "player_days": 1199182,
+          "spend_daily": 1825,
+          "cohort_reporting": 5292
+        },
+        "db_size_mb": 74.8,
+        "generate_seconds": 1.7
+      },
+      "finished": "2026-11-08T06:49:51+00:00",
+      "seconds": 11.4
+    },
+    "backtest": {
+      "status": "completed",
+      "started": "2026-11-08T06:49:51+00:00",
+      "resumed": false,
+      "detail": {
+        "reviews": 48,
+        "issued_total": 1334,
+        "summaries_total": 239,
+        "withheld_total": {
+          "below_min_installs": 20,
+          "insufficient_training_history": 142,
+          "low_activity": 8,
+          "revenue_spike": 149
+        }
+      },
+      "finished": "2026-11-08T06:53:32+00:00",
+      "seconds": 221.4
+    },
+    "tie_checks": {
+      "status": "completed",
+      "started": "2026-11-08T06:53:32+00:00",
+      "resumed": false,
+      "detail": {
+        "problems": [],
+        "checks": "seed fields, hashes recorded at build time vs now, dev-artifact identity, store evidence/schedule hashes, content tie"
+      },
+      "finished": "2026-11-08T06:53:45+00:00",
+      "seconds": 13.3
+    },
+    "evaluate": {
+      "status": "completed",
+      "started": "2026-11-08T06:53:45+00:00",
+      "resumed": false,
+      "detail": {
+        "results_file": "evals/results/rehearsal/seed_1/baseline_eval.json",
+        "scored_channel_reviews": 48
+      },
+      "finished": "2026-11-08T06:54:08+00:00",
+      "seconds": 22.7
+    }
+  },
+  "completed": true
+}

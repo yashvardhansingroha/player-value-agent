@@ -1,0 +1,22 @@
+{
+  "id": "front_loaded",
+  "title": "Strong at D3, weak by D30 (front-loaded spenders)",
+  "channel": "tiktok",
+  "plant_ref": "config channels.tiktok: front_boost=7.0, front_tau_days=1.2, fast retention decay (alpha=0.90)",
+  "planted_window_days": null,
+  "evaluation_as_of_days": [245, 252, 259, 266, 273, 280, 287, 294, 301],
+  "evaluation_note": "Excludes as_of days 308 onward, where the tiny-sample scenario overlaps on this channel.",
+  "expected": {
+    "ideal_actions": ["hold", "decrease"],
+    "acceptable_actions": ["insufficient_evidence"],
+    "forbidden_actions": ["increase_test"],
+    "required_investigations": ["forecast_cohort_value", "get_roas_average_vs_marginal"],
+    "notes": "A rule that trusts early D3 revenue looks great but D30 value is much lower. Increasing on D3 evidence is the trap."
+  },
+  "if_experiment_run": {"expected_readout": "rollback"},
+  "calibration_intents": [
+    {"metric": "d3_net_revenue_per_install_rank", "op": "<=", "value": 2},
+    {"metric": "d30_to_d3_multiplier_over_peer_median", "op": "<=", "value": 0.65},
+    {"metric": "avg_d30_roas_over_target", "op": "<=", "value": 0.9}
+  ]
+}

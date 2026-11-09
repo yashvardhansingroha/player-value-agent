@@ -1,0 +1,307 @@
+[
+ {
+  "as_of": "2025-10-13",
+  "investigation_calls": 7,
+  "sequential_single_call_turns": false,
+  "status": "agent_proposal",
+  "stages": {
+   "investigation": {
+    "model_requests": 2,
+    "tool_calls_by_model": 7,
+    "evidence_nudges": 0,
+    "ended_by": "model_done",
+    "required_evidence_complete": true,
+    "missing_required_at_end": [],
+    "usage": {
+     "prompt_tokens": 5837,
+     "output_tokens": 275
+    }
+   },
+   "finalization": {
+    "requests": 1,
+    "provider_accepted_schema_and_returned_text": true,
+    "text_parsed_as_json_object": true,
+    "validator_ok": true,
+    "repairs_used": 0,
+    "usage": {
+     "prompt_tokens": 3106,
+     "output_tokens": 900
+    }
+   }
+  },
+  "requests": [
+   {
+    "stage": "investigation",
+    "t": 0.0,
+    "prompt_tokens": 2068,
+    "completion_tokens": 270,
+    "max_completion_tokens": 2600
+   },
+   {
+    "stage": "investigation",
+    "t": 6.8,
+    "prompt_tokens": 3769,
+    "completion_tokens": 5,
+    "max_completion_tokens": 2600
+   },
+   {
+    "stage": "finalization",
+    "t": 29.9,
+    "prompt_tokens": 3106,
+    "completion_tokens": 900,
+    "max_completion_tokens": 2600
+   }
+  ],
+  "refused": [],
+  "total_tokens": 10118,
+  "seconds_waited": 29.9
+ },
+ {
+  "as_of": "2025-10-13",
+  "investigation_calls": 7,
+  "sequential_single_call_turns": true,
+  "status": "agent_proposal",
+  "stages": {
+   "investigation": {
+    "model_requests": 8,
+    "tool_calls_by_model": 7,
+    "evidence_nudges": 0,
+    "ended_by": "model_done",
+    "required_evidence_complete": true,
+    "missing_required_at_end": [],
+    "usage": {
+     "prompt_tokens": 23374,
+     "output_tokens": 635
+    }
+   },
+   "finalization": {
+    "requests": 1,
+    "provider_accepted_schema_and_returned_text": true,
+    "text_parsed_as_json_object": true,
+    "validator_ok": true,
+    "repairs_used": 0,
+    "usage": {
+     "prompt_tokens": 3106,
+     "output_tokens": 900
+    }
+   }
+  },
+  "requests": [
+   {
+    "stage": "investigation",
+    "t": 0.0,
+    "prompt_tokens": 2068,
+    "completion_tokens": 90,
+    "max_completion_tokens": 2600
+   },
+   {
+    "stage": "investigation",
+    "t": 0.0,
+    "prompt_tokens": 2414,
+    "completion_tokens": 90,
+    "max_completion_tokens": 2600
+   },
+   {
+    "stage": "investigation",
+    "t": 15.3,
+    "prompt_tokens": 2630,
+    "completion_tokens": 90,
+    "max_completion_tokens": 2600
+   },
+   {
+    "stage": "investigation",
+    "t": 37.1,
+    "prompt_tokens": 2813,
+    "completion_tokens": 90,
+    "max_completion_tokens": 2600
+   },
+   {
+    "stage": "investigation",
+    "t": 60.4,
+    "prompt_tokens": 3004,
+    "completion_tokens": 90,
+    "max_completion_tokens": 2600
+   },
+   {
+    "stage": "investigation",
+    "t": 85.2,
+    "prompt_tokens": 3203,
+    "completion_tokens": 90,
+    "max_completion_tokens": 2600
+   },
+   {
+    "stage": "investigation",
+    "t": 111.4,
+    "prompt_tokens": 3402,
+    "completion_tokens": 90,
+    "max_completion_tokens": 2600
+   },
+   {
+    "stage": "investigation",
+    "t": 141.1,
+    "prompt_tokens": 3840,
+    "completion_tokens": 5,
+    "max_completion_tokens": 2600
+   },
+   {
+    "stage": "finalization",
+    "t": 164.1,
+    "prompt_tokens": 3106,
+    "completion_tokens": 900,
+    "max_completion_tokens": 2600
+   }
+  ],
+  "refused": [],
+  "total_tokens": 28015,
+  "seconds_waited": 164.1
+ },
+ {
+  "as_of": "2025-11-10",
+  "investigation_calls": 6,
+  "sequential_single_call_turns": false,
+  "status": "agent_proposal",
+  "stages": {
+   "investigation": {
+    "model_requests": 2,
+    "tool_calls_by_model": 6,
+    "evidence_nudges": 0,
+    "ended_by": "model_done",
+    "required_evidence_complete": true,
+    "missing_required_at_end": [],
+    "usage": {
+     "prompt_tokens": 5383,
+     "output_tokens": 245
+    }
+   },
+   "finalization": {
+    "requests": 1,
+    "provider_accepted_schema_and_returned_text": true,
+    "text_parsed_as_json_object": true,
+    "validator_ok": true,
+    "repairs_used": 0,
+    "usage": {
+     "prompt_tokens": 2770,
+     "output_tokens": 900
+    }
+   }
+  },
+  "requests": [
+   {
+    "stage": "investigation",
+    "t": 0.0,
+    "prompt_tokens": 2068,
+    "completion_tokens": 240,
+    "max_completion_tokens": 2600
+   },
+   {
+    "stage": "investigation",
+    "t": 3.0,
+    "prompt_tokens": 3315,
+    "completion_tokens": 5,
+    "max_completion_tokens": 2600
+   },
+   {
+    "stage": "finalization",
+    "t": 23.6,
+    "prompt_tokens": 2770,
+    "completion_tokens": 900,
+    "max_completion_tokens": 2600
+   }
+  ],
+  "refused": [],
+  "total_tokens": 9298,
+  "seconds_waited": 23.6
+ },
+ {
+  "as_of": "2025-11-10",
+  "investigation_calls": 6,
+  "sequential_single_call_turns": true,
+  "status": "agent_proposal",
+  "stages": {
+   "investigation": {
+    "model_requests": 7,
+    "tool_calls_by_model": 6,
+    "evidence_nudges": 0,
+    "ended_by": "model_done",
+    "required_evidence_complete": true,
+    "missing_required_at_end": [],
+    "usage": {
+     "prompt_tokens": 19477,
+     "output_tokens": 545
+    }
+   },
+   "finalization": {
+    "requests": 1,
+    "provider_accepted_schema_and_returned_text": true,
+    "text_parsed_as_json_object": true,
+    "validator_ok": true,
+    "repairs_used": 0,
+    "usage": {
+     "prompt_tokens": 2770,
+     "output_tokens": 900
+    }
+   }
+  },
+  "requests": [
+   {
+    "stage": "investigation",
+    "t": 0.0,
+    "prompt_tokens": 2068,
+    "completion_tokens": 90,
+    "max_completion_tokens": 2600
+   },
+   {
+    "stage": "investigation",
+    "t": 0.0,
+    "prompt_tokens": 2431,
+    "completion_tokens": 90,
+    "max_completion_tokens": 2600
+   },
+   {
+    "stage": "investigation",
+    "t": 15.4,
+    "prompt_tokens": 2632,
+    "completion_tokens": 90,
+    "max_completion_tokens": 2600
+   },
+   {
+    "stage": "investigation",
+    "t": 37.2,
+    "prompt_tokens": 2803,
+    "completion_tokens": 90,
+    "max_completion_tokens": 2600
+   },
+   {
+    "stage": "investigation",
+    "t": 60.4,
+    "prompt_tokens": 2994,
+    "completion_tokens": 90,
+    "max_completion_tokens": 2600
+   },
+   {
+    "stage": "investigation",
+    "t": 84.9,
+    "prompt_tokens": 3175,
+    "completion_tokens": 90,
+    "max_completion_tokens": 2600
+   },
+   {
+    "stage": "investigation",
+    "t": 111.0,
+    "prompt_tokens": 3374,
+    "completion_tokens": 5,
+    "max_completion_tokens": 2600
+   },
+   {
+    "stage": "finalization",
+    "t": 131.6,
+    "prompt_tokens": 2770,
+    "completion_tokens": 900,
+    "max_completion_tokens": 2600
+   }
+  ],
+  "refused": [],
+  "total_tokens": 23692,
+  "seconds_waited": 131.6
+ }
+]

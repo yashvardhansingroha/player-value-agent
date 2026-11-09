@@ -1,0 +1,20 @@
+# SIMULATED DEMONSTRATION WORLD (Phase 4b). ALL DATA IS SYNTHETIC. Declared and committed BEFORE the demonstration was run.
+#
+# WHY THIS FILE EXISTS: on the dev-seed channel (about 100 installs a day) the design standards in config/experiment.yaml could not be
+# met at ANY scale in that file's scale_search list (x1 ... x100) under the simulator noise in config/experiment_sim.yaml: heavy-tailed
+# in-app purchase revenue only averages out as 1/sqrt(volume), and per-unit-day installs carry about 50% relative overdispersion that
+# no extra volume removes. That is the real result and the Phase 4 report states it. The policy action for that channel is therefore
+# insufficient_evidence, and the real ledger refuses the real plan.
+#
+# To exercise the complete ledger lifecycle (plan -> approval -> application -> pending -> readout -> keep/rollback) with a REAL,
+# ADEQUATE plan, this file declares a different synthetic world: a channel with far larger volume and near-Poisson count noise.
+# It is NOT the dev-seed channel and says nothing about it. The design standards, the estimator, the guardrails and the decision rule
+# are EXACTLY those in config/experiment.yaml (unchanged); only the world's noise and volume differ. The keep/rollback outcome is
+# decided by the simulator's truth and is not chosen here.
+version: 1
+sim_overrides:
+  noise:
+    installs_dispersion: 0.005     # near-Poisson counts (the dev world uses 0.25)
+    common_day_sd: 0.01            # small day-wide shock (the dev world uses 0.08)
+scale_search:
+  options: [100, 1000, 10000]      # multiples of the dev-seed channel's budget and install volume

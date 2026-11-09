@@ -1,0 +1,11 @@
+{
+ "freeze_id": "baseline-freeze-v1",
+ "started": "2026-11-08T06:55:50+00:00",
+ "git_commit": "abd7625e711f0422c4151c3403c973618db9d38c",
+ "seeds": [
+  9101,
+  9102,
+  9103
+ ],
+ "note": "the held-out baseline run is ONCE; delete nothing"
+}

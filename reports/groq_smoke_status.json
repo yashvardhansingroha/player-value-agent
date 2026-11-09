@@ -1,0 +1,101 @@
+{
+ "label": "GROQ SMOKE TEST (connectivity and token calibration; NOT agent evidence)",
+ "provider": "groq",
+ "model": "openai/gpt-oss-120b",
+ "as_of": "2025-10-13",
+ "live": true,
+ "steps": [
+  {
+   "step": "tool_call_request",
+   "tool_calls": [
+    {
+     "name": "get_review_overview",
+     "args": {},
+     "provider_id": "fc_99b51e7a-1ffb-4707-a0ed-7049189c7eb1"
+    }
+   ],
+   "text": null,
+   "usage": {
+    "prompt_tokens": 1674,
+    "output_tokens": 27,
+    "finish_reason": "tool_calls"
+   }
+  },
+  {
+   "step": "round_trip_request",
+   "n_results_sent": 1,
+   "text": "{\"summary\":\"Received one tool result.\", \"summary_claims\": [], \"items\": []}",
+   "tool_calls_requested": 0,
+   "usage": {
+    "prompt_tokens": 2073,
+    "output_tokens": 23,
+    "finish_reason": "stop"
+   }
+  }
+ ],
+ "mode": "live",
+ "result": "round trip completed",
+ "request_log": [
+  {
+   "prompt_tokens_estimated": 2981,
+   "max_completion_tokens": 2600,
+   "attempts": 1,
+   "slept_seconds": 0.0,
+   "status": 200,
+   "headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-requests": "999",
+    "x-ratelimit-remaining-tokens": "5791",
+    "x-ratelimit-reset-requests": "1m26.4s",
+    "x-ratelimit-reset-tokens": "16.567s"
+   },
+   "observed_chars_per_token": 4.986,
+   "usage": {
+    "prompt_tokens": 1674,
+    "completion_tokens": 27,
+    "total_tokens": 1701
+   },
+   "finish_reason": "tool_calls"
+  },
+  {
+   "prompt_tokens_estimated": 2128,
+   "max_completion_tokens": 2600,
+   "attempts": 1,
+   "slept_seconds": 0.0,
+   "status": 200,
+   "headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-requests": "998",
+    "x-ratelimit-remaining-tokens": "3801",
+    "x-ratelimit-reset-requests": "2m52.8s",
+    "x-ratelimit-reset-tokens": "31.492s"
+   },
+   "observed_chars_per_token": 4.862,
+   "usage": {
+    "prompt_tokens": 2073,
+    "completion_tokens": 23,
+    "total_tokens": 2096
+   },
+   "finish_reason": "stop"
+  }
+ ],
+ "pacer": {
+  "tokens_used_total": 3797,
+  "requests_made": 2,
+  "slept_seconds": 0.0,
+  "provider_numbers": {
+   "remaining_tokens": 3801,
+   "tokens_reset_at": 1525660.117,
+   "remaining_requests_day": 998
+  }
+ },
+ "calibration": {
+  "observed_chars_per_token": [
+   4.986,
+   4.862
+  ],
+  "note": "compare with the offline model's 2.6 / 3.2 / 3.8 (pessimistic / central / optimistic) before any full run"
+ }
+}

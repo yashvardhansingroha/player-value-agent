@@ -1,0 +1,51 @@
+# Budget policy. These are CHOSEN POLICY ASSUMPTIONS, not findings. ALL DATA IS SYNTHETIC; the ledger is a SANDBOX.
+# PROVENANCE: every value below was fixed BEFORE any policy decision or policy report was produced for the dev seed, and
+# is not to be tuned toward a preferred decision. Changing any value changes the policy hash, which invalidates approvals.
+version: 1
+budget_unit: daily_spend_synthetic_usd
+
+# ---- hard constraints (enforced when a proposal is built, approved, applied, and rolled back) ----
+constraints:
+  per_channel_change_cap: 0.20     # |new - current| / current at most 20% per change
+  min_spend_floor: 10.0            # no channel budget below this
+  max_channel_share: 0.40          # a channel's budget is at most 40% of the total ceiling
+  ceiling_reserve_fraction: 0.20   # used ONLY to initialise a sandbox ledger: ceiling = initial total x (1 + fraction)
+  # The total is a CEILING: sum(budgets) <= ceiling. The gap (ceiling - sum) is an unallocated reserve. Increases are
+  # funded from the reserve only (no reallocation between channels in v1).
+
+steps:
+  increase_step_pct: 0.10          # proposed bounded step for an increase test
+  decrease_step_pct: 0.10
+  min_step_fraction: 0.02          # a step smaller than 2% of the current budget is not proposed
+
+# ---- payback target: derived from sufficiently mature, reported historical cohorts only ----
+payback:
+  horizon_day: 180
+  payback_multiple: 1.0            # D180 net revenue must repay spend x this multiple
+  trailing_cohorts: 90             # most recent eligible cohorts whose D180 milestone is complete
+  min_mature_cohorts: 30           # per channel, else pooled across paid channels, else insufficient history
+  min_mature_installs: 3000
+
+# ---- spend -> installs response (model-estimated, NOT causal incrementality) ----
+response:
+  window_cohort_days: 120          # most recent decision-ready days with known spend and installs > 0
+  min_observations: 40
+  min_log_spend_sd: 0.10           # spend must have varied, otherwise the elasticity is not identified
+  max_b_se: 0.30                   # standard error of the log-log elasticity must be at most this
+  b_bounds: [0.05, 1.2]            # elasticity outside this range is treated as unusable
+  anchor_days: 14                  # recent mean spend / installs used to anchor the curve
+  range_quantiles: [0.05, 0.95]    # observed spend range; a proposed level must stay inside it
+
+# ---- finite-step marginal ROAS (model-estimated) ----
+marginal:
+  # ASSUMPTION: incremental players are worth this fraction of the included cohorts' average forecast value per install.
+  incremental_quality_haircut: 0.80
+  mc_draws: 4000
+  mc_seed: 12345
+  lower_quantile: 0.10             # lower bound = 10th percentile (one-sided); an approximation, not a guaranteed 90% bound
+
+# ---- evidence gates (evaluated separately; see src/policy/policy.py for which failures block what) ----
+gates:
+  min_included_cohorts: 4          # of the 7 expected window dates
+  min_included_spend_share: 0.70   # included cohorts' share of the window's decision-ready spend
+  max_interval_width_ratio: 1.5    # (hi - lo) / point of the summary interval; wider is unusable uncertainty

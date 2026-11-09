@@ -1,0 +1,82 @@
+{
+  "seed": 9101,
+  "freeze_id": "baseline-freeze-v1",
+  "rehearsal": false,
+  "git_commit": "abd7625e711f0422c4151c3403c973618db9d38c",
+  "paths": {
+    "decision_db": "data/decision/seed_9101/decision.db",
+    "generation_report": "data/decision/seed_9101/generation_report.json",
+    "hidden_truth": "data/hidden/seed_9101/hidden_truth.json",
+    "forecast_store": "data/forecasts/seed_9101/forecasts.db",
+    "results_dir": "evals/results/heldout/seed_9101",
+    "results": "evals/results/heldout/seed_9101/baseline_eval.json",
+    "provenance": "evals/results/heldout/seed_9101/provenance.json"
+  },
+  "hashes": {
+    "decision_db": "bdc25a0861931ab9613ef04b58d677524e2979eac09e54bf78bf4f70f2a3e449",
+    "hidden_truth": "9845177586440240a2d365b4ace66707e7dd005f6ad87e1a51d26f33724c4d6e",
+    "decision_db_at_backtest_start": "bdc25a0861931ab9613ef04b58d677524e2979eac09e54bf78bf4f70f2a3e449",
+    "forecast_store": "00220884508b06673ff82b82c9753c8bbcb0d08211d23cd9d23fedc055007805"
+  },
+  "steps": {
+    "generate": {
+      "status": "completed",
+      "started": "2026-11-08T06:55:50+00:00",
+      "resumed": false,
+      "detail": {
+        "generation_report_seed": 9101,
+        "row_counts": {
+          "players": 160311,
+          "player_days": 1203573,
+          "spend_daily": 1825,
+          "cohort_reporting": 5292
+        },
+        "db_size_mb": 74.9,
+        "generate_seconds": 1.9
+      },
+      "finished": "2026-11-08T06:56:03+00:00",
+      "seconds": 12.8
+    },
+    "backtest": {
+      "status": "completed",
+      "started": "2026-11-08T06:56:03+00:00",
+      "resumed": false,
+      "detail": {
+        "reviews": 48,
+        "issued_total": 1329,
+        "summaries_total": 239,
+        "withheld_total": {
+          "below_min_installs": 35,
+          "insufficient_training_history": 145,
+          "low_activity": 7,
+          "revenue_spike": 137
+        }
+      },
+      "finished": "2026-11-08T07:00:01+00:00",
+      "seconds": 238.4
+    },
+    "tie_checks": {
+      "status": "completed",
+      "started": "2026-11-08T07:00:01+00:00",
+      "resumed": false,
+      "detail": {
+        "problems": [],
+        "checks": "seed fields, hashes recorded at build time vs now, dev-artifact identity, store evidence/schedule hashes, content tie"
+      },
+      "finished": "2026-11-08T07:00:13+00:00",
+      "seconds": 12.4
+    },
+    "evaluate": {
+      "status": "completed",
+      "started": "2026-11-08T07:00:13+00:00",
+      "resumed": false,
+      "detail": {
+        "results_file": "evals/results/heldout/seed_9101/baseline_eval.json",
+        "scored_channel_reviews": 48
+      },
+      "finished": "2026-11-08T07:00:35+00:00",
+      "seconds": 21.8
+    }
+  },
+  "completed": true
+}

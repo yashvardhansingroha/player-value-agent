@@ -1,0 +1,33 @@
+{
+ "label": "Hashes of the recorded Groq live-run files (provider groq, model openai/gpt-oss-120b, review date 2025-11-10, synthetic dev seed 1). ALL DATA IS SYNTHETIC. The files are the original run records, unmodified; the README section and the screen read them only after this check.",
+ "validated_run_file": "reports/phase5_runs/live_groq_2025-11-10_4.json",
+ "original_development_history": {
+  "note": "Commit ids from the local development history these records were produced in. That history is not part of this repository (it starts from a single commit); the ids are kept for reference only.",
+  "code_commit_of_the_validated_run": "39bb6fdcaeeb8f65730678c3701d00012fdbe4b6",
+  "record_commit": "0d3816a8bddcce0e1e131e3d7f1854821eed85e6",
+  "smoke_test_commit": "796e011defe73463ebb49c35c263c2d2e99af3f7"
+ },
+ "files": {
+  "reports/groq_live_status.json": {
+   "sha256_lf_normalised": "44bd5a60ab3a066fa2e843739a4a852da0c1358c78f7bd116e317d14b71c5656"
+  },
+  "reports/groq_smoke_status.json": {
+   "sha256_lf_normalised": "aa89597a7029447479c74782852ee048901266a83306e5fcd04c88b082e3672f"
+  },
+  "reports/phase5_runs/live_groq_2025-11-10.json": {
+   "sha256_lf_normalised": "3fe6004c07258d9af3e31500dbfe3df710ff11fa19664c0faf516d91353aaad8"
+  },
+  "reports/phase5_runs/live_groq_2025-11-10_2.json": {
+   "sha256_lf_normalised": "a2c6bbffc5b06f481fdfa492f0bfea69ee5d87740949c3a27daae38d2b9df4e7"
+  },
+  "reports/phase5_runs/live_groq_2025-11-10_3.json": {
+   "sha256_lf_normalised": "94a440dbbae2e63099a6888574128f3f5f15bf877a3b6b09d3a46127bf0d6841"
+  },
+  "reports/phase5_runs/live_groq_2025-11-10_4.json": {
+   "sha256_lf_normalised": "16fac29eacc264c64c24611e2acbeff5aa8a91b873a6c91b0b355f1cc28bb1b4"
+  },
+  "reports/phase5_runs/live_groq_2025-11-10_5.json": {
+   "sha256_lf_normalised": "268db3c3a6f80acd2d6887728343f3eb56ae3d5a7916f360910b5398881cacd1"
+  }
+ }
+}

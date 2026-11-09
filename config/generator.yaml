@@ -1,0 +1,131 @@
+# Synthetic data generator parameters. ALL DATA IS SYNTHETIC. One file holds every generator parameter.
+# Money is in synthetic USD. Day 0 is a Monday, so Mondays are day indexes 0, 7, 14, ...
+seed: 1
+dev_seeds: [1]
+# Held-out seeds are reserved for the final evaluation run. generate_data.py refuses them unless --allow-heldout.
+heldout_seeds: [9101, 9102, 9103]
+
+start_date: "2025-01-06"       # calendar date of day 0 (a Monday)
+horizon_days: 365              # install days 0..364; activity is simulated up to event day 364 (storage end)
+store_fee: 0.30                # net IAP = gross IAP * (1 - store_fee); ad revenue is not reduced
+max_activity_day_n: 180        # player activity is stored through D180 only (nothing later is used)
+spend_report_lag_days: 1       # spend for day d becomes visible at 00:00 of day d + lag
+
+weekday_install_multiplier: [1.00, 0.98, 0.97, 1.00, 1.05, 1.12, 1.10]   # Mon..Sun
+install_noise_sd: 0.12         # lognormal noise on the expected installs before Poisson sampling
+
+# Review (decision) dates used by scenarios: Mondays from burn-in end to the last decision date.
+decision_as_of_days: [245, 252, 259, 266, 273, 280, 287, 294, 301, 308, 315, 322, 329, 336]
+
+# ---- Spend process (paid channels): log-spend = log(base) + weekly level + daily noise ----
+spend_process:
+  weekly_level_persistence: 0.70
+  weekly_level_sd: 0.12
+  daily_noise_sd: 0.22
+  min_multiple_of_base: 0.45
+  max_multiple_of_base: 2.00
+
+# ---- Player behaviour shared by all channels ----
+behaviour:
+  engagement_gamma_shape: 2.0          # per-player engagement multiplier, mean 1
+  sessions_per_active_day: 2.4
+  day0_session_bonus: 1.5
+  levels_per_session: 1.8
+  ad_impressions_per_session: 2.0
+  ecpm_noise_sd: 0.25
+  purchase_amount_noise_sd: 0.50
+  spend_scale_sd: 0.80                 # heavy-tailed player spend scale (lognormal)
+  big_spender_share_of_payers: 0.03
+  big_spender_multiplier_range: [5, 20]
+
+# ---- Channels ----
+# response.type power: installs = a * spend^b, with a chosen so installs(base_spend) = base_installs.
+# response.type hill:  installs = Imax * s^h / (K^h + s^h), K = k_over_base * base_spend, Imax chosen the same way.
+# quality_gamma: players acquired when daily spend is higher than base are worth less:
+#                quality = (spend / base_spend) ** (-quality_gamma); it scales payer rate and engagement.
+channels:
+  meta:
+    base_spend: 90
+    base_installs: 85
+    response: {type: power, b: 0.80}
+    quality_gamma: 0.0
+    retention: {r1: 0.42, alpha: 0.52}
+    payer_rate: 0.065
+    purchase: {p_per_active_day: 0.22, front_boost: 1.0, front_tau_days: 3.0, price: 8.5}
+    ecpm: 9.0
+    report_lag: {min_days: 1, jitter_days: 1}
+  google_uac:
+    base_spend: 80
+    base_installs: 70
+    response: {type: power, b: 0.75}
+    quality_gamma: 0.0
+    retention: {r1: 0.36, alpha: 0.58}
+    payer_rate: 0.045
+    purchase: {p_per_active_day: 0.20, front_boost: 1.0, front_tau_days: 3.0, price: 8.0}
+    ecpm: 8.5
+    report_lag: {min_days: 1, jitter_days: 1}
+  applovin:                       # saturating channel: a power law fits its curve badly
+    base_spend: 100
+    base_installs: 95
+    response: {type: hill, h: 1.6, k_over_base: 0.8}
+    quality_gamma: 0.4
+    retention: {r1: 0.38, alpha: 0.55}
+    payer_rate: 0.070
+    purchase: {p_per_active_day: 0.22, front_boost: 1.0, front_tau_days: 3.0, price: 9.0}
+    ecpm: 10.0
+    report_lag: {min_days: 1, jitter_days: 1}
+  unity:                          # iOS-style late reporting
+    base_spend: 60
+    base_installs: 55
+    response: {type: power, b: 0.70}
+    quality_gamma: 0.0
+    retention: {r1: 0.37, alpha: 0.55}
+    payer_rate: 0.050
+    purchase: {p_per_active_day: 0.20, front_boost: 1.0, front_tau_days: 3.0, price: 8.0}
+    ecpm: 8.0
+    report_lag: {min_days: 6, jitter_days: 3}
+  tiktok:                         # front-loaded spenders: strong at D3, weak by D30
+    base_spend: 70
+    base_installs: 52
+    response: {type: power, b: 0.85}
+    quality_gamma: 0.0
+    retention: {r1: 0.34, alpha: 0.90}
+    payer_rate: 0.070
+    purchase: {p_per_active_day: 0.12, front_boost: 7.0, front_tau_days: 1.2, price: 8.0}
+    ecpm: 7.5
+    report_lag: {min_days: 1, jitter_days: 1}
+
+organic:                          # tracked, no spend, excluded from budget decisions
+  base_installs: 60
+  weekly_growth_per_day: 0.0007
+  retention: {r1: 0.40, alpha: 0.50}
+  payer_rate: 0.050
+  purchase: {p_per_active_day: 0.20, front_boost: 1.0, front_tau_days: 3.0, price: 8.5}
+  ecpm: 9.0
+  report_lag: {min_days: 1, jitter_days: 1}
+
+# ---- Planted events (windows are calendar day indexes, inclusive). Scenario files in evals/scenarios
+# ---- repeat these windows; a test checks the two agree. ----
+planted:
+  regime_shift:                   # a game update changes monetisation for every channel from this event day on
+    start_day: 280
+    iap_purchase_probability_multiplier: 0.70
+    ecpm_multiplier: 1.10
+  tracking_outage:                # installs are still counted, but in-app events are lost
+    channel: google_uac
+    start_day: 296
+    end_day: 302
+    event_loss_probability: 0.92
+  cpi_spike:                      # same spend buys half the installs, so CPI doubles
+    channel: google_uac
+    start_day: 250
+    end_day: 256
+    install_multiplier: 0.50
+  tiny_sample_whale:              # budget cut to a tiny test; one player makes a huge purchase
+    channel: tiktok
+    start_day: 310
+    end_day: 316
+    spend_multiplier: 0.05
+    whale_install_day: 312
+    whale_event_day_n: 1
+    whale_iap_gross: 1500.0

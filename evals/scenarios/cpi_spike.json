@@ -1,0 +1,19 @@
+{
+  "id": "cpi_spike",
+  "title": "Temporary CPI spike",
+  "channel": "google_uac",
+  "plant_ref": "config planted.cpi_spike: days 250..256, install_multiplier 0.50 at unchanged spend",
+  "planted_window_days": [250, 256],
+  "evaluation_as_of_days": [259, 266],
+  "expected": {
+    "ideal_actions": ["hold"],
+    "acceptable_actions": ["insufficient_evidence"],
+    "forbidden_actions": ["increase_test", "decrease"],
+    "required_investigations": ["run_quality_checks", "get_cohort_metrics"],
+    "notes": "CPI doubles for a week. That is an anomaly to flag, not a stable response curve to extrapolate or a reason to cut permanently."
+  },
+  "if_experiment_run": null,
+  "calibration_intents": [
+    {"metric": "cpi_spike_ratio_to_trailing_median", "op": ">=", "value": 1.6}
+  ]
+}

@@ -1,0 +1,753 @@
+{
+ "label": "SIMULATED. ALL DATA IS SYNTHETIC.",
+ "seed": 1,
+ "as_of": "2025-10-13",
+ "channel": "applovin",
+ "decision": {
+  "baseline": 101.7,
+  "proposed": 111.87,
+  "step": 10.17,
+  "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+  "declared_reporting_lag_days": 2,
+  "target_d30_roas": 0.5274603739507926,
+  "average_d30_roas": 1.2580693213162832,
+  "model_estimated_finite_step_marginal_roas": 0.7519528382978089,
+  "lower_bound": 0.5280757979743754,
+  "reasons": [
+   "lower bound of model-estimated finite-step marginal D30 ROAS 0.528 is at or above the target 0.527; this is a bounded TEST that needs a pre-registered experiment plan, not an optimal-allocation claim"
+  ]
+ },
+ "scale1": {
+  "plan_hash": "b4c3042ed647a9b6c2d4985ea80a33591bf3d771bdf4fcc9336898cca034075a",
+  "adequate": false,
+  "reasons": [
+   "no allowed treatment window met the adequacy standards"
+  ],
+  "action_after_design": "insufficient_evidence",
+  "power_table": [
+   {
+    "treatment days": 14,
+    "true iROAS / target": 0.5,
+    "true iROAS": 0.2637301869753963,
+    "P(keep)": 0.061,
+    "MC SE": 0.0075682891065286355,
+    "median estimate": 0.25673413364033193,
+    "median lower bound": -1.9659603414687121,
+    "replicates": 1000,
+    "role": "FALSE-KEEP (boundary/below)"
+   },
+   {
+    "treatment days": 14,
+    "true iROAS / target": 0.8,
+    "true iROAS": 0.4219682991606341,
+    "P(keep)": 0.078,
+    "MC SE": 0.008480330182251162,
+    "median estimate": 0.4235990056672747,
+    "median lower bound": -1.8410793204966973,
+    "replicates": 1000,
+    "role": "FALSE-KEEP (boundary/below)"
+   },
+   {
+    "treatment days": 14,
+    "true iROAS / target": 1.0,
+    "true iROAS": 0.5274603739507926,
+    "P(keep)": 0.086,
+    "MC SE": 0.008865889690267977,
+    "median estimate": 0.5317126964238759,
+    "median lower bound": -1.71750906529822,
+    "replicates": 1000,
+    "role": "FALSE-KEEP (boundary/below)"
+   },
+   {
+    "treatment days": 14,
+    "true iROAS / target": 1.140488,
+    "true iROAS": 0.6015622269663915,
+    "P(keep)": 0.101,
+    "MC SE": 0.009528850927577786,
+    "median estimate": 0.6649404923259697,
+    "median lower bound": -1.6020597181735194,
+    "replicates": 1000,
+    "role": "informational"
+   },
+   {
+    "treatment days": 14,
+    "true iROAS / target": 1.25,
+    "true iROAS": 0.6593254674384907,
+    "P(keep)": 0.095,
+    "MC SE": 0.00927227048785787,
+    "median estimate": 0.4718489848219224,
+    "median lower bound": -1.7889535778296093,
+    "replicates": 1000,
+    "role": "informational"
+   },
+   {
+    "treatment days": 14,
+    "true iROAS / target": 1.5,
+    "true iROAS": 0.7911905609261889,
+    "P(keep)": 0.091,
+    "MC SE": 0.009094998625618368,
+    "median estimate": 0.8223869282361276,
+    "median lower bound": -1.4315015548450853,
+    "replicates": 1000,
+    "role": "POWER (declared alternative)"
+   },
+   {
+    "treatment days": 14,
+    "true iROAS / target": 2.0,
+    "true iROAS": 1.0549207479015852,
+    "P(keep)": 0.151,
+    "MC SE": 0.01132249972400088,
+    "median estimate": 1.1541636438856164,
+    "median lower bound": -1.0383659995927155,
+    "replicates": 1000,
+    "role": "informational"
+   },
+   {
+    "treatment days": 28,
+    "true iROAS / target": 0.5,
+    "true iROAS": 0.2637301869753963,
+    "P(keep)": 0.074,
+    "MC SE": 0.00827792244467173,
+    "median estimate": 0.2827978560990392,
+    "median lower bound": -1.6673480735132764,
+    "replicates": 1000,
+    "role": "FALSE-KEEP (boundary/below)"
+   },
+   {
+    "treatment days": 28,
+    "true iROAS / target": 0.8,
+    "true iROAS": 0.4219682991606341,
+    "P(keep)": 0.08,
+    "MC SE": 0.008579044235810887,
+    "median estimate": 0.5001434996679608,
+    "median lower bound": -1.4885324270286415,
+    "replicates": 1000,
+    "role": "FALSE-KEEP (boundary/below)"
+   },
+   {
+    "treatment days": 28,
+    "true iROAS / target": 1.0,
+    "true iROAS": 0.5274603739507926,
+    "P(keep)": 0.095,
+    "MC SE": 0.00927227048785787,
+    "median estimate": 0.5595957148579327,
+    "median lower bound": -1.3857021965901872,
+    "replicates": 1000,
+    "role": "FALSE-KEEP (boundary/below)"
+   },
+   {
+    "treatment days": 28,
+    "true iROAS / target": 1.140488,
+    "true iROAS": 0.6015622269663915,
+    "P(keep)": 0.087,
+    "MC SE": 0.00891240708226459,
+    "median estimate": 0.5350359128765445,
+    "median lower bound": -1.3481109407182217,
+    "replicates": 1000,
+    "role": "informational"
+   },
+   {
+    "treatment days": 28,
+    "true iROAS / target": 1.25,
+    "true iROAS": 0.6593254674384907,
+    "P(keep)": 0.101,
+    "MC SE": 0.009528850927577786,
+    "median estimate": 0.6659548860232569,
+    "median lower bound": -1.258463304214449,
+    "replicates": 1000,
+    "role": "informational"
+   },
+   {
+    "treatment days": 28,
+    "true iROAS / target": 1.5,
+    "true iROAS": 0.7911905609261889,
+    "P(keep)": 0.123,
+    "MC SE": 0.010386096475577337,
+    "median estimate": 0.7494473961975241,
+    "median lower bound": -1.20356389307195,
+    "replicates": 1000,
+    "role": "POWER (declared alternative)"
+   },
+   {
+    "treatment days": 28,
+    "true iROAS / target": 2.0,
+    "true iROAS": 1.0549207479015852,
+    "P(keep)": 0.153,
+    "MC SE": 0.011383804285035824,
+    "median estimate": 1.0535901914282415,
+    "median lower bound": -0.910043956487585,
+    "replicates": 1000,
+    "role": "informational"
+   },
+   {
+    "treatment days": 56,
+    "true iROAS / target": 0.5,
+    "true iROAS": 0.2637301869753963,
+    "P(keep)": 0.069,
+    "MC SE": 0.008014923580421713,
+    "median estimate": 0.3378944850125615,
+    "median lower bound": -1.4680038959200647,
+    "replicates": 1000,
+    "role": "FALSE-KEEP (boundary/below)"
+   },
+   {
+    "treatment days": 56,
+    "true iROAS / target": 0.8,
+    "true iROAS": 0.4219682991606341,
+    "P(keep)": 0.088,
+    "MC SE": 0.008958571314668427,
+    "median estimate": 0.42940451514743294,
+    "median lower bound": -1.3579870078517589,
+    "replicates": 1000,
+    "role": "FALSE-KEEP (boundary/below)"
+   },
+   {
+    "treatment days": 56,
+    "true iROAS / target": 1.0,
+    "true iROAS": 0.5274603739507926,
+    "P(keep)": 0.094,
+    "MC SE": 0.009228434320078352,
+    "median estimate": 0.4632052175420678,
+    "median lower bound": -1.3236693177163141,
+    "replicates": 1000,
+    "role": "FALSE-KEEP (boundary/below)"
+   },
+   {
+    "treatment days": 56,
+    "true iROAS / target": 1.140488,
+    "true iROAS": 0.6015622269663915,
+    "P(keep)": 0.109,
+    "MC SE": 0.00985489725973843,
+    "median estimate": 0.6639438729388961,
+    "median lower bound": -1.12116459049212,
+    "replicates": 1000,
+    "role": "informational"
+   },
+   {
+    "treatment days": 56,
+    "true iROAS / target": 1.25,
+    "true iROAS": 0.6593254674384907,
+    "P(keep)": 0.105,
+    "MC SE": 0.009694070352540258,
+    "median estimate": 0.7582581346082409,
+    "median lower bound": -1.0543744735741385,
+    "replicates": 1000,
+    "role": "informational"
+   },
+   {
+    "treatment days": 56,
+    "true iROAS / target": 1.5,
+    "true iROAS": 0.7911905609261889,
+    "P(keep)": 0.124,
+    "MC SE": 0.010422283818818216,
+    "median estimate": 0.8080378436805665,
+    "median lower bound": -1.0029167416787863,
+    "replicates": 1000,
+    "role": "POWER (declared alternative)"
+   },
+   {
+    "treatment days": 56,
+    "true iROAS / target": 2.0,
+    "true iROAS": 1.0549207479015852,
+    "P(keep)": 0.158,
+    "MC SE": 0.011534123287012324,
+    "median estimate": 1.0256527693855895,
+    "median lower bound": -0.7392063171381202,
+    "replicates": 1000,
+    "role": "informational"
+   }
+  ],
+  "ledger_approval": {
+   "ok": false,
+   "code": "plan_inadequate",
+   "detail": {
+    "channel": "applovin",
+    "plan_hash": "b4c3042ed647a9b6c2d4985ea80a33591bf3d771bdf4fcc9336898cca034075a",
+    "reasons": [
+     "no allowed treatment window met the adequacy standards"
+    ]
+   }
+  }
+ },
+ "scale_search": [
+  {
+   "world": "dev-seed world",
+   "scale": 1,
+   "adequate": false,
+   "chosen_treatment_days": null,
+   "power at 1.5x (56d)": 0.124,
+   "false-keep at 1.0x (56d)": 0.094,
+   "median SE of iROAS (56d, at 1.5x)": 1.3659679042875483,
+   "reasons": "no allowed treatment window met the adequacy standards"
+  },
+  {
+   "world": "dev-seed world",
+   "scale": 5,
+   "adequate": false,
+   "chosen_treatment_days": null,
+   "power at 1.5x (56d)": 0.146,
+   "false-keep at 1.0x (56d)": 0.096,
+   "median SE of iROAS (56d, at 1.5x)": 0.9902830586387843,
+   "reasons": "no allowed treatment window met the adequacy standards"
+  },
+  {
+   "world": "dev-seed world",
+   "scale": 10,
+   "adequate": false,
+   "chosen_treatment_days": null,
+   "power at 1.5x (56d)": 0.165,
+   "false-keep at 1.0x (56d)": 0.106,
+   "median SE of iROAS (56d, at 1.5x)": 0.7768427074256488,
+   "reasons": "no allowed treatment window met the adequacy standards"
+  },
+  {
+   "world": "dev-seed world",
+   "scale": 25,
+   "adequate": false,
+   "chosen_treatment_days": null,
+   "power at 1.5x (56d)": 0.191,
+   "false-keep at 1.0x (56d)": 0.122,
+   "median SE of iROAS (56d, at 1.5x)": 0.5819973486706065,
+   "reasons": "no allowed treatment window met the adequacy standards"
+  },
+  {
+   "world": "dev-seed world",
+   "scale": 50,
+   "adequate": false,
+   "chosen_treatment_days": null,
+   "power at 1.5x (56d)": 0.234,
+   "false-keep at 1.0x (56d)": 0.106,
+   "median SE of iROAS (56d, at 1.5x)": 0.47625755711343204,
+   "reasons": "no allowed treatment window met the adequacy standards"
+  },
+  {
+   "world": "dev-seed world",
+   "scale": 100,
+   "adequate": false,
+   "chosen_treatment_days": null,
+   "power at 1.5x (56d)": 0.247,
+   "false-keep at 1.0x (56d)": 0.108,
+   "median SE of iROAS (56d, at 1.5x)": 0.4329419882826414,
+   "reasons": "no allowed treatment window met the adequacy standards"
+  }
+ ],
+ "demo_search": [
+  {
+   "world": "DEMONSTRATION world",
+   "scale": 100,
+   "adequate": false,
+   "chosen_treatment_days": null,
+   "power at 1.5x (56d)": 0.38,
+   "false-keep at 1.0x (56d)": 0.083,
+   "median SE of iROAS (56d, at 1.5x)": 0.25691371580326594,
+   "reasons": "no allowed treatment window met the adequacy standards"
+  },
+  {
+   "world": "DEMONSTRATION world",
+   "scale": 1000,
+   "adequate": true,
+   "chosen_treatment_days": 56,
+   "power at 1.5x (56d)": 0.854,
+   "false-keep at 1.0x (56d)": 0.083,
+   "median SE of iROAS (56d, at 1.5x)": 0.11020560313212327,
+   "reasons": ""
+  }
+ ],
+ "demo_world": {
+  "sim_overrides": {
+   "noise": {
+    "installs_dispersion": 0.005,
+    "common_day_sd": 0.01
+   }
+  },
+  "scale_options": [
+   100,
+   1000,
+   10000
+  ]
+ },
+ "chosen_scale": 1000,
+ "chosen_world": "DEMONSTRATION world",
+ "lifecycle": {
+  "scale": 1000,
+  "plan_hash": "490484e825f7062d439a6d9e0f0e2d731192953ba05e68aebfe98386082a69ad",
+  "approval": {
+   "ok": true,
+   "proposal_hash": "8a5b41d5a163254e3b84e401973bb56a58450eab44408257f966f424d60eab94",
+   "ledger_version": 1
+  },
+  "apply": {
+   "change_id": "C-0002-9654b8-EXP",
+   "kind": "APPLY"
+  },
+  "pending_attempts": [
+   {
+    "attempt": "on the application date",
+    "result": "REFUSED: readout not available: needs the simulation clock to reach 2026-01-08 (clock is 2025-10-13, 87 day(s) to go)",
+    "pending acquisition days": 56
+   },
+   {
+    "attempt": "treatment window mid-point (clock 2025-11-10; 0 of 1344 outcome rows released)",
+    "result": "REFUSED: readout not available: needs the simulation clock to reach 2026-01-08 (clock is 2025-11-10, 59 day(s) to go)",
+    "pending acquisition days": 56
+   },
+   {
+    "attempt": "end of treatment window (clock 2025-12-07; 576 of 1344 outcome rows released)",
+    "result": "REFUSED: readout not available: needs the simulation clock to reach 2026-01-08 (clock is 2025-12-07, 32 day(s) to go)",
+    "pending acquisition days": 32
+   },
+   {
+    "attempt": "day before the last cohort's D30 outcome + lag (clock 2026-01-07; 1320 of 1344 outcome rows released)",
+    "result": "REFUSED: readout not available: needs the simulation clock to reach 2026-01-08 (clock is 2026-01-07, 1 day(s) to go)",
+    "pending acquisition days": 1
+   }
+  ],
+  "readout": {
+   "label": "SIMULATED READOUT. ALL DATA IS SYNTHETIC.",
+   "plan_hash": "490484e825f7062d439a6d9e0f0e2d731192953ba05e68aebfe98386082a69ad",
+   "clock": "2026-01-08",
+   "loaded_configuration": {
+    "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+    "experiment_config_hash": "c93e81723417516d0f9bddbe1a3d7d4626d35c4e600bc25422b09a47180e8852"
+   },
+   "estimate": {
+    "iroas": 0.4053613443127155,
+    "se": 0.23388618861528881,
+    "lower_bound": 0.09634231855828312,
+    "alpha": 0.1,
+    "df": 22,
+    "extra_revenue_per_day": 328.83833755406533,
+    "extra_spend_per_day": 811.2227329214288
+   },
+   "spending": {
+    "planned_extra_spend_per_day_total": 10170.0,
+    "planned_extra_spend_over_window": 569520.0,
+    "realised_extra_spend_per_day_total_estimate": 9734.672795057146,
+    "realised_extra_spend_over_window_estimate": 545141.6765232001,
+    "delivery_fraction": 0.957194965099031,
+    "delivery_bounds": [
+     0.5,
+     1.5
+    ]
+   },
+   "guardrails": {
+    "cpi_ratio": 1.0588478290765149,
+    "cpi_ratio_limit": 1.5,
+    "d1_retention_change": -0.026439696378563193,
+    "d1_retention_change_floor": -0.03
+   },
+   "rule": {
+    "target_d30_roas": 0.5274603739507926,
+    "lower_bound_meets_target": false
+   },
+   "units": {
+    "treatment": 12,
+    "control": 12
+   },
+   "input_problems": {},
+   "invalid_readout": false,
+   "decision": "rollback",
+   "decision_code": "rollback:lower_bound_below_target"
+  },
+  "execution": {
+   "status": "rolled_back",
+   "change_id": "C-0002-9654b8-EXP",
+   "rollback_change_id": "R-0003"
+  },
+  "duplicate_execution": {
+   "status": "rejected",
+   "code": "readout_already_executed",
+   "outcome_recorded": false
+  },
+  "authoritative_execution_checks": [
+   {
+    "attempt": "fabricated 'keep' result at clock 2025-10-13 (before the readout date)",
+    "response": "readout_not_available",
+    "outcome recorded": false,
+    "ledger version unchanged": true
+   },
+   {
+    "attempt": "fabricated 'rollback' result at clock 2025-10-13 (before the readout date)",
+    "response": "readout_not_available",
+    "outcome recorded": false,
+    "ledger version unchanged": true
+   },
+   {
+    "attempt": "valid readout with the decision edited to 'keep'",
+    "response": "readout_preview_mismatch",
+    "outcome recorded": false,
+    "ledger version unchanged": true
+   }
+  ],
+  "transitions": [
+   {
+    "step": "initial ledger",
+    "ledger version": 1,
+    "kind": "INIT",
+    "total": 406200.0,
+    "ceiling": 487439.99999999994,
+    "reserve": 81239.99999999994,
+    "applovin": 101700.0,
+    "sim clock": "2025-10-13",
+    "note": ""
+   },
+   {
+    "step": "plan frozen (ledger + experiment store), proposal created",
+    "ledger version": 1,
+    "kind": "INIT",
+    "total": 406200.0,
+    "ceiling": 487439.99999999994,
+    "reserve": 81239.99999999994,
+    "applovin": 101700.0,
+    "sim clock": "2025-10-13",
+    "note": "plan 490484e825f7..."
+   },
+   {
+    "step": "approved (bound to proposal, ledger version, policy hash, plan hash)",
+    "ledger version": 1,
+    "kind": "INIT",
+    "total": 406200.0,
+    "ceiling": 487439.99999999994,
+    "reserve": 81239.99999999994,
+    "applovin": 101700.0,
+    "sim clock": "2025-10-13",
+    "note": ""
+   },
+   {
+    "step": "applied: experiment-backed increase",
+    "ledger version": 2,
+    "kind": "APPLY",
+    "total": 416370.0,
+    "ceiling": 487439.99999999994,
+    "reserve": 71069.99999999994,
+    "applovin": 111870.0,
+    "sim clock": "2025-10-13",
+    "note": "kind APPLY (not MECHANICS_TEST)"
+   },
+   {
+    "step": "pending: clock advanced, readout still refused",
+    "ledger version": 2,
+    "kind": "APPLY",
+    "total": 416370.0,
+    "ceiling": 487439.99999999994,
+    "reserve": 71069.99999999994,
+    "applovin": 111870.0,
+    "sim clock": "2026-01-07",
+    "note": "4 early attempts refused"
+   },
+   {
+    "step": "readout available and computed",
+    "ledger version": 2,
+    "kind": "APPLY",
+    "total": 416370.0,
+    "ceiling": 487439.99999999994,
+    "reserve": 71069.99999999994,
+    "applovin": 111870.0,
+    "sim clock": "2026-01-08",
+    "note": "decision rollback (rollback:lower_bound_below_target)"
+   },
+   {
+    "step": "readout executed: rolled_back",
+    "ledger version": 3,
+    "kind": "ROLLBACK",
+    "total": 406200.0,
+    "ceiling": 487439.99999999994,
+    "reserve": 81239.99999999994,
+    "applovin": 101700.0,
+    "sim clock": "2026-01-08",
+    "note": ""
+   }
+  ],
+  "audit_events": [
+   "ledger_initialized",
+   "plan_registered",
+   "proposal_created",
+   "approval_recorded",
+   "apply_succeeded",
+   "rollback_succeeded"
+  ],
+  "experiment_events": [
+   "clock_set",
+   "plan_frozen",
+   "experiment_started",
+   "readout_execution_rejected",
+   "readout_execution_rejected",
+   "clock_set",
+   "observations_released",
+   "clock_set",
+   "observations_released",
+   "clock_set",
+   "observations_released",
+   "clock_set",
+   "observations_released",
+   "readout_execution_rejected",
+   "readout_executed",
+   "readout_execution_rejected"
+  ]
+ },
+ "blocked_demo": {
+  "readout_decision": "rollback",
+  "rollback_attempt": {
+   "status": "rollback_blocked",
+   "ledger": {
+    "ok": false,
+    "status": "rollback_blocked",
+    "code": "channel_changed_since",
+    "detail": {
+     "conflicts": {
+      "applovin": {
+       "current_change_id": "C-0003-ter-change",
+       "current_channel_version": 3,
+       "current_budget": 106276.5,
+       "expected_change_id": "C-0002-9654b8-EXP"
+      }
+     }
+    }
+   },
+   "outcome_recorded": false,
+   "readout": {
+    "label": "SIMULATED READOUT. ALL DATA IS SYNTHETIC.",
+    "plan_hash": "490484e825f7062d439a6d9e0f0e2d731192953ba05e68aebfe98386082a69ad",
+    "clock": "2026-01-08",
+    "loaded_configuration": {
+     "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+     "experiment_config_hash": "c93e81723417516d0f9bddbe1a3d7d4626d35c4e600bc25422b09a47180e8852"
+    },
+    "estimate": {
+     "iroas": 0.4053613443127155,
+     "se": 0.23388618861528881,
+     "lower_bound": 0.09634231855828312,
+     "alpha": 0.1,
+     "df": 22,
+     "extra_revenue_per_day": 328.83833755406533,
+     "extra_spend_per_day": 811.2227329214288
+    },
+    "spending": {
+     "planned_extra_spend_per_day_total": 10170.0,
+     "planned_extra_spend_over_window": 569520.0,
+     "realised_extra_spend_per_day_total_estimate": 9734.672795057146,
+     "realised_extra_spend_over_window_estimate": 545141.6765232001,
+     "delivery_fraction": 0.957194965099031,
+     "delivery_bounds": [
+      0.5,
+      1.5
+     ]
+    },
+    "guardrails": {
+     "cpi_ratio": 1.0588478290765149,
+     "cpi_ratio_limit": 1.5,
+     "d1_retention_change": -0.026439696378563193,
+     "d1_retention_change_floor": -0.03
+    },
+    "rule": {
+     "target_d30_roas": 0.5274603739507926,
+     "lower_bound_meets_target": false
+    },
+    "units": {
+     "treatment": 12,
+     "control": 12
+    },
+    "input_problems": {},
+    "invalid_readout": false,
+    "decision": "rollback",
+    "decision_code": "rollback:lower_bound_below_target"
+   },
+   "note": "the readout says ROLL BACK but the ledger could not; no outcome was recorded and the increase is NOT treated as kept"
+  },
+  "configuration_not_loaded": {
+   "status": "configuration_not_loaded",
+   "outcome_recorded": false,
+   "ledger_policy_hash": "89445be4e7edb76f835c1d3cb690f7289b2d675ac23a27a11d81a7600707cb6c",
+   "plan_policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "action": "load the configuration the plan was frozen under into the ledger with reload_config before executing the readout"
+  }
+ },
+ "independent": {
+  "N": 328.83833755406533,
+  "D": 811.2227329214288,
+  "iroas": 0.4053613443127155,
+  "se": 0.23388618861528856,
+  "t_crit": 1.321236741613362,
+  "lower": 0.09634231855828346,
+  "matches_readout": true
+ },
+ "score": {
+  "label": "SIMULATED: scored against the simulator's truth after the decision",
+  "true_iroas_treated_units": 0.15612027634973544,
+  "estimated_iroas": 0.4053613443127155,
+  "estimation_error": 0.24924106796298004,
+  "lower_bound": 0.09634231855828312,
+  "lower_bound_at_or_below_truth": true,
+  "target_d30_roas": 0.5274603739507926,
+  "truth_meets_target": false,
+  "decision": "rollback",
+  "decision_correct": true,
+  "true_extra_spend_per_day_total": 9864.90000000001,
+  "estimated_realised_extra_spend_per_day_total": 9734.672795057146,
+  "planned_extra_spend_per_day_total": 10170.0,
+  "true_extra_revenue_per_day_total": 1540.1109141625068,
+  "estimated_extra_revenue_per_day_total": 3946.060050648784,
+  "reference_channel_level_proportional_step_roas": 0.18561941643843494
+ },
+ "replicate_study_chosen_design": {
+  "label": "SIMULATED evaluation-side study (uses truth)",
+  "replicates": 300,
+  "true_iroas_treated_units": 0.15612027634973544,
+  "target_d30_roas": 0.5274603739507926,
+  "keep_rate": 0.0,
+  "keep_rate_mc_se": 5.773502691896258e-08,
+  "estimate_mean": 0.21873754106637502,
+  "estimate_bias": 0.06261726471663959,
+  "estimate_sd": 0.08947811551694118,
+  "lower_bound_coverage_of_truth": 0.9933333333333333,
+  "nominal_one_sided_coverage": 0.9,
+  "median_delta_method_se": 0.20728355996584347,
+  "estimate_quantiles_5_50_95": [
+   0.06840773862823146,
+   0.22271292390071923,
+   0.36097875844264043
+  ],
+  "reference_estimate": 0.4053613443127155,
+  "reference_estimate_percentile": 0.99,
+  "rollback_reasons": {
+   "rollback:lower_bound_below_target": 1.0,
+   "rollback:guardrail_breached": 0.0,
+   "rollback:invalid_spend_delivery": 0.0,
+   "rollback:invalid_readout_statistic": 0.0
+  }
+ },
+ "replicate_study_scale1_design": {
+  "label": "SIMULATED evaluation-side study (uses truth)",
+  "replicates": 300,
+  "true_iroas_treated_units": 0.15612028065998657,
+  "target_d30_roas": 0.5274603739507926,
+  "keep_rate": 0.03,
+  "keep_rate_mc_se": 0.009848857801796104,
+  "estimate_mean": 0.08117779023786127,
+  "estimate_bias": -0.0749424904221253,
+  "estimate_sd": 2.357691633825871,
+  "lower_bound_coverage_of_truth": 0.8933333333333333,
+  "nominal_one_sided_coverage": 0.9,
+  "median_delta_method_se": 1.9221204129237912,
+  "estimate_quantiles_5_50_95": [
+   -3.7267904347207197,
+   0.1291118473103175,
+   3.8040022396014885
+  ],
+  "reference_estimate": null,
+  "reference_estimate_percentile": null,
+  "rollback_reasons": {
+   "rollback:lower_bound_below_target": 0.55,
+   "rollback:guardrail_breached": 0.42,
+   "rollback:invalid_spend_delivery": 0.0,
+   "rollback:invalid_readout_statistic": 0.0
+  }
+ },
+ "truth_scale1": {
+  "true_iroas_treated_units": 0.15612028065998657,
+  "true_extra_revenue_per_day": 1.5401109566827003,
+  "true_extra_spend_per_day": 9.864899999999993,
+  "reference_channel_level_proportional_step_roas": 0.18561942092906172
+ },
+ "elapsed_seconds": 32.6
+}

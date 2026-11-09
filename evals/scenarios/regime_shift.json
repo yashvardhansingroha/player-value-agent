@@ -1,0 +1,20 @@
+{
+  "id": "regime_shift",
+  "title": "Mid-period monetisation regime shift (game update)",
+  "channel": "all_paid",
+  "plant_ref": "config planted.regime_shift: from event day 280, purchase probability and eCPM multipliers (values live in the config)",
+  "planted_window_days": [280, 364],
+  "evaluation_as_of_days": [],
+  "expected": {
+    "ideal_actions": [],
+    "acceptable_actions": [],
+    "forbidden_actions": [],
+    "required_investigations": [],
+    "notes": "No decision expectation in Phase 1. This is generator messiness: it makes older forecast multipliers and payback ratios stale. Drift monitoring is a stretch item and any drift-alert expectation will be added before that work starts."
+  },
+  "if_experiment_run": null,
+  "calibration_intents": [
+    {"metric": "iap_per_active_day_post_over_pre", "op": "<=", "value": 0.9},
+    {"metric": "ad_ecpm_post_over_pre", "op": ">=", "value": 1.05}
+  ]
+}

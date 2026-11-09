@@ -1,0 +1,666 @@
+{
+ "fixed_overhead_chars": {
+  "system_prompt+task": 4592,
+  "tool_schemas_openai_wrapped": 2801
+ },
+ "2025-10-13 | full/full_sweep | pessimistic": {
+  "requests": 4,
+  "prompts": [
+   3041,
+   3611,
+   16626,
+   16987
+  ],
+  "tokens_in": 40265,
+  "tokens_out": 2390,
+  "total": 42655,
+  "worst_prompt_plus_max_completion": 19987,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 4,
+  "min_minutes_by_tpm": 5.3
+ },
+ "2025-10-13 | full/full_sweep | central": {
+  "requests": 4,
+  "prompts": [
+   2478,
+   2951,
+   13575,
+   13878
+  ],
+  "tokens_in": 32882,
+  "tokens_out": 2390,
+  "total": 35272,
+  "worst_prompt_plus_max_completion": 16878,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 5,
+  "min_minutes_by_tpm": 4.4
+ },
+ "2025-10-13 | full/full_sweep | optimistic": {
+  "requests": 4,
+  "prompts": [
+   2092,
+   2499,
+   11487,
+   11751
+  ],
+  "tokens_in": 27829,
+  "tokens_out": 2390,
+  "total": 30219,
+  "worst_prompt_plus_max_completion": 14751,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 6,
+  "min_minutes_by_tpm": 3.8
+ },
+ "2025-10-13 | full/full_sweep | measured_json_4.3": {
+  "requests": 4,
+  "prompts": [
+   1853,
+   2219,
+   10193,
+   10432
+  ],
+  "tokens_in": 24697,
+  "tokens_out": 2390,
+  "total": 27087,
+  "worst_prompt_plus_max_completion": 13432,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 7,
+  "min_minutes_by_tpm": 3.4
+ },
+ "2025-10-13 | full/full_sweep | measured_prefix_4.9": {
+  "requests": 4,
+  "prompts": [
+   1631,
+   1958,
+   8988,
+   9205
+  ],
+  "tokens_in": 21782,
+  "tokens_out": 2390,
+  "total": 24172,
+  "worst_prompt_plus_max_completion": 12205,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 8,
+  "min_minutes_by_tpm": 3.0
+ },
+ "2025-10-13 | full/targeted | pessimistic": {
+  "requests": 5,
+  "prompts": [
+   3041,
+   3611,
+   5431,
+   7610,
+   7971
+  ],
+  "tokens_in": 27664,
+  "tokens_out": 2700,
+  "total": 30364,
+  "worst_prompt_plus_max_completion": 10971,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 6,
+  "min_minutes_by_tpm": 3.8
+ },
+ "2025-10-13 | full/targeted | central": {
+  "requests": 5,
+  "prompts": [
+   2478,
+   2951,
+   4471,
+   6268,
+   6571
+  ],
+  "tokens_in": 22739,
+  "tokens_out": 2700,
+  "total": 25439,
+  "worst_prompt_plus_max_completion": 9571,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 7,
+  "min_minutes_by_tpm": 3.2
+ },
+ "2025-10-13 | full/targeted | optimistic": {
+  "requests": 5,
+  "prompts": [
+   2092,
+   2499,
+   3814,
+   5349,
+   5613
+  ],
+  "tokens_in": 19367,
+  "tokens_out": 2700,
+  "total": 22067,
+  "worst_prompt_plus_max_completion": 8613,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 9,
+  "min_minutes_by_tpm": 2.8
+ },
+ "2025-10-13 | full/targeted | measured_json_4.3": {
+  "requests": 5,
+  "prompts": [
+   1853,
+   2219,
+   3407,
+   4779,
+   5019
+  ],
+  "tokens_in": 17277,
+  "tokens_out": 2700,
+  "total": 19977,
+  "worst_prompt_plus_max_completion": 8019,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 10,
+  "min_minutes_by_tpm": 2.5
+ },
+ "2025-10-13 | full/targeted | measured_prefix_4.9": {
+  "requests": 5,
+  "prompts": [
+   1631,
+   1958,
+   3028,
+   4249,
+   4466
+  ],
+  "tokens_in": 15332,
+  "tokens_out": 2700,
+  "total": 18032,
+  "worst_prompt_plus_max_completion": 7466,
+  "fits_8000_with_max_completion": true,
+  "runs_per_day_by_200k": 11,
+  "min_minutes_by_tpm": 2.3
+ },
+ "2025-10-13 | compact/full_sweep | pessimistic": {
+  "requests": 4,
+  "prompts": [
+   3041,
+   3503,
+   14135,
+   14318
+  ],
+  "tokens_in": 34997,
+  "tokens_out": 2390,
+  "total": 37387,
+  "worst_prompt_plus_max_completion": 17318,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 5,
+  "min_minutes_by_tpm": 4.7
+ },
+ "2025-10-13 | compact/full_sweep | central": {
+  "requests": 4,
+  "prompts": [
+   2478,
+   2863,
+   11551,
+   11710
+  ],
+  "tokens_in": 28602,
+  "tokens_out": 2390,
+  "total": 30992,
+  "worst_prompt_plus_max_completion": 14710,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 6,
+  "min_minutes_by_tpm": 3.9
+ },
+ "2025-10-13 | compact/full_sweep | optimistic": {
+  "requests": 4,
+  "prompts": [
+   2092,
+   2425,
+   9783,
+   9925
+  ],
+  "tokens_in": 24225,
+  "tokens_out": 2390,
+  "total": 26615,
+  "worst_prompt_plus_max_completion": 12925,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 7,
+  "min_minutes_by_tpm": 3.3
+ },
+ "2025-10-13 | compact/full_sweep | measured_json_4.3": {
+  "requests": 4,
+  "prompts": [
+   1853,
+   2154,
+   8687,
+   8818
+  ],
+  "tokens_in": 21512,
+  "tokens_out": 2390,
+  "total": 23902,
+  "worst_prompt_plus_max_completion": 11818,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 8,
+  "min_minutes_by_tpm": 3.0
+ },
+ "2025-10-13 | compact/full_sweep | measured_prefix_4.9": {
+  "requests": 4,
+  "prompts": [
+   1631,
+   1901,
+   7666,
+   7789
+  ],
+  "tokens_in": 18987,
+  "tokens_out": 2390,
+  "total": 21377,
+  "worst_prompt_plus_max_completion": 10789,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 9,
+  "min_minutes_by_tpm": 2.7
+ },
+ "2025-10-13 | compact/targeted | pessimistic": {
+  "requests": 5,
+  "prompts": [
+   3041,
+   3503,
+   4850,
+   6668,
+   6851
+  ],
+  "tokens_in": 24913,
+  "tokens_out": 2700,
+  "total": 27613,
+  "worst_prompt_plus_max_completion": 9851,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 7,
+  "min_minutes_by_tpm": 3.5
+ },
+ "2025-10-13 | compact/targeted | central": {
+  "requests": 5,
+  "prompts": [
+   2478,
+   2863,
+   3999,
+   5502,
+   5661
+  ],
+  "tokens_in": 20503,
+  "tokens_out": 2700,
+  "total": 23203,
+  "worst_prompt_plus_max_completion": 8661,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 8,
+  "min_minutes_by_tpm": 2.9
+ },
+ "2025-10-13 | compact/targeted | optimistic": {
+  "requests": 5,
+  "prompts": [
+   2092,
+   2425,
+   3417,
+   4705,
+   4847
+  ],
+  "tokens_in": 17486,
+  "tokens_out": 2700,
+  "total": 20186,
+  "worst_prompt_plus_max_completion": 7847,
+  "fits_8000_with_max_completion": true,
+  "runs_per_day_by_200k": 9,
+  "min_minutes_by_tpm": 2.5
+ },
+ "2025-10-13 | compact/targeted | measured_json_4.3": {
+  "requests": 5,
+  "prompts": [
+   1853,
+   2154,
+   3056,
+   4210,
+   4342
+  ],
+  "tokens_in": 15615,
+  "tokens_out": 2700,
+  "total": 18315,
+  "worst_prompt_plus_max_completion": 7342,
+  "fits_8000_with_max_completion": true,
+  "runs_per_day_by_200k": 10,
+  "min_minutes_by_tpm": 2.3
+ },
+ "2025-10-13 | compact/targeted | measured_prefix_4.9": {
+  "requests": 5,
+  "prompts": [
+   1631,
+   1901,
+   2720,
+   3749,
+   3872
+  ],
+  "tokens_in": 13873,
+  "tokens_out": 2700,
+  "total": 16573,
+  "worst_prompt_plus_max_completion": 6872,
+  "fits_8000_with_max_completion": true,
+  "runs_per_day_by_200k": 12,
+  "min_minutes_by_tpm": 2.1
+ },
+ "2025-11-10 | full/full_sweep | pessimistic": {
+  "requests": 4,
+  "prompts": [
+   3041,
+   3639,
+   15650,
+   16011
+  ],
+  "tokens_in": 38341,
+  "tokens_out": 2360,
+  "total": 40701,
+  "worst_prompt_plus_max_completion": 19011,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 4,
+  "min_minutes_by_tpm": 5.1
+ },
+ "2025-11-10 | full/full_sweep | central": {
+  "requests": 4,
+  "prompts": [
+   2478,
+   2974,
+   12774,
+   13078
+  ],
+  "tokens_in": 31304,
+  "tokens_out": 2360,
+  "total": 33664,
+  "worst_prompt_plus_max_completion": 16078,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 5,
+  "min_minutes_by_tpm": 4.2
+ },
+ "2025-11-10 | full/full_sweep | optimistic": {
+  "requests": 4,
+  "prompts": [
+   2092,
+   2518,
+   10807,
+   11071
+  ],
+  "tokens_in": 26488,
+  "tokens_out": 2360,
+  "total": 28848,
+  "worst_prompt_plus_max_completion": 14071,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 6,
+  "min_minutes_by_tpm": 3.6
+ },
+ "2025-11-10 | full/full_sweep | measured_json_4.3": {
+  "requests": 4,
+  "prompts": [
+   1853,
+   2236,
+   9586,
+   9826
+  ],
+  "tokens_in": 23501,
+  "tokens_out": 2360,
+  "total": 25861,
+  "worst_prompt_plus_max_completion": 12826,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 7,
+  "min_minutes_by_tpm": 3.2
+ },
+ "2025-11-10 | full/full_sweep | measured_prefix_4.9": {
+  "requests": 4,
+  "prompts": [
+   1631,
+   1973,
+   8451,
+   8667
+  ],
+  "tokens_in": 20722,
+  "tokens_out": 2360,
+  "total": 23082,
+  "worst_prompt_plus_max_completion": 11667,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 8,
+  "min_minutes_by_tpm": 2.9
+ },
+ "2025-11-10 | full/targeted | pessimistic": {
+  "requests": 5,
+  "prompts": [
+   3041,
+   3639,
+   5384,
+   7707,
+   8068
+  ],
+  "tokens_in": 27839,
+  "tokens_out": 2700,
+  "total": 30539,
+  "worst_prompt_plus_max_completion": 11068,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 6,
+  "min_minutes_by_tpm": 3.8
+ },
+ "2025-11-10 | full/targeted | central": {
+  "requests": 5,
+  "prompts": [
+   2478,
+   2974,
+   4433,
+   6347,
+   6650
+  ],
+  "tokens_in": 22882,
+  "tokens_out": 2700,
+  "total": 25582,
+  "worst_prompt_plus_max_completion": 9650,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 7,
+  "min_minutes_by_tpm": 3.2
+ },
+ "2025-11-10 | full/targeted | optimistic": {
+  "requests": 5,
+  "prompts": [
+   2092,
+   2518,
+   3783,
+   5416,
+   5680
+  ],
+  "tokens_in": 19489,
+  "tokens_out": 2700,
+  "total": 22189,
+  "worst_prompt_plus_max_completion": 8680,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 9,
+  "min_minutes_by_tpm": 2.8
+ },
+ "2025-11-10 | full/targeted | measured_json_4.3": {
+  "requests": 5,
+  "prompts": [
+   1853,
+   2236,
+   3379,
+   4838,
+   5078
+  ],
+  "tokens_in": 17384,
+  "tokens_out": 2700,
+  "total": 20084,
+  "worst_prompt_plus_max_completion": 8078,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 9,
+  "min_minutes_by_tpm": 2.5
+ },
+ "2025-11-10 | full/targeted | measured_prefix_4.9": {
+  "requests": 5,
+  "prompts": [
+   1631,
+   1973,
+   3003,
+   4301,
+   4518
+  ],
+  "tokens_in": 15426,
+  "tokens_out": 2700,
+  "total": 18126,
+  "worst_prompt_plus_max_completion": 7518,
+  "fits_8000_with_max_completion": true,
+  "runs_per_day_by_200k": 11,
+  "min_minutes_by_tpm": 2.3
+ },
+ "2025-11-10 | compact/full_sweep | pessimistic": {
+  "requests": 4,
+  "prompts": [
+   3041,
+   3530,
+   13285,
+   13468
+  ],
+  "tokens_in": 33324,
+  "tokens_out": 2360,
+  "total": 35684,
+  "worst_prompt_plus_max_completion": 16468,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 5,
+  "min_minutes_by_tpm": 4.5
+ },
+ "2025-11-10 | compact/full_sweep | central": {
+  "requests": 4,
+  "prompts": [
+   2478,
+   2885,
+   10852,
+   11011
+  ],
+  "tokens_in": 27226,
+  "tokens_out": 2360,
+  "total": 29586,
+  "worst_prompt_plus_max_completion": 14011,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 6,
+  "min_minutes_by_tpm": 3.7
+ },
+ "2025-11-10 | compact/full_sweep | optimistic": {
+  "requests": 4,
+  "prompts": [
+   2092,
+   2444,
+   9188,
+   9330
+  ],
+  "tokens_in": 23054,
+  "tokens_out": 2360,
+  "total": 25414,
+  "worst_prompt_plus_max_completion": 12330,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 7,
+  "min_minutes_by_tpm": 3.2
+ },
+ "2025-11-10 | compact/full_sweep | measured_json_4.3": {
+  "requests": 4,
+  "prompts": [
+   1853,
+   2170,
+   8156,
+   8288
+  ],
+  "tokens_in": 20467,
+  "tokens_out": 2360,
+  "total": 22827,
+  "worst_prompt_plus_max_completion": 11288,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 8,
+  "min_minutes_by_tpm": 2.9
+ },
+ "2025-11-10 | compact/full_sweep | measured_prefix_4.9": {
+  "requests": 4,
+  "prompts": [
+   1631,
+   1915,
+   7196,
+   7318
+  ],
+  "tokens_in": 18060,
+  "tokens_out": 2360,
+  "total": 20420,
+  "worst_prompt_plus_max_completion": 10318,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 9,
+  "min_minutes_by_tpm": 2.6
+ },
+ "2025-11-10 | compact/targeted | pessimistic": {
+  "requests": 5,
+  "prompts": [
+   3041,
+   3530,
+   4804,
+   6764,
+   6947
+  ],
+  "tokens_in": 25086,
+  "tokens_out": 2700,
+  "total": 27786,
+  "worst_prompt_plus_max_completion": 9947,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 7,
+  "min_minutes_by_tpm": 3.5
+ },
+ "2025-11-10 | compact/targeted | central": {
+  "requests": 5,
+  "prompts": [
+   2478,
+   2885,
+   3961,
+   5580,
+   5739
+  ],
+  "tokens_in": 20643,
+  "tokens_out": 2700,
+  "total": 23343,
+  "worst_prompt_plus_max_completion": 8739,
+  "fits_8000_with_max_completion": false,
+  "runs_per_day_by_200k": 8,
+  "min_minutes_by_tpm": 2.9
+ },
+ "2025-11-10 | compact/targeted | optimistic": {
+  "requests": 5,
+  "prompts": [
+   2092,
+   2444,
+   3385,
+   4770,
+   4912
+  ],
+  "tokens_in": 17603,
+  "tokens_out": 2700,
+  "total": 20303,
+  "worst_prompt_plus_max_completion": 7912,
+  "fits_8000_with_max_completion": true,
+  "runs_per_day_by_200k": 9,
+  "min_minutes_by_tpm": 2.5
+ },
+ "2025-11-10 | compact/targeted | measured_json_4.3": {
+  "requests": 5,
+  "prompts": [
+   1853,
+   2170,
+   3028,
+   4268,
+   4400
+  ],
+  "tokens_in": 15719,
+  "tokens_out": 2700,
+  "total": 18419,
+  "worst_prompt_plus_max_completion": 7400,
+  "fits_8000_with_max_completion": true,
+  "runs_per_day_by_200k": 10,
+  "min_minutes_by_tpm": 2.3
+ },
+ "2025-11-10 | compact/targeted | measured_prefix_4.9": {
+  "requests": 5,
+  "prompts": [
+   1631,
+   1915,
+   2695,
+   3800,
+   3923
+  ],
+  "tokens_in": 13964,
+  "tokens_out": 2700,
+  "total": 16664,
+  "worst_prompt_plus_max_completion": 6923,
+  "fits_8000_with_max_completion": true,
+  "runs_per_day_by_200k": 12,
+  "min_minutes_by_tpm": 2.1
+ }
+}

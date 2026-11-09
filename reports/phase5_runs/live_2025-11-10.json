@@ -1,0 +1,368 @@
+{
+ "mode": "live",
+ "model": "models/gemini-3.5-flash",
+ "as_of": "2025-11-10",
+ "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+ "status": "rules_only_fallback",
+ "fallback_reason": "api_failure",
+ "fallback_detail": "ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.6-flash, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 45.744041363s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.6-flash'}, 'quotaValue': '5'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '45s'}]}}",
+ "repairs_used": 0,
+ "labels": [
+  "MODE: LIVE (model models/gemini-3.5-flash).",
+  "RULES-ONLY FALLBACK: AGENT UNAVAILABLE (API FAILURE). This is the reviewed deterministic proposal with the same quality gates, validation and approval requirements.",
+  "MISSING EVIDENCE: google_uac: insufficient_evidence (quality_check_failed:tracking_gap; forecast_covers_too_little_of_the_window).",
+  "APPROVAL REQUIRED: this is a proposal only. Nothing changes until a person approves it and it is applied in the sandbox ledger; any increase also needs its plan registered there."
+ ],
+ "validation": null,
+ "fallback_validation": {
+  "ok": true,
+  "errors": [],
+  "plans_to_register": [],
+  "note": "valid = traceable, inside the policy's permitted actions and the hard constraints; it does not make the decision good"
+ },
+ "tool_calls": [
+  {
+   "tool_call_id": "tc_001",
+   "tool": "get_review_overview",
+   "args": {},
+   "status": "ok",
+   "output_sha256": "78be07d60bab596d7e4e3ca90293ae79f05cf640f9be68ede108d760a19dda53"
+  }
+ ],
+ "evidence_trail": [
+  {
+   "tool_call_id": "tc_001",
+   "tool": "get_review_overview",
+   "args": {},
+   "channel": null,
+   "as_of": "2025-11-10",
+   "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+   "populations": {
+    "default": "channel_review_status",
+    "ledger": "sandbox_ledger_state"
+   },
+   "result": {
+    "as_of": "2025-11-10",
+    "ledger": {
+     "version": 1,
+     "total_budget": 406.2,
+     "ceiling": 487.43999999999994,
+     "reserve": 81.23999999999995
+    },
+    "channels": {
+     "applovin": {
+      "current_budget": 101.7,
+      "policy_action": "hold",
+      "policy_proposed_budget": 101.7,
+      "completeness_passed": true,
+      "failed_stages": [
+       "quality:revenue_concentration",
+       "excluded_population"
+      ]
+     },
+     "google_uac": {
+      "current_budget": 72.1,
+      "policy_action": "insufficient_evidence",
+      "policy_proposed_budget": 72.1,
+      "completeness_passed": true,
+      "failed_stages": [
+       "quality:tracking_gap",
+       "quality:revenue_concentration",
+       "forecast_coverage"
+      ]
+     },
+     "meta": {
+      "current_budget": 90.7,
+      "policy_action": "hold",
+      "policy_proposed_budget": 90.7,
+      "completeness_passed": true,
+      "failed_stages": []
+     },
+     "tiktok": {
+      "current_budget": 85.0,
+      "policy_action": "decrease",
+      "policy_proposed_budget": 76.5,
+      "completeness_passed": true,
+      "failed_stages": []
+     },
+     "unity": {
+      "current_budget": 56.7,
+      "policy_action": "hold",
+      "policy_proposed_budget": 56.7,
+      "completeness_passed": true,
+      "failed_stages": [
+       "excluded_population"
+      ]
+     }
+    }
+   },
+   "output_sha256": "78be07d60bab596d7e4e3ca90293ae79f05cf640f9be68ede108d760a19dda53"
+  }
+ ],
+ "model_turns": [
+  {
+   "text": null,
+   "tool_calls": [
+    {
+     "name": "get_review_overview",
+     "args": {}
+    }
+   ]
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1509,
+  "output_tokens": 12
+ },
+ "plans_to_register": [],
+ "proposal": {
+  "proposal_id": "P-2025-11-10-16f72cc897-RULES",
+  "as_of": "2025-11-10",
+  "ledger_version": 1,
+  "policy_hash": "8ff28b1b2cdcdac9b0ad0d6780b9def33a529ddb17b3b1351b171de542480ab3",
+  "source": "rules_only",
+  "items": [
+   {
+    "channel": "applovin",
+    "action": "hold",
+    "current_budget": 101.7,
+    "new_budget": 101.7,
+    "qualification": "none",
+    "experiment_plan_hash": null,
+    "reason": "average D30 ROAS 0.461 is below the target 0.519, so (diminishing-returns heuristic) there is no basis for an increase; decrease blocked: excluded_cohorts_withheld_for_revenue_spike: included-only average ROAS is biased low",
+    "evidence": {
+     "run_labels": [
+      "MODE: LIVE (model models/gemini-3.5-flash).",
+      "RULES-ONLY FALLBACK: AGENT UNAVAILABLE (API FAILURE). This is the reviewed deterministic proposal with the same quality gates, validation and approval requirements.",
+      "MISSING EVIDENCE: google_uac: insufficient_evidence (quality_check_failed:tracking_gap; forecast_covers_too_little_of_the_window).",
+      "APPROVAL REQUIRED: this is a proposal only. Nothing changes until a person approves it and it is applied in the sandbox ledger; any increase also needs its plan registered there."
+     ],
+     "policy_action": "hold",
+     "uncertainty": {
+      "interval_status": "available",
+      "calibration_n": 35,
+      "interval_reason": null,
+      "note": "80% nominal empirical interval from earlier matured forecasts; observed coverage on the dev seed is below nominal, so it is not a guaranteed bound",
+      "lo": 200.4756532094604,
+      "hi": 336.9406425358193,
+      "width_ratio": 0.5097506556133031
+     },
+     "average_d30_roas": {
+      "population": "included cohorts only",
+      "label": "forecast-based average D30 ROAS (model-estimated: uses forecast revenue)",
+      "forecast_d30_net_revenue": 267.7092963464106,
+      "spend": 580.1,
+      "point": 0.46148818539288156,
+      "lower": 0.34558809379324323,
+      "upper": 0.5808319988550582
+     },
+     "payback_target": {
+      "level": "channel",
+      "n_cohorts": 90,
+      "installs": 8957,
+      "first_install": "2025-01-30",
+      "last_install": "2025-05-12",
+      "sum_d30": 7321.874469,
+      "sum_d180": 14118.002106999998,
+      "d180_over_d30": 1.9281950498842946,
+      "target_d30_roas": 0.5186197319923662,
+      "note": "estimate derived from synthetic mature history; payback_multiple x (sum D30 / sum D180)"
+     }
+    }
+   },
+   {
+    "channel": "google_uac",
+    "action": "insufficient_evidence",
+    "current_budget": 72.1,
+    "new_budget": 72.1,
+    "qualification": "none",
+    "experiment_plan_hash": null,
+    "reason": "quality_check_failed:tracking_gap; forecast_covers_too_little_of_the_window",
+    "evidence": {
+     "run_labels": [
+      "MODE: LIVE (model models/gemini-3.5-flash).",
+      "RULES-ONLY FALLBACK: AGENT UNAVAILABLE (API FAILURE). This is the reviewed deterministic proposal with the same quality gates, validation and approval requirements.",
+      "MISSING EVIDENCE: google_uac: insufficient_evidence (quality_check_failed:tracking_gap; forecast_covers_too_little_of_the_window).",
+      "APPROVAL REQUIRED: this is a proposal only. Nothing changes until a person approves it and it is applied in the sandbox ledger; any increase also needs its plan registered there."
+     ],
+     "policy_action": "insufficient_evidence",
+     "uncertainty": {
+      "interval_status": "available",
+      "calibration_n": 35,
+      "interval_reason": null,
+      "note": "80% nominal empirical interval from earlier matured forecasts; observed coverage on the dev seed is below nominal, so it is not a guaranteed bound",
+      "lo": 39.12835250867014,
+      "hi": 53.543810066092384,
+      "width_ratio": 0.3243380387364427
+     },
+     "average_d30_roas": {
+      "population": "included cohorts only",
+      "label": "forecast-based average D30 ROAS (model-estimated: uses forecast revenue)",
+      "forecast_d30_net_revenue": 44.44578136311743,
+      "spend": 239.52999999999997,
+      "point": 0.18555413252251257,
+      "lower": 0.16335470508358094,
+      "upper": 0.22353696850537466
+     },
+     "payback_target": {
+      "level": "channel",
+      "n_cohorts": 90,
+      "installs": 6258,
+      "first_install": "2025-02-04",
+      "last_install": "2025-05-12",
+      "sum_d30": 2518.898522,
+      "sum_d180": 4997.671239,
+      "d180_over_d30": 1.98407009863655,
+      "target_d30_roas": 0.5040144502390306,
+      "note": "estimate derived from synthetic mature history; payback_multiple x (sum D30 / sum D180)"
+     }
+    }
+   },
+   {
+    "channel": "meta",
+    "action": "hold",
+    "current_budget": 90.7,
+    "new_budget": 90.7,
+    "qualification": "none",
+    "experiment_plan_hash": null,
+    "reason": "lower bound of model-estimated finite-step marginal D30 ROAS 0.317 is below the target 0.453 (point estimate 0.412)",
+    "evidence": {
+     "run_labels": [
+      "MODE: LIVE (model models/gemini-3.5-flash).",
+      "RULES-ONLY FALLBACK: AGENT UNAVAILABLE (API FAILURE). This is the reviewed deterministic proposal with the same quality gates, validation and approval requirements.",
+      "MISSING EVIDENCE: google_uac: insufficient_evidence (quality_check_failed:tracking_gap; forecast_covers_too_little_of_the_window).",
+      "APPROVAL REQUIRED: this is a proposal only. Nothing changes until a person approves it and it is applied in the sandbox ledger; any increase also needs its plan registered there."
+     ],
+     "policy_action": "hold",
+     "uncertainty": {
+      "interval_status": "available",
+      "calibration_n": 35,
+      "interval_reason": null,
+      "note": "80% nominal empirical interval from earlier matured forecasts; observed coverage on the dev seed is below nominal, so it is not a guaranteed bound",
+      "lo": 345.54205048002854,
+      "hi": 519.6836151312841,
+      "width_ratio": 0.41884578762983193
+     },
+     "average_d30_roas": {
+      "population": "included cohorts only",
+      "label": "forecast-based average D30 ROAS (model-estimated: uses forecast revenue)",
+      "forecast_d30_net_revenue": 415.765347997623,
+      "spend": 649.2099999999999,
+      "point": 0.6404173503144176,
+      "lower": 0.5322500430985792,
+      "upper": 0.8004861526028314
+     },
+     "payback_target": {
+      "level": "channel",
+      "n_cohorts": 90,
+      "installs": 8047,
+      "first_install": "2025-02-03",
+      "last_install": "2025-05-12",
+      "sum_d30": 6169.345000999999,
+      "sum_d180": 13627.008794999998,
+      "d180_over_d30": 2.2088258628413833,
+      "target_d30_roas": 0.45272921547270495,
+      "note": "estimate derived from synthetic mature history; payback_multiple x (sum D30 / sum D180)"
+     }
+    }
+   },
+   {
+    "channel": "tiktok",
+    "action": "decrease",
+    "current_budget": 85.0,
+    "new_budget": 76.5,
+    "qualification": "none",
+    "experiment_plan_hash": null,
+    "reason": "upper bound of average D30 ROAS 0.262 is below the target 0.893 (policy heuristic on forecast average ROAS; not a guarantee of economic safety)",
+    "evidence": {
+     "run_labels": [
+      "MODE: LIVE (model models/gemini-3.5-flash).",
+      "RULES-ONLY FALLBACK: AGENT UNAVAILABLE (API FAILURE). This is the reviewed deterministic proposal with the same quality gates, validation and approval requirements.",
+      "MISSING EVIDENCE: google_uac: insufficient_evidence (quality_check_failed:tracking_gap; forecast_covers_too_little_of_the_window).",
+      "APPROVAL REQUIRED: this is a proposal only. Nothing changes until a person approves it and it is applied in the sandbox ledger; any increase also needs its plan registered there."
+     ],
+     "policy_action": "decrease",
+     "uncertainty": {
+      "interval_status": "available",
+      "calibration_n": 35,
+      "interval_reason": null,
+      "note": "80% nominal empirical interval from earlier matured forecasts; observed coverage on the dev seed is below nominal, so it is not a guaranteed bound",
+      "lo": 102.51790739735208,
+      "hi": 125.15835403264094,
+      "width_ratio": 0.19596558885898782
+     },
+     "average_d30_roas": {
+      "population": "included cohorts only",
+      "label": "forecast-based average D30 ROAS (model-estimated: uses forecast revenue)",
+      "forecast_d30_net_revenue": 115.53276657964881,
+      "spend": 478.34,
+      "point": 0.2415285499428206,
+      "lower": 0.2143201643127317,
+      "upper": 0.261651448828534
+     },
+     "payback_target": {
+      "level": "channel",
+      "n_cohorts": 90,
+      "installs": 4756,
+      "first_install": "2025-01-29",
+      "last_install": "2025-05-11",
+      "sum_d30": 2631.9714379999996,
+      "sum_d180": 2947.647339,
+      "d180_over_d30": 1.1199389539120068,
+      "target_d30_roas": 0.8929058110774221,
+      "note": "estimate derived from synthetic mature history; payback_multiple x (sum D30 / sum D180)"
+     }
+    }
+   },
+   {
+    "channel": "unity",
+    "action": "hold",
+    "current_budget": 56.7,
+    "new_budget": 56.7,
+    "qualification": "none",
+    "experiment_plan_hash": null,
+    "reason": "average D30 ROAS 0.311 is below the target 0.518, so (diminishing-returns heuristic) there is no basis for an increase; decrease blocked: excluded_cohorts_withheld_for_revenue_spike: included-only average ROAS is biased low",
+    "evidence": {
+     "run_labels": [
+      "MODE: LIVE (model models/gemini-3.5-flash).",
+      "RULES-ONLY FALLBACK: AGENT UNAVAILABLE (API FAILURE). This is the reviewed deterministic proposal with the same quality gates, validation and approval requirements.",
+      "MISSING EVIDENCE: google_uac: insufficient_evidence (quality_check_failed:tracking_gap; forecast_covers_too_little_of_the_window).",
+      "APPROVAL REQUIRED: this is a proposal only. Nothing changes until a person approves it and it is applied in the sandbox ledger; any increase also needs its plan registered there."
+     ],
+     "policy_action": "hold",
+     "uncertainty": {
+      "interval_status": "available",
+      "calibration_n": 35,
+      "interval_reason": null,
+      "note": "80% nominal empirical interval from earlier matured forecasts; observed coverage on the dev seed is below nominal, so it is not a guaranteed bound",
+      "lo": 90.71977462632614,
+      "hi": 173.86490106045966,
+      "width_ratio": 0.7066869390016866
+     },
+     "average_d30_roas": {
+      "population": "included cohorts only",
+      "label": "forecast-based average D30 ROAS (model-estimated: uses forecast revenue)",
+      "forecast_d30_net_revenue": 117.65482258889617,
+      "spend": 378.7,
+      "point": 0.31068080958250904,
+      "lower": 0.23955578195491456,
+      "upper": 0.45910985228534373
+     },
+     "payback_target": {
+      "level": "channel",
+      "n_cohorts": 90,
+      "installs": 4986,
+      "first_install": "2025-01-15",
+      "last_install": "2025-05-05",
+      "sum_d30": 1872.2194889999998,
+      "sum_d180": 3611.487642,
+      "d180_over_d30": 1.9289873133032003,
+      "target_d30_roas": 0.5184067272519272,
+      "note": "estimate derived from synthetic mature history; payback_multiple x (sum D30 / sum D180)"
+     }
+    }
+   }
+  ],
+  "synthetic_notice": "SYNTHETIC DATA. SANDBOX LEDGER: nothing here moves real money."
+ }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "steady_winner",
+  "title": "Steady winner with real headroom",
+  "channel": "meta",
+  "plant_ref": "config channels.meta: power-law response (b=0.80), strong monetisation, no planted defect",
+  "planted_window_days": null,
+  "evaluation_as_of_days": [252, 259, 266, 273],
+  "evaluation_note": "Pre regime shift only (shift starts day 280).",
+  "expected": {
+    "ideal_actions": ["increase_test"],
+    "acceptable_actions": ["hold"],
+    "forbidden_actions": ["decrease"],
+    "required_investigations": ["run_quality_checks", "check_reporting_completeness", "get_roas_average_vs_marginal", "design_budget_experiment"],
+    "notes": "Lower bound of model-estimated marginal D30 ROAS should clear the target, so a small bounded increase TEST with a pre-registered plan is right. Never a claim of optimal allocation."
+  },
+  "if_experiment_run": {"expected_readout": "keep"},
+  "calibration_intents": [
+    {"metric": "avg_d30_roas_over_target", "op": ">=", "value": 1.4},
+    {"metric": "true_step20_marginal_roas_over_target", "op": ">=", "value": 1.2}
+  ]
+}
